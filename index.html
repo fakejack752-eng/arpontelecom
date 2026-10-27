@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Arpon Telecom — mobile servicing & repair in Bangladesh. Display change, Samsung green line, chip-level board repair, genuine batteries, software & FRP unlock, water damage — free diagnosis, no fix no fee. Gadgets & accessories. Monograph Vol. I.">
+<meta name="description" content="আরপন টেলিকম — বাংলাদেশে মোবাইল সার্ভিসিং ও মেরামত। ডিসপ্লে চেঞ্জ, স্যামসাং গ্রিন লাইন, চিপ-লেভেল মাদারবোর্ড মেরামত, জেনুইন ব্যাটারি, সফটওয়্যার ও FRP আনলক, পানি-ক্ষত — ফ্রি ডায়াগনোসিস, ঠিক না হলে ফি নেই। গ্যাজেট ও অ্যাক্সেসরিজ। মনোগ্রাফ প্রথম খণ্ড।">
 <meta name="theme-color" content="#05140A">
-<title>ARPON TELECOM — A Monograph on the Craft of Repair · Vol. I</title>
+<title>আরপন টেলিকম — মেরামতের কারুকলা বিষয়ক মনোগ্রাফ · প্রথম খণ্ড</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2305140A'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='38' fill='%23C9A227' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&family=Noto+Serif+Bengali:wght@400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Hind+Siliguri:wght@400;500;600&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&family=Noto+Serif+Bengali:wght@400;500;600;700&display=swap">
 <style>
 /* ============================================================
    ARPON TELECOM — A Monograph on the Craft of Repair, Vol. I
@@ -27,9 +27,9 @@
   --gold-dark:       #B8860B;
   --ivory:           #F5F5DC;
   --moss:            #8FBC8F;
-  --serif: 'Cormorant Garamond', 'Times New Roman', 'Noto Serif Bengali', serif;
-  --sans:  'Inter', system-ui, sans-serif;
-  --mono:  'JetBrains Mono', 'Noto Serif Bengali', monospace;
+  --serif: 'Cormorant Garamond', 'Noto Serif Bengali', 'Times New Roman', serif;
+  --sans:  'Inter', 'Hind Siliguri', system-ui, sans-serif;
+  --mono:  'JetBrains Mono', 'Hind Siliguri', 'Noto Serif Bengali', monospace;
   --ease-quiet:    cubic-bezier(.22, 1, .36, 1);
   --ease-precise:  cubic-bezier(.4, 0, .2, 1);
   --ease-emphasis: cubic-bezier(.16, 1, .3, 1);
@@ -1267,6 +1267,39 @@ body::after {
 .reveal--delay-2 { transition-delay: 0.3s; }
 .reveal--delay-3 { transition-delay: 0.45s; }
 
+/* ---------- Bangla typography (page lang = bn) ---------- */
+:lang(bn) em, :lang(bn) i { font-style: normal; }   /* no synthetic oblique — Bangla emphasis = gold, upright */
+:lang(bn) { hyphens: none; }
+.manifesto__body, .spread__body { line-height: 1.95; }
+.manifesto__body { font-size: clamp(1.04rem, 1.5vw, 1.26rem); }
+.manifesto__title, .index__title, .spread__title, .section-head__title,
+.palette__title, .letter__title, .spread__sub, .spread__pullquote,
+.footnotes p, .divider, .section-head__num, .section-head__sub,
+.contact__pre, .contact__col .note, .colophon, .manifesto__sig,
+.specimen__alphabet, .filmframe__name { font-style: normal; letter-spacing: 0; }
+.manifesto__title, .index__title, .spread__title, .section-head__title,
+.palette__title { line-height: 1.42; }
+.letter__title, .contact__pre { line-height: 1.5; }
+.spread__sub, .spread__pullquote, .footnotes p, .section-head__sub,
+.colophon { line-height: 1.72; }
+.eyebrow { font-size: 12px; letter-spacing: 0.09em; }
+.spread__chapter-label, .spread__meta-item .label, .contact__col .label,
+.bench-spec .bench-spec__eyebrow, .index__cat, .hero__byline { letter-spacing: 0.09em; }
+.bench-spec__item .label, .spread__caption, .plate__meta, .plate__corner,
+.letter__meta, .letter__sig, .specimen__head, .specimen__footer,
+.ticket__head, .ticket__no, .ticket__row, .ticket__foot, .filmframe__num,
+.filmframe__pant, .palette__count, .palette__progress-label, .specimens__hint,
+.manifesto__sig-meta, .colophon__sig, .ledger__row.head, .ledger__k { font-size: 10px; letter-spacing: 0.09em; }
+.running-head .rh-mid, .running-head .rh-right { letter-spacing: 0.12em; }
+.hero__meta-top, .hero__meta-bottom, .spread__head { letter-spacing: 0.1em; }
+.hero__name--line2 { font-style: normal; letter-spacing: 0; line-height: 1.3; font-size: clamp(2rem, 8.5vw, 7rem); }
+.manifesto__body p:first-of-type::first-letter,
+.spread__body p:first-of-type::first-letter { font-size: 3.1em; line-height: 0.95; padding: 0.06em 0.14em 0 0; font-weight: 600; }
+.ledger__yes, .ledger__no { font-style: normal; }
+.specimen__aa { letter-spacing: 0; line-height: 1.15; padding: 1.1rem 0 0.7rem; }
+.specimen__aa em { font-style: normal; }
+.contact__name { letter-spacing: -0.03em; }   /* brand stays Latin */
+
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -1349,6 +1382,7 @@ body::after {
   hours, city, Facebook) live in ONE place — the BUSINESS object
   at the top of the <script> tag at the bottom of this file.
   Search for  "BUSINESS"  and edit there. Nothing else to touch.
+  বাংলায়: ফোন, ঠিকানা, সময় — সব এক জায়গায়, শুধু BUSINESS অবজেক্টটা বদলান।
   ════════════════════════════════════════════════════════════════
 -->
 
@@ -1357,136 +1391,136 @@ body::after {
 
 <header class="running-head">
   <span class="rh-left">ARPON TELECOM</span>
-  <span class="rh-mid">MONOGRAPH · VOL. I</span>
-  <span class="rh-right">P.&nbsp;<span id="page-num">001</span></span>
+  <span class="rh-mid">মনোগ্রাফ · খণ্ড I</span>
+  <span class="rh-right">পৃ.&nbsp;<span id="page-num">০০১</span></span>
 </header>
 
 <!-- ========== HERO / FRONTISPIECE ========== -->
 <section class="hero" id="hero">
   <div class="hero__meta-top">
-    <span>VOL. I / MONOGRAPH</span>
-    <span>MOBILE SERVICING · REPAIR · GADGETS</span>
-    <span>FIRST EDITION · MMXXVI</span>
+    <span>খণ্ড I / মনোগ্রাফ</span>
+    <span>মোবাইল সার্ভিসিং · মেরামত · গ্যাজেট</span>
+    <span>প্রথম সংস্করণ · MMXXVI</span>
   </div>
 
   <div class="hero__title">
-    <h1 class="hero__name hero__name--line1" aria-label="Arpon">
+    <h1 class="hero__name hero__name--line1" aria-label="আরপন টেলিকম">
       <span>A</span><span>R</span><span>P</span><span>O</span><span>N</span>
     </h1>
     <div class="hero__name hero__name--line2" aria-hidden="true">
-      <span>T</span><span>e</span><span>l</span><span>e</span><span>c</span><span>o</span><span>m</span>
+      <span>টে</span><span>লি</span><span>ক</span><span>ম</span>
     </div>
     <div class="hero__byline">
       <span class="hero__rule"></span>
-      <span>Mobile Servicing · Repair · Gadgets &amp; Accessories</span>
+      <span>মোবাইল সার্ভিসিং · মেরামত · গ্যাজেট ও অ্যাক্সেসরিজ</span>
       <span class="hero__rule"></span>
     </div>
   </div>
 
   <div class="hero__meta-bottom">
     <span>ISBN 978-984-XXXX-XXX-X</span>
-    <a class="hero__scroll-cue" href="#preface">↓ BEGIN READING</a>
-    <span>FREE DIAGNOSIS · NO FIX, NO FEE</span>
+    <a class="hero__scroll-cue" href="#preface">↓ পড়া শুরু করুন</a>
+    <span>ফ্রি ডায়াগনোসিস · ঠিক না হলে ফি নেই</span>
   </div>
 </section>
 
 <!-- ========== DIVIDER I ========== -->
 <div class="divider" role="presentation">
   <span class="divider__roman">I</span>
-  <span>— Preface —</span>
+  <span>— ভূমিকা —</span>
 </div>
 
 <!-- ========== PREFACE (ABOUT) ========== -->
 <section class="manifesto reveal" id="preface">
   <div class="manifesto__header">
-    <span class="eyebrow">A NOTE FROM THE COUNTER</span>
-    <h2 class="manifesto__title">A shop that refuses to let a <em>good phone</em> die.</h2>
+    <span class="eyebrow">কাউন্টার থেকে একখানা নোট</span>
+    <h2 class="manifesto__title">যে দোকান একটা <em>ভালো ফোনকে</em> মরতে দেয় না।</h2>
   </div>
 
   <div class="manifesto__body">
-    <p>Every device that crosses our counter arrives with a small emergency attached. A screen meets a floor. A monsoon finds a pocket. A motherboard, without warning, decides it is finished. Our trade is the stubborn conviction that none of these accidents is final — that with a bench, a microscope, and an honest price, most of what the market calls <em>dead</em> is merely interrupted.</p>
+    <p>আমাদের কাউন্টার পেরোনো প্রতিটি যন্ত্র সঙ্গে করে নিয়ে আসে ছোটখাটো এক জরুরি অবস্থা। স্ক্রিনের দেখা হয়ে যায় মেঝের সঙ্গে; বর্ষা খুঁজে নেয় পকেটের ভেতরটা; কোনো সতর্কতা ছাড়াই মাদারবোর্ড একদিন ঠিক করে ফেলে, তার হিসাব শেষ। আর আমাদের পেশার ভিত্তিই হলো এক জেদি বিশ্বাস — এই দুর্ঘটনাগুলোর কোনোটাই চূড়ান্ত রায় নয়; একটা কর্মক্ষেত্র, একটা মাইক্রোস্কোপ আর একটা সৎ দাম থাকলে, বাজার যাকে বলে <em lang="en">dead</em>, তার বেশিরভাগই আসলে মাঝপথে বাধাপ্রাপ্ত।</p>
 
-    <p>We keep the good panels. We fit genuine cells, matched capacities, and we refuse — politely, permanently — to build a repair on a part we would not put in our own phones. If a component is not good enough to survive our own pockets, it does not survive our counter. In a country where a phone is often the most expensive machine a family owns, this is not romance; it is arithmetic. It has cost us margin. It has never cost us a customer twice.</p>
+    <p>আমরা ভালো প্যানেলই রাখি। জেনুইন সেল বসাই, ক্যাপাসিটি মেলানো থাকে, আর এমন কোনো যন্ত্রাংশে আমরা — বিনয়ের সঙ্গে, কিন্তু চিরকালের জন্য — মেরামত গড়ি না, যেটা আমরা নিজেদের ফোনে দেব না। কোনো অংশ যদি আমাদের নিজেদের পকেট টিকিয়ে রাখার মতো না হয়, সেটা আমাদের কাউন্টারও পার করে না। যে দেশে ফোনই প্রায়ই একটা পরিবারের সবচেয়ে দামি যন্ত্র, সেখানে এটা আবেগ নয়; খাতার হিসাব। এতে আমাদের মার্জিন কমেছে — কিন্তু কোনো ক্রেতা দ্বিতীয়বার হারিয়েছি, তা নয়।</p>
 
-    <p>We believe in the right to fix. A phone you own should not expire on a software roadmap, and a repair should not cost more than the truth. So we quote before we open a screw, we return every removed part in a small bag, and we tell you plainly when a repair is not worth making. <em>Verdicts are free.</em> Noise is extra.</p>
+    <p>আমরা ‘মেরামতের অধিকারে’ বিশ্বাস করি। আপনার মালিকানার ফোন কোনো সফটওয়্যার-রোডম্যাপের মেয়াদে শেষ হয়ে যাওয়া উচিত নয়, আর মেরামতের দাম যেন সত্যের চেয়ে বেশি না হয়। তাই একটা স্ক্রু খোলার আগেই দাম বলে দিই, খোলা প্রতিটি অংশ ছোট্ট এক ব্যাগে করে ফেরত দিই, আর মেরামত যখন অমূলক, সরাসরি বলে দিই। <em lang="en">Verdicts are free.</em> আওয়াজের বিল আসে বাড়তি।</p>
 
-    <p>What follows is not a brochure. It is a record of the work, set the way the trade deserves — slowly, and in gold.</p>
+    <p>সামনের পৃষ্ঠাগুলো কোনো বিজ্ঞাপনি পুস্তিকা নয়; এটা কাজেরই খতিয়ান — যেভাবে এই পেশাটা পাওয়ার অধিকারী: ধীরে, আর সোনালি কালিতে।</p>
   </div>
 
   <div class="manifesto__sig">
     Arpon Telecom<br>
-    <span class="manifesto__sig-meta" data-contact="sigline">[CITY] · BANGLADESH · MMXXVI</span>
+    <span class="manifesto__sig-meta" data-contact="sigline">[শহর] · বাংলাদেশ · MMXXVI</span>
   </div>
 </section>
 
 <!-- ========== DIVIDER II ========== -->
 <div class="divider" role="presentation">
   <span class="divider__roman">II</span>
-  <span>— Contents —</span>
+  <span>— সূচিপত্র —</span>
 </div>
 
 <!-- ========== INDEX / TABLE OF CONTENTS ========== -->
 <section class="index reveal" id="contents">
   <div class="index__header">
-    <span class="eyebrow">FIVE CHAPTERS &amp; A SHOP</span>
-    <h2 class="index__title">Contents</h2>
+    <span class="eyebrow">পাঁচ অধ্যায় ও একটা দোকান</span>
+    <h2 class="index__title">সূচিপত্র</h2>
   </div>
 
   <ul class="index__list">
     <li>
       <a class="index__entry" href="#ch-01">
-        <span class="index__num">01 ——</span>
-        <span class="index__name">Screen &amp; Display</span>
-        <span class="index__cat">Hardware · Glass &amp; OLED</span>
-        <span class="index__page">P. 042</span>
+        <span class="index__num">০১ ——</span>
+        <span class="index__name">স্ক্রিন ও ডিসপ্লে</span>
+        <span class="index__cat">হার্ডওয়্যার · গ্লাস ও OLED</span>
+        <span class="index__page">পৃ. ০৪২</span>
       </a>
     </li>
     <li>
       <a class="index__entry" href="#ch-02">
-        <span class="index__num">02 ——</span>
-        <span class="index__name">Motherboard &amp; Chip-Level</span>
-        <span class="index__cat">The Heirloom Chapter</span>
-        <span class="index__page">P. 068</span>
+        <span class="index__num">০২ ——</span>
+        <span class="index__name">মাদারবোর্ড ও চিপ-লেভেল</span>
+        <span class="index__cat">উত্তরাধিকারের অধ্যায়</span>
+        <span class="index__page">পৃ. ০৬৮</span>
       </a>
     </li>
     <li>
       <a class="index__entry" href="#ch-03">
-        <span class="index__num">03 ——</span>
-        <span class="index__name">Battery &amp; Power</span>
-        <span class="index__cat">Power &amp; Safety</span>
-        <span class="index__page">P. 094</span>
+        <span class="index__num">০৩ ——</span>
+        <span class="index__name">ব্যাটারি ও পাওয়ার</span>
+        <span class="index__cat">শক্তি ও নিরাপত্তা</span>
+        <span class="index__page">পৃ. ০৯৪</span>
       </a>
     </li>
     <li>
       <a class="index__entry" href="#ch-04">
-        <span class="index__num">04 ——</span>
-        <span class="index__name">Software &amp; Unlocking</span>
-        <span class="index__cat">Firmware &amp; Data</span>
-        <span class="index__page">P. 118</span>
+        <span class="index__num">০৪ ——</span>
+        <span class="index__name">সফটওয়্যার ও আনলক</span>
+        <span class="index__cat">ফার্মওয়্যার ও ডেটা</span>
+        <span class="index__page">পৃ. ১১৮</span>
       </a>
     </li>
     <li>
       <a class="index__entry" href="#ch-05">
-        <span class="index__num">05 ——</span>
-        <span class="index__name">Water Damage &amp; Diagnostics</span>
-        <span class="index__cat">Free Diagnosis</span>
-        <span class="index__page">P. 142</span>
+        <span class="index__num">০৫ ——</span>
+        <span class="index__name">পানি-ক্ষত ও ডায়াগনোসিস</span>
+        <span class="index__cat">ফ্রি ডায়াগনোসিস</span>
+        <span class="index__page">পৃ. ১৪২</span>
       </a>
     </li>
     <li>
       <a class="index__entry" href="#shop">
-        <span class="index__num">06 ——</span>
-        <span class="index__name">The Shop</span>
-        <span class="index__cat">Gadgets &amp; Accessories</span>
-        <span class="index__page">P. 166</span>
+        <span class="index__num">০৬ ——</span>
+        <span class="index__name">দোকান</span>
+        <span class="index__cat">গ্যাজেট ও অ্যাক্সেসরিজ</span>
+        <span class="index__page">পৃ. ১৬৬</span>
       </a>
     </li>
     <li>
       <a class="index__entry" href="#letters">
-        <span class="index__num">07 ——</span>
-        <span class="index__name">Letters to the Editor</span>
-        <span class="index__cat">Testimonials</span>
-        <span class="index__page">P. 204</span>
+        <span class="index__num">০৭ ——</span>
+        <span class="index__name">সম্পাদকের কাছে চিঠি</span>
+        <span class="index__cat">ক্রেতাদের চিঠিপত্র</span>
+        <span class="index__page">পৃ. ২০৪</span>
       </a>
     </li>
   </ul>
@@ -1495,7 +1529,7 @@ body::after {
 <!-- ========== DIVIDER III ========== -->
 <div class="divider" role="presentation">
   <span class="divider__roman">III</span>
-  <span>— Selected Work —</span>
+  <span>— নির্বাচিত কর্ম —</span>
 </div>
 
 <!-- ========== CHAPTER 01 — SCREEN & DISPLAY ========== -->
@@ -1503,36 +1537,36 @@ body::after {
   <div class="spread__inner">
     <header class="spread__head">
       <span>ARPON TELECOM / MONOGRAPH I</span>
-      <span>CHAPTER 01 — SCREEN &amp; DISPLAY</span>
-      <span>P. 042—067</span>
+      <span>অধ্যায় ০১ — স্ক্রিন ও ডিসপ্লে</span>
+      <span>পৃ. ০৪২–০৬৭</span>
     </header>
 
     <div class="spread__chapter-wrap">
       <div class="spread__chapter">01</div>
       <div class="spread__chapter-label">
-        Screen &amp; Display
-        <small>Glass · OLED · Assemblies · Walk-in</small>
+        স্ক্রিন ও ডিসপ্লে
+        <small>গ্লাস · OLED · অ্যাসেম্বলি · ওয়াক-ইন</small>
       </div>
     </div>
 
-    <h3 class="spread__title">The glass breaks. The day doesn't have to.</h3>
-    <p class="spread__sub">Displays replaced while you take tea — glass, OLED and full assemblies, fitted, laminated and pressure-tested before they leave the bench.</p>
+    <h3 class="spread__title">কাচ ভেঙে যায়; দিনটা না-ও ভাঙতে পারে।</h3>
+    <p class="spread__sub">চা শেষ হওয়ার আগেই ডিসপ্লে বদলে যায় — গ্লাস, OLED আর ফুল অ্যাসেম্বলি; বসানো, ল্যামিনেশন আর প্রেশার-টেস্ট করে তবেই বেঞ্চ ছাড়ে।</p>
 
     <div class="spread__meta">
       <div class="spread__meta-item">
-        <span class="label">Service</span>
-        <span class="value">Screens, glass &amp; display assemblies</span>
+        <span class="label">সার্ভিস</span>
+        <span class="value">স্ক্রিন, গ্লাস ও ডিসপ্লে অ্যাসেম্বলি</span>
       </div>
       <div class="spread__meta-item">
-        <span class="label">Turnaround</span>
-        <span class="value">45–90 minutes, walk-in</span>
+        <span class="label">সময়</span>
+        <span class="value">৪৫–৯০ মিনিট, ওয়াক-ইন</span>
       </div>
       <div class="spread__meta-item">
-        <span class="label">Warranty</span>
-        <span class="value">6 months, parts &amp; fitting</span>
+        <span class="label">ওয়ারেন্টি</span>
+        <span class="value">৬ মাস, যন্ত্রাংশ ও ফিটিং</span>
       </div>
       <div class="spread__meta-item">
-        <span class="label">Coverage</span>
+        <span class="label">কভারেজ</span>
         <span class="value">iPhone · Samsung · Xiaomi · Realme · Tecno · Symphony</span>
       </div>
     </div>
@@ -1540,33 +1574,33 @@ body::after {
     <div class="spread__layout">
       <div class="spread__col-text">
         <div class="spread__body">
-          <p>A screen is the only part of the phone you ever actually touch. It deserves better than the cheapest flat-panel on the market, glued in haste under a ceiling fan. We fit original and OEM-grade assemblies, we check touch response corner to corner, and we do not hand a phone back until the colours sit exactly where the factory left them.</p>
-          <p>And when the <em>green line</em> appears on a Samsung AMOLED after an update — the defect the whole country has been arguing about — we test whether the maker's known-defect replacement still covers your set before you spend a single taka. Half the panels we refuse to sell were never the customer's to buy.</p>
-          <p>Crushed glass, ghost touch, ink blots, black corners — the display has a whole vocabulary of failure, and we speak all of it. Where only the glass is broken on a unit that still has a healthy panel, we separate and refit rather than replace the whole assembly, because <em>your data and your money both matter more than our margin.</em><sup>1</sup></p>
+          <p>স্ক্রিনই ফোনের একমাত্র অংশ, যাকে আপনি আসলে ছুঁয়ে দেখেন। সে যেন বাজারের সবচেয়ে সস্তা প্যানেল, আর সেটা ছাদের ফ্যানের নিচে তাড়াহুড়োয় আটকে দেওয়া — এর চেয়ে ভালো কিছু সে প্রাপ্য। আমরা অরিজিনাল ও OEM-গ্রেড অ্যাসেম্বলি বসাই, কোণা থেকে কোণা টাচ-রেসপন্স মেপে দেখি, আর রংগুলো যতক্ষণ না ঠিক ফ্যাক্টরি-জমানো জায়গায় বসে, ততক্ষণ ফোন হাতে ধরিয়ে দিই না।</p>
+          <p>আর স্যামসাং-এর AMOLED-এ আপডেটের পর <em lang="en">green line</em> দেখা দিলে — যে ত্রুটি নিয়ে সারা দেশ তর্কে মেতেছে — আপনি একটা টাকাও খরচ করার আগে আমরা পরীক্ষা করে দেখি, নির্মাতার নোটো-ত্রুটি রিপ্লেসমেন্ট প্রোগ্রামে আপনার সেট ঢুকে কি না। আমরা যে প্যানেলগুলো বিক্রি করতে অস্বীকার করি, তার অর্ধেকই আসলে ক্রেতার কেনারই দরকার ছিল না।</p>
+          <p>চুরমার কাচ, ঘোস্ট টাচ, কালির ছোপ, কালো কোণা — ডিসপ্লের ব্যর্থতার পুরো এক ভাষাই আমাদের জানা। প্যানেল ভালো থেকে শুধু কাচ ভাঙা হলে আমরা পুরো অ্যাসেম্বলি না বদলে কাচ আলাদা করে আবার বসাই — কারণ <em>আপনার ডেটা আর আপনার টাকা, দুটোই আমাদের মার্জিনের চেয়ে দামি।</em><sup>১</sup></p>
         </div>
 
-        <div class="spread__pullquote">A repair is a promise the shop keeps finishing.</div>
+        <div class="spread__pullquote">মেরামত আসলে এক প্রতিশ্রুতি — যেটা দোকান বারবার এসে পূর্ণ করে।</div>
 
         <div class="footnotes">
-          <p><sup>1</sup> "Original" does not mean expensive. It means fitted once.</p>
+          <p><sup>১</sup> ‘অরিজিনাল’ মানেই দামি নয়; মানে একবারই বসাতে হয়।</p>
         </div>
       </div>
 
       <div class="spread__col-visual">
         <figure class="plate">
           <span class="plate__corner plate__corner--tl">PL. 01.A</span>
-          <span class="plate__corner plate__corner--tr">DISPLAY / ASSEMBLY</span>
-          <span class="plate__corner plate__corner--bl">ORIGINAL OLED</span>
-          <span class="plate__corner plate__corner--br">BENCH 03</span>
-          <img src="https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/217cb8c5a267.webp" alt="An opened smartphone on the bench, its display assembly lifted clear of the frame" width="900" height="1100" loading="lazy">
+          <span class="plate__corner plate__corner--tr">ডিসপ্লে / অ্যাসেম্বলি</span>
+          <span class="plate__corner plate__corner--bl">অরিজিনাল OLED</span>
+          <span class="plate__corner plate__corner--br">বেঞ্চ ০৩</span>
+          <img src="https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/217cb8c5a267.webp" alt="বেঞ্চে খোলা একটা স্মার্টফোন, ডিসপ্লে অ্যাসেম্বলি ফ্রেম থেকে সরানো অবস্থায়" width="900" height="1100" loading="lazy">
           <figcaption class="plate__meta">
-            <span>PL. 01.A — DISPLAY ASSEMBLY / OEM</span>
-            <span>BENCH TESTED · BEFORE LAMINATION</span>
+            <span>PL. 01.A — ডিসপ্লে অ্যাসেম্বলি / OEM</span>
+            <span>বেঞ্চ-টেস্টেড · ল্যামিনেশনের আগে</span>
           </figcaption>
         </figure>
         <div class="spread__caption">
-          <span>Pl. 01.A — Display assembly, original panel, prior to lamination</span>
-          <span>Bench lamp, natural shade</span>
+          <span>Pl. 01.A — ডিসপ্লে অ্যাসেম্বলি, অরিজিনাল প্যানেল, ল্যামিনেশনের আগে</span>
+          <span>বেঞ্চ-ল্যাম্পের আলো, স্বাভাবিক শেড</span>
         </div>
       </div>
     </div>
@@ -1578,51 +1612,51 @@ body::after {
   <div class="spread__inner">
     <header class="spread__head">
       <span>ARPON TELECOM / MONOGRAPH I</span>
-      <span>CHAPTER 02 — MOTHERBOARD &amp; CHIP-LEVEL</span>
-      <span>P. 068—093</span>
+      <span>অধ্যায় ০২ — মাদারবোর্ড ও চিপ-লেভেল</span>
+      <span>পৃ. ০৬৮–০৯৩</span>
     </header>
 
     <div class="spread__chapter-wrap">
       <div class="spread__chapter">02</div>
       <div class="spread__chapter-label">
-        Motherboard &amp; Chip-Level
-        <small>The Heirloom Chapter · Micro-Soldering</small>
+        মাদারবোর্ড ও চিপ-লেভেল
+        <small>উত্তরাধিকারের অধ্যায় · মাইক্রো-সোল্ডারিং</small>
       </div>
     </div>
 
-    <h3 class="spread__title">Where other shops see a dead board, we see unasked questions.</h3>
-    <p class="spread__sub">Microscope work, reballing, trace repair — the slow, patient discipline of bringing logic boards back from verdicts handed down too quickly.</p>
+    <h3 class="spread__title">যেখানে অন্য দোকান মৃত বোর্ড দেখে, আমরা দেখি এখনো জিজ্ঞেস-না-করা অনেক প্রশ্ন।</h3>
+    <p class="spread__sub">মাইক্রোস্কোপের কাজ, রিবলিং, ট্রেস মেরামত — খুব দ্রুত রায় দিয়ে দেওয়া বোর্ডগুলোকে ধীরে, ধৈর্য ধরে ফিরিয়ে আনার সাধনা।</p>
 
     <div class="spread__meta">
       <div class="spread__meta-item">
-        <span class="label">Service</span>
-        <span class="value">Motherboard &amp; chip-level repair</span>
+        <span class="label">সার্ভিস</span>
+        <span class="value">মাদারবোর্ড ও চিপ-লেভেল মেরামত</span>
       </div>
       <div class="spread__meta-item">
-        <span class="label">Turnaround</span>
-        <span class="value">2–5 days, case by case</span>
+        <span class="label">সময়</span>
+        <span class="value">২–৫ দিন, কেস-ভিত্তিক</span>
       </div>
       <div class="spread__meta-item">
-        <span class="label">Warranty</span>
-        <span class="value">3 months on the repaired fault</span>
+        <span class="label">ওয়ারেন্টি</span>
+        <span class="value">সংশোধিত ত্রুটিতে ৩ মাস</span>
       </div>
       <div class="spread__meta-item">
-        <span class="label">Coverage</span>
-        <span class="value">Dead sets, no display, no charge, water boards</span>
+        <span class="label">কভারেজ</span>
+        <span class="value">মৃত সেট, ডিসপ্লে-হীন, চার্জ-হীন, পানি-ভেজা বোর্ড</span>
       </div>
     </div>
 
     <div class="spread__layout">
       <div class="spread__col-text">
         <div class="spread__body">
-          <p>This is the heirloom chapter. Most phones are not dead — they are one component away from living, and the component costs less than lunch. The difference between a verdict and a repair is a microscope, a steady hand, and the willingness to test rather than guess. We work at 10–45× magnification with hot air and micro-irons, reballing ICs, rebuilding pads, and running jumper wires thinner than an argument.<sup>2</sup></p>
-          <p>Boards are washed, corrosion is mapped, and every repair is photographed under the scope before and after, so you can see precisely what was wrong and what we did about it. No shortcuts, no "board-level problem, buy a new one" — unless the board truly says so.</p>
+          <p>এটা উত্তরাধিকারের অধ্যায়। বেশিরভাগ ফোন মরে না — বাঁচার জন্য দরকার হয় একটা ছোট্ট যন্ত্রাংশ, যার দাম এক বেলার খাবারের চেয়েও কম। রায় আর মেরামতের মধ্যে তফাত এতটুকুই: একটা মাইক্রোস্কোপ, একটা স্থির হাত, আর অনুমানের বদলে পরীক্ষা করার সাহস। আমরা কাজ করি ১০–৪৫× ম্যাগনিফিকেশনে, হট-এয়ার আর মাইক্রো-আয়রনে; IC রিবল করি, প্যাড গড়ে তুলি, আর বিতর্কের চেয়েও চিকন জাম্পার-তার বসাই।<sup>২</sup></p>
+          <p>বোর্ড ধুয়ে নেওয়া হয়, ক্ষয়ের মানচিত্র আঁকা হয়, আর প্রতিটি মেরামতের আগে-পরে স্কোপের নিচে ছবি তোলা হয় — যাতে আপনি নিজেই দেখতে পারেন, ঠিক কী নষ্ট ছিল আর আমরা তার কী করলাম। কোনো শর্টকাট নেই, আর ‘বোর্ডের সমস্যা, নতুন কিনে ফেলুন’-বাজিও নেই — যতক্ষণ না বোর্ড নিজেই তা-ই বলে।</p>
         </div>
 
-        <div class="spread__pullquote">Dead is a rumour. We interrogate the witnesses.</div>
+        <div class="spread__pullquote">মৃত্যু এখানে গুজব মাত্র। আমরা সাক্ষীদের জিজ্ঞাসাবাদ করি।</div>
 
         <div class="footnotes">
-          <p><sup>2</sup> Our scope has seen more drama than most television.</p>
+          <p><sup>২</sup> আমাদের স্কোপ বেশিরভাগ টেলিভিশনের চেয়ে বেশি নাটক দেখেছে।</p>
         </div>
       </div>
 
@@ -1630,7 +1664,7 @@ body::after {
         <div class="logo-display">
           <span class="plate__corner plate__corner--tl">PL. 02.A</span>
           <span class="plate__corner plate__corner--tr">ARPON / TELECOM</span>
-          <span class="plate__corner plate__corner--bl">THE MARK, CONSTRUCTED</span>
+          <span class="plate__corner plate__corner--bl">চিহ্ন, নির্মিত-রূপ</span>
           <span class="plate__corner plate__corner--br">MMXXVI</span>
 
           <!-- The Arpon mark, redrawn as a gold hairline construction:
@@ -1677,37 +1711,37 @@ body::after {
           </div>
         </div>
         <div class="spread__caption">
-          <span>Pl. 02.A — Three arcs, three nodes, one honest A</span>
-          <span>Gold ink, hairline 1.2</span>
+          <span>Pl. 02.A — তিনটি চাপ, তিনটি নোড, একটা সৎ A</span>
+          <span>সোনালি কালি, হেয়ারলাইন ১.২</span>
         </div>
       </div>
     </div>
 
     <div class="bench-spec">
-      <span class="bench-spec__eyebrow">THE BENCH, SPECIFIED</span>
+      <span class="bench-spec__eyebrow">বেঞ্চের স্পেসিফিকেশন</span>
       <div class="bench-spec__item">
-        <span class="label">Magnification</span>
-        <span class="value">10× – 45×, stereo scope</span>
+        <span class="label">ম্যাগনিফিকেশন</span>
+        <span class="value">১০×–৪৫×, স্টেরিও স্কোপ</span>
       </div>
       <div class="bench-spec__item">
-        <span class="label">Irons</span>
-        <span class="value">Hot-air rework, 0.2&nbsp;mm tips</span>
+        <span class="label">আয়রন</span>
+        <span class="value">হট-এয়ার রিওয়ার্ক, ০.২&nbsp;মিমি টিপ</span>
       </div>
       <div class="bench-spec__item">
-        <span class="label">Reballing</span>
-        <span class="value">BGA stencils, both alloys</span>
+        <span class="label">রিবলিং</span>
+        <span class="value">BGA স্টেনসিল, দুই অ্যালয়েই</span>
       </div>
       <div class="bench-spec__item">
-        <span class="label">Bench PSU</span>
-        <span class="value">0–30 V, current watched</span>
+        <span class="label">বেঞ্চ PSU</span>
+        <span class="value">০–৩০ ভোল্ট, কারেন্ট-ওয়াচ</span>
       </div>
       <div class="bench-spec__item">
-        <span class="label">Donor Boards</span>
-        <span class="value">300+ units on the shelf</span>
+        <span class="label">ডোনার বোর্ড</span>
+        <span class="value">৩০০+ সেট শেলফে</span>
       </div>
       <div class="bench-spec__item">
-        <span class="label">Photography</span>
-        <span class="value">Every repair, before &amp; after</span>
+        <span class="label">ফটোগ্রাফি</span>
+        <span class="value">প্রতিটি মেরামতের আগে-পরে</span>
       </div>
     </div>
   </div>
@@ -1718,94 +1752,94 @@ body::after {
   <div class="spread__inner">
     <header class="spread__head">
       <span>ARPON TELECOM / MONOGRAPH I</span>
-      <span>CHAPTER 03 — BATTERY &amp; POWER</span>
-      <span>P. 094—117</span>
+      <span>অধ্যায় ০৩ — ব্যাটারি ও পাওয়ার</span>
+      <span>পৃ. ০৯৪–১১৭</span>
     </header>
 
     <div class="spread__chapter-wrap">
       <div class="spread__chapter">03</div>
       <div class="spread__chapter-label">
-        Battery &amp; Power
-        <small>Genuine Cells · Safety First</small>
+        ব্যাটারি ও পাওয়ার
+        <small>জেনুইন সেল · নিরাপত্তা আগে</small>
       </div>
     </div>
 
-    <h3 class="spread__title">A swollen battery is not a feature. It is a warning.</h3>
-    <p class="spread__sub">Genuine cells fitted in thirty minutes — with the old cell returned to you in a bag, because proof is part of the service.</p>
+    <h3 class="spread__title">ফোলা ব্যাটারি কোনো ফিচার নয়; সে একটা সতর্কবার্তা।</h3>
+    <p class="spread__sub">৩০ মিনিটে জেনুইন সেল বসানো হয় — পুরনো সেল ব্যাগে করে আপনারই হাতে দিয়ে দেওয়া হয়, কারণ প্রমাণও সার্ভিসের অংশ।</p>
 
     <div class="spread__meta">
       <div class="spread__meta-item">
-        <span class="label">Service</span>
-        <span class="value">Batteries, charging ports &amp; power</span>
+        <span class="label">সার্ভিস</span>
+        <span class="value">ব্যাটারি, চার্জিং পোর্ট ও পাওয়ার</span>
       </div>
       <div class="spread__meta-item">
-        <span class="label">Turnaround</span>
-        <span class="value">30 minutes, most models</span>
+        <span class="label">সময়</span>
+        <span class="value">৩০ মিনিট, বেশিরভাগ মডেলে</span>
       </div>
       <div class="spread__meta-item">
-        <span class="label">Warranty</span>
-        <span class="value">12 months on genuine cells</span>
+        <span class="label">ওয়ারেন্টি</span>
+        <span class="value">জেনুইন সেলে ১২ মাস</span>
       </div>
       <div class="spread__meta-item">
-        <span class="label">Coverage</span>
-        <span class="value">iPhone · Samsung · Xiaomi · Tecno · tablets · power banks</span>
+        <span class="label">কভারেজ</span>
+        <span class="value">iPhone · Samsung · Xiaomi · Tecno · ট্যাবলেট · পাওয়ার ব্যাংক</span>
       </div>
     </div>
 
     <div class="spread__layout">
       <div class="spread__col-text">
         <div class="spread__body">
-          <p>We fit genuine and grade-A cells only, and we will happily show you the difference under the counter light: matched capacity, honest cycle counts, thermal protection that actually exists. An aftermarket cell is a small fire with a discount sticker on it. We do not stock them. When another counter offers you an "original" iPhone battery for the price of lunch, ask what is actually inside the wrapper — the genuine cell costs real money because it is real. We have, in ten years, never once used a cheap cable.<sup>3</sup></p>
-          <p>Charging trouble is usually not the battery at all — it is the port, the IC beneath it, or the cable that came free with a phone case. We diagnose the whole chain before we sell you anything, and we test every replacement to full charge before it goes home in your pocket.</p>
+          <p>আমরা বসাই শুধু জেনুইন বা গ্রেড-A সেল, আর কাউন্টারের আলোয় পার্থক্যটা দেখাতেও কখনো কুণ্ঠিত হই না: মেলা ক্যাপাসিটি, সৎ সাইকেল-গণনা, আর সত্যিকারের থার্মাল-প্রোটেকশন — যেটা আসলেই থাকে। নকল সেল আসলে ছোটখাটো এক আগুন, গায়ে লেগে থাকে ডিসকাউন্টের স্টিকার; সেটা আমরা মজুতই রাখি না। অন্য কোনো কাউন্টার যখন লাঞ্চের দামে ‘অরিজিনাল’ আইফোন ব্যাটারি অফার করে, মোড়কের ভেতরে আসলে কী আছে জিগাই নিন — জেনুইন সেলের দাম সত্যিই হয়, কারণ সেটা সত্যিই। দশ বছরে সস্তা কেবল ব্যবহার করেছি একবারও না।<sup>৩</sup></p>
+          <p>চার্জিং-সমস্যা প্রায়ই ব্যাটারির দোষে হয় না বললেই চলে — দোষটা থাকে পোর্টে, তার নিচের IC-তে, কিংবা কেসের সঙ্গে ফ্রি-পাওয়া কেবলে। আপনাকে কিছু বিক্রি করার আগেই আমরা পুরো চেইনটা ডায়াগনোস করি, আর প্রতিটি বদলানো অংশ পকেটে যাওয়ার আগে ফুল-চার্জ টেস্ট পার করায়।</p>
         </div>
 
-        <div class="spread__pullquote">The old cell comes back to you in a bag. Proof is part of the service.</div>
+        <div class="spread__pullquote">পুরনো সেল ব্যাগে ভরে ফেরত যায় আপনার হাতে। প্রমাণই সার্ভিসের অংশ।</div>
 
         <div class="footnotes">
-          <p><sup>3</sup> The cable in question costs more than lunch. It has outlived four phones.</p>
+          <p><sup>৩</sup> খোদ ওই কেবলের দামই লাঞ্চের চেয়ে বেশি; চারটা ফোনের পরও টিকে আছে।</p>
         </div>
       </div>
 
       <div class="spread__col-visual">
         <div class="ledger">
           <div class="ledger__head">
-            <span>LEDGER — PL. 03.A</span>
-            <span>GENUINE vs AFTERMARKET</span>
+            <span>খতিয়ান — PL. 03.A</span>
+            <span>জেনুইন বনাম বাজারি</span>
           </div>
           <div class="ledger__row head">
             <span></span>
-            <span>Genuine (ours)</span>
-            <span>Aftermarket</span>
+            <span>জেনুইন (আমাদের)</span>
+            <span>বাজারি</span>
           </div>
           <div class="ledger__row">
-            <span class="ledger__k">Capacity</span>
-            <span class="ledger__yes">As rated, matched</span>
-            <span class="ledger__no">60–80% of the printing</span>
+            <span class="ledger__k">ক্যাপাসিটি</span>
+            <span class="ledger__yes">রেট-অনুযায়ী, মেলানো</span>
+            <span class="ledger__no">ছাপার ৬০–৮০%</span>
           </div>
           <div class="ledger__row">
-            <span class="ledger__k">Thermals</span>
-            <span class="ledger__yes">Fused &amp; protected</span>
-            <span class="ledger__no">Hopeful</span>
+            <span class="ledger__k">তাপ-সুরক্ষা</span>
+            <span class="ledger__yes">ফিউজড ও সুরক্ষিত</span>
+            <span class="ledger__no">আশার ওপর ভরসা</span>
           </div>
           <div class="ledger__row">
-            <span class="ledger__k">Cycle Life</span>
-            <span class="ledger__yes">An honest count</span>
-            <span class="ledger__no">A rumour</span>
+            <span class="ledger__k">চার্জ-সাইকেল</span>
+            <span class="ledger__yes">একটা সৎ গণনা</span>
+            <span class="ledger__no">একটা গুজব</span>
           </div>
           <div class="ledger__row">
-            <span class="ledger__k">Warranty</span>
-            <span class="ledger__yes">12 months, written</span>
-            <span class="ledger__no">A handshake, maybe</span>
+            <span class="ledger__k">ওয়ারেন্টি</span>
+            <span class="ledger__yes">১২ মাস, লিখিত</span>
+            <span class="ledger__no">হাত নাড়া, হয়তো</span>
           </div>
           <div class="ledger__row">
-            <span class="ledger__k">Old Cell</span>
-            <span class="ledger__yes">Returned in a bag</span>
-            <span class="ledger__no">Vanishes</span>
+            <span class="ledger__k">পুরনো সেল</span>
+            <span class="ledger__yes">ব্যাগে করে ফেরত</span>
+            <span class="ledger__no">মিলিয়ে যায়</span>
           </div>
         </div>
         <div class="spread__caption">
-          <span>Pl. 03.A — The ledger we keep against the market</span>
-          <span>Audited seasonally</span>
+          <span>Pl. 03.A — বাজারের বিরুদ্ধে আমাদের খতিয়ান</span>
+          <span>প্রতি মৌসুমে হিসাব-নিরীক্ষিত</span>
         </div>
       </div>
     </div>
@@ -1817,80 +1851,80 @@ body::after {
   <div class="spread__inner">
     <header class="spread__head">
       <span>ARPON TELECOM / MONOGRAPH I</span>
-      <span>CHAPTER 04 — SOFTWARE &amp; UNLOCKING</span>
-      <span>P. 118—141</span>
+      <span>অধ্যায় ০৪ — সফটওয়্যার ও আনলক</span>
+      <span>পৃ. ১১৮–১৪১</span>
     </header>
 
     <div class="spread__chapter-wrap">
       <div class="spread__chapter">04</div>
       <div class="spread__chapter-label">
-        Software &amp; Unlocking
-        <small>Flashing · FRP · Data Recovery</small>
+        সফটওয়্যার ও আনলক
+        <small>ফ্ল্যাশিং · FRP · ডেটা রিকভারি</small>
       </div>
     </div>
 
-    <h3 class="spread__title">The quiet half of the craft.</h3>
-    <p class="spread__sub">Flashing, FRP, unlocking and data recovery — performed with consent, patience, and a backup taken before anything else moves.</p>
+    <h3 class="spread__title">কারুকাজের শান্ত অর্ধেকটা।</h3>
+    <p class="spread__sub">ফ্ল্যাশিং, FRP, আনলক ও ডেটা রিকভারি — সবই সম্মতি নিয়ে, ধৈর্য নিয়ে, আর যা-ই হোক তার আগে ব্যাকআপ নিয়ে।</p>
 
     <div class="spread__meta">
       <div class="spread__meta-item">
-        <span class="label">Service</span>
-        <span class="value">Software, flashing &amp; unlocking</span>
+        <span class="label">সার্ভিস</span>
+        <span class="value">সফটওয়্যার, ফ্ল্যাশিং ও আনলক</span>
       </div>
       <div class="spread__meta-item">
-        <span class="label">Turnaround</span>
-        <span class="value">Same day, most cases</span>
+        <span class="label">সময়</span>
+        <span class="value">বেশিরভাগ কেসেই একই দিনে</span>
       </div>
       <div class="spread__meta-item">
-        <span class="label">Warranty</span>
-        <span class="value">Firmware guaranteed stable</span>
+        <span class="label">ওয়ারেন্টি</span>
+        <span class="value">ফার্মওয়্যার স্থিতিশীলই থাকবে</span>
       </div>
       <div class="spread__meta-item">
-        <span class="label">Coverage</span>
-        <span class="value">Android &amp; iOS · FRP, Mi &amp; screen locks</span>
+        <span class="label">কভারেজ</span>
+        <span class="value">Android ও iOS · FRP, Mi ও স্ক্রিন লক</span>
       </div>
     </div>
 
     <div class="specimen-stage">
-      <span class="specimen-stage__corner specimen-stage__corner--tl">PL. 04.A — TYPE SPECIMEN</span>
-      <span class="specimen-stage__corner specimen-stage__corner--br">THE QUIET HALF</span>
-      <div class="specimen-stage__glyph">S<em>f</em></div>
-      <p class="specimen-stage__caption">Sf, for software — the half of repair that has no screws.</p>
+      <span class="specimen-stage__corner specimen-stage__corner--tl">PL. 04.A — টাইপ স্পেসিমেন</span>
+      <span class="specimen-stage__corner specimen-stage__corner--br">শান্ত অর্ধেক</span>
+      <div class="specimen-stage__glyph">স<em>ফ</em></div>
+      <p class="specimen-stage__caption">সফ — সফটওয়্যারের সফ; যে মেরামতে কোনো স্ক্রু নেই।</p>
     </div>
 
     <div class="type-features">
       <div class="type-features__item">
-        <span class="num">01</span>
-        <span class="label">Flashing</span>
-        <span class="desc">Stock firmware &amp; brick rescue</span>
+        <span class="num">০১</span>
+        <span class="label">ফ্ল্যাশিং</span>
+        <span class="desc">স্টক ফার্মওয়্যার ও ব্রিক-উদ্ধার</span>
       </div>
       <div class="type-features__item">
-        <span class="num">02</span>
+        <span class="num">০২</span>
         <span class="label">FRP</span>
-        <span class="desc">Verification for rightful owners</span>
+        <span class="desc">সত্যিকারের মালিকের ভেরিফিকেশন</span>
       </div>
       <div class="type-features__item">
-        <span class="num">03</span>
-        <span class="label">Recovery</span>
-        <span class="desc">Photos off dying storage</span>
+        <span class="num">০৩</span>
+        <span class="label">রিকভারি</span>
+        <span class="desc">মরণ-স্টোরেজ থেকে ছবি ফেরানো</span>
       </div>
       <div class="type-features__item">
-        <span class="num">04</span>
-        <span class="label">Unlocking</span>
-        <span class="desc">With proof, with paperwork</span>
+        <span class="num">০৪</span>
+        <span class="label">আনলক</span>
+        <span class="desc">প্রমাণ-সহ, কাগজপত্র-সহ</span>
       </div>
     </div>
 
     <div class="spread__narrow">
       <div class="spread__body">
-        <p>Software repair is surgery without anaesthetic: the patient watches everything. So we explain each step before we take it, we back up first — <em>always first</em> — and we never touch data we have not been asked to touch.<sup>4</sup> The small faults cost a cup of tea's worth of taka; the large ones cost an afternoon. Both are quoted before a single setting changes.</p>
-        <p>FRP and lock work is done for rightful owners with proof of ownership — bring the box, the receipt, or the account itself. The machines are capable of almost anything; the shop, of rather less. That is deliberate.</p>
+        <p>সফটওয়্যার-মেরামত এক অপারেশন, যেখানে কোনো অ্যানেস্থেসিয়া নেই: রোগী সবটা চোখের সামনে দেখে। তাই প্রতিটি ধাপ আগে বুঝিয়ে বলি, সবার আগে ব্যাকআপ নিই — <em>সবসময় সবার আগে</em> — আর যে ডেটায় হাত দিতে বলা হয়নি, সেখানে হাতই দিই না।<sup>৪</sup> ছোট সমস্যার দাম এক কাপ চায়ের টাকা; বড়গুলোর দাম এক বিকেল। দুটোই বলা হয় আগে — একটা সেটিংসও না বদলানোর আগে।</p>
+        <p>FRP আর লকের কাজ করা হয় শুধু সত্যিকারের মালিকের জন্য, মালিকানার প্রমাণ-সহ — বক্স, কাগজ, কিংবা অ্যাকাউন্ট নিজেই নিয়ে আসুন। যন্ত্র প্রায় সবকিছুই পারে; দোকান পারে তার চেয়ে অনেক কম। এটা ইচ্ছাকৃত।</p>
       </div>
 
-      <div class="spread__pullquote">The data matters more than the device. The device, we can always fix.</div>
+      <div class="spread__pullquote">ডেটা যন্ত্রের চেয়ে দামি; যন্ত্র আমরা তো যে-কোনো দিন সারাতেই পারি।</div>
 
       <div class="footnotes">
-        <p><sup>4</sup> We do not look at your photographs. This is policy, not squeamishness.</p>
+        <p><sup>৪</sup> আপনার ছবিগুলো আমরা দেখি না। এটা নীতি, বুক-কাঁপুনি নয়।</p>
       </div>
     </div>
   </div>
@@ -1901,76 +1935,76 @@ body::after {
   <div class="spread__inner">
     <header class="spread__head">
       <span>ARPON TELECOM / MONOGRAPH I</span>
-      <span>CHAPTER 05 — WATER DAMAGE &amp; DIAGNOSTICS</span>
-      <span>P. 142—165</span>
+      <span>অধ্যায় ০৫ — পানি-ক্ষত ও ডায়াগনোসিস</span>
+      <span>পৃ. ১৪২–১৬৫</span>
     </header>
 
     <div class="spread__chapter-wrap">
       <div class="spread__chapter">05</div>
       <div class="spread__chapter-label">
-        Water Damage &amp; Diagnostics
-        <small>Free Diagnosis · Ultrasonic Treatment</small>
+        পানি-ক্ষত ও ডায়াগনোসিস
+        <small>ফ্রি ডায়াগনোসিস · আল্ট্রাসনিক ট্রিটমেন্ট</small>
       </div>
     </div>
 
-    <h3 class="spread__title">Bring it in wet. Leave with a verdict, not an invoice.</h3>
-    <p class="spread__sub">Free, honest diagnosis — every device, every condition — followed by ultrasonic board treatment if the verdict says the fight is worth having.</p>
+    <h3 class="spread__title">ভেজা অবস্থায় আনুন; চলে যান রায় নিয়ে — ইনভয়েস নয়।</h3>
+    <p class="spread__sub">ফ্রি আর সৎ ডায়াগনোসিস — প্রতিটি যন্ত্র, যে-কোনো অবস্থায় — তারপর রায় যদি বলে লড়াই সার্থক, তবেই আল্ট্রাসনিক বোর্ড-ট্রিটমেন্ট।</p>
 
     <div class="spread__meta">
       <div class="spread__meta-item">
-        <span class="label">Service</span>
-        <span class="value">Water damage &amp; full diagnostics</span>
+        <span class="label">সার্ভিস</span>
+        <span class="value">পানি-ক্ষত ও সম্পূর্ণ ডায়াগনোসিস</span>
       </div>
       <div class="spread__meta-item">
-        <span class="label">Turnaround</span>
-        <span class="value">Diagnosis free, same day</span>
+        <span class="label">সময়</span>
+        <span class="value">ডায়াগনোসিস ফ্রি, একই দিনে</span>
       </div>
       <div class="spread__meta-item">
-        <span class="label">Warranty</span>
-        <span class="value">90 days on board treatment</span>
+        <span class="label">ওয়ারেন্টি</span>
+        <span class="value">বোর্ড-ট্রিটমেন্টে ৯০ দিন</span>
       </div>
       <div class="spread__meta-item">
-        <span class="label">Coverage</span>
-        <span class="value">Any condition, any brand, any state</span>
+        <span class="label">কভারেজ</span>
+        <span class="value">যে-কোনো অবস্থা, যে-কোনো ব্র্যান্ড, যে-কোনো ভেজা ইতিহাস</span>
       </div>
     </div>
 
     <div class="spread__layout">
       <div class="spread__col-text">
         <div class="spread__body">
-          <p>Monsoon is a season; accidents are a calendar. Whatever the liquid — pond, tea, chlorine, or the sea — the procedure is the same: open, wash, map the corrosion, dry with care, and then test honestly before quoting a single taka. The brand counters charge ৳500 merely to hear the complaint; here, the listening is free. The diagnosis costs nothing, and it comes with a straight answer.<sup>5</sup></p>
-          <p>Ultrasonic baths lift what the flood leaves behind; under the scope we rebuild what the bath uncovers. Some boards are beyond saving, and we will tell you so for free — because a verdict you can trust is worth more than a repair you cannot.</p>
+          <p>বর্ষা একটা ঋতু; দুর্ঘটনা পুরো এক বর্ষপঞ্জি। তরল যা-ই হোক — পুকুরের পানি, চা, ক্লোরিন কিংবা সমুদ্র — পদ্ধতি এক: খোলা, ধোয়া, ক্ষয়ের মানচিত্র আঁকা, যত্নে শুকানো, আর তারপর একটা টাকার কোটেশনের আগে সৎভাবে পরীক্ষা। ব্র্যান্ড-কাউন্টার অভিযোগটা শুনেই নেয় ৳৫০০; এখানে শোনাটা ফ্রি। ডায়াগনোসিস একদম বিনামূল্যে, সঙ্গে একটা সোজাসাপ্টা উত্তর।<sup>৫</sup></p>
+          <p>আল্ট্রাসনিক বাথ বন্যার রেখে-যাওয়া সব তুলে ফেলে; স্কোপের নিচে আমরা গড়ে তুলি যা বাথ উন্মোচন করে। কিছু বোর্ড সত্যিই বাঁচার বাইরে চলে যায়, আর সে রায়ও আমরা বিনামূল্যেই দিই — কারণ একটা বিশ্বাসযোগ্য রায়, একটা অবিশ্বাস্য মেরামতের চেয়ে বেশি মূল্যবান।</p>
         </div>
 
-        <div class="spread__pullquote">Free diagnosis. Honest verdicts. Repairs only if the board deserves them.</div>
+        <div class="spread__pullquote">ফ্রি ডায়াগনোসিস। সৎ রায়। মেরামত তবেই, যদি বোর্ড প্রাপ্য হয়।</div>
 
         <div class="footnotes">
-          <p><sup>5</sup> Rice fixes nothing. It seasons the corrosion. See us instead.</p>
+          <p><sup>৫</sup> ভাত কিছুই সারায় না; ক্ষয়টাকে শুধু মশলায় ঢেকে দেয়। বরং আমাদের কাছে আসুন।</p>
         </div>
       </div>
 
       <div class="spread__col-visual">
-        <div class="ticket" role="img" aria-label="An intake ticket: diagnosis free, no fix no fee">
+        <div class="ticket" role="img" aria-label="একটা গ্রহণ-পর্চি: ডায়াগনোসিস ফ্রি, ঠিক না হলে ফি নেই">
           <div class="ticket__head">
-            <span>ARPON TELECOM</span>
-            <span>INTAKE</span>
+            <span>আরপন টেলিকম</span>
+            <span>গ্রহণ</span>
           </div>
-          <div class="ticket__brand">Intake Ticket</div>
-          <div class="ticket__no">Nº 0547 — DESK COPY</div>
-          <div class="ticket__row"><span class="k">Device</span><span class="v">[Your phone here]</span></div>
-          <div class="ticket__row"><span class="k">Condition</span><span class="v">"Brief swim"</span></div>
-          <div class="ticket__row"><span class="k">Diagnosis</span><span class="v">Free · Same day</span></div>
-          <div class="ticket__row"><span class="k">Quote</span><span class="v">Before work, always</span></div>
-          <div class="ticket__row"><span class="k">Fix or not</span><span class="v">You decide</span></div>
-          <div class="ticket__stamp">NO FIX · NO FEE</div>
+          <div class="ticket__brand">গ্রহণ-পর্চি</div>
+          <div class="ticket__no">Nº ০৫৪৭ — ডেস্ক কপি</div>
+          <div class="ticket__row"><span class="k">ডিভাইস</span><span class="v">[আপনার ফোনের নাম]</span></div>
+          <div class="ticket__row"><span class="k">অবস্থা</span><span class="v">‘ছোট্ট এক সাঁতার’</span></div>
+          <div class="ticket__row"><span class="k">ডায়াগনোসিস</span><span class="v">ফ্রি · একই দিনে</span></div>
+          <div class="ticket__row"><span class="k">কোটেশন</span><span class="v">কাজের আগেই, সবসময়</span></div>
+          <div class="ticket__row"><span class="k">ঠিক হবে কি না</span><span class="v">আপনার সিদ্ধান্ত</span></div>
+          <div class="ticket__stamp">ঠিক না হলে · ফি নেই</div>
           <div class="ticket__foot">
-            <span>KEEP THIS HALF</span>
-            <span>VALID ALL MONSOON</span>
+            <span>এই অর্ধেকটা রেখে দিন</span>
+            <span>পুরো বর্ষা মৌসুম বৈধ</span>
           </div>
         </div>
         <div class="spread__caption">
-          <span>Pl. 05.A — The intake ticket, as issued</span>
-          <span>Desk copy, carbon none</span>
+          <span>Pl. 05.A — গ্রহণ-পর্চি, যেমন ইস্যু হয়</span>
+          <span>ডেস্ক কপি, কার্বন-বিহীন</span>
         </div>
       </div>
     </div>
@@ -1979,71 +2013,71 @@ body::after {
 <!-- ========== DIVIDER IV ========== -->
 <div class="divider" role="presentation">
   <span class="divider__roman">IV</span>
-  <span>— Gadgets &amp; Accessories —</span>
+  <span>— গ্যাজেট ও অ্যাক্সেসরিজ —</span>
 </div>
 
 <!-- ========== THE SHOP — DRAGGABLE SPECIMEN DESK ========== -->
 <div class="section-head reveal" id="shop">
-  <div class="section-head__num">Plate Series</div>
-  <h2 class="section-head__title">Gadgets &amp; <em>Accessories</em></h2>
-  <p class="section-head__sub">Six categories on one desk. Drag the papers; wheel or pinch to magnify. Everything shown here is on the shelf today.</p>
+  <div class="section-head__num">প্লেট-সিরিজ</div>
+  <h2 class="section-head__title">গ্যাজেট ও <em>অ্যাক্সেসরিজ</em></h2>
+  <p class="section-head__sub">এক বেঞ্চে ছয়টা ক্যাটাগরি। কাগজগুলো টেনে সরান; হুইল বা পিঞ্চ করে বড় করুন। এখানে দেখানো সবকিছু আজও শেলফে।</p>
 </div>
 
 <div class="specimens">
   <div class="specimens__desk" id="desk">
-    <p class="specimens__hint">DRAG THE PAPERS · WHEEL / PINCH TO MAGNIFY · <span class="bn">টেনে সাজান</span></p>
+    <p class="specimens__hint">কাগজ টেনে সরান · হুইল / পিঞ্চে বড় করুন</p>
 
-    <article class="specimen" tabindex="0" aria-label="Cases and covers, in stock, 150 to 1500 taka">
+    <article class="specimen" tabindex="0" aria-label="কভার ও প্যানেল, স্টকে, ১৫০ থেকে ১,৫০০ টাকা">
       <div class="specimen__paper">
-        <header class="specimen__head"><span>NO. 01</span><span>CATEGORY</span></header>
-        <div class="specimen__aa">C<em>c</em></div>
-        <p class="specimen__alphabet">Armor, leather, silicone, clear — a wardrobe for every pocket.</p>
-        <footer class="specimen__footer"><span>IN STOCK</span><span class="specimen__price">৳150–1,500</span></footer>
+        <header class="specimen__head"><span>নং ০১</span><span>ক্যাটাগরি</span></header>
+        <div class="specimen__aa">ক<em>ভা</em></div>
+        <p class="specimen__alphabet">আর্মর, লেদার, সিলিকন, স্বচ্ছ — প্রতিটা পকেটের পোশাক, সব স্বাদে।</p>
+        <footer class="specimen__footer"><span>স্টকে আছে</span><span class="specimen__price">৳১৫০–১,৫০০</span></footer>
       </div>
     </article>
 
-    <article class="specimen" tabindex="0" aria-label="Chargers and cables, in stock, 250 to 2500 taka">
+    <article class="specimen" tabindex="0" aria-label="চার্জার ও কেবল, স্টকে, ২৫০ থেকে ২,৫০০ টাকা">
       <div class="specimen__paper">
-        <header class="specimen__head"><span>NO. 02</span><span>CATEGORY</span></header>
-        <div class="specimen__aa">C<em>h</em></div>
-        <p class="specimen__alphabet">Braided, fast, honest wattage — cables that outlive phones.</p>
-        <footer class="specimen__footer"><span>IN STOCK</span><span class="specimen__price">৳250–2,500</span></footer>
+        <header class="specimen__head"><span>নং ০২</span><span>ক্যাটাগরি</span></header>
+        <div class="specimen__aa">চা<em>র্জ</em></div>
+        <p class="specimen__alphabet">ব্রেইডেড, ফাস্ট, সৎ ওয়াটেজ — ফোনের চেয়েও দীর্ঘজীবী কেবল।</p>
+        <footer class="specimen__footer"><span>স্টকে আছে</span><span class="specimen__price">৳২৫০–২,৫০০</span></footer>
       </div>
     </article>
 
-    <article class="specimen" tabindex="0" aria-label="Earbuds and audio, in stock, 500 to 6000 taka">
+    <article class="specimen" tabindex="0" aria-label="ইয়ারবাড ও অডিও, স্টকে, ৫০০ থেকে ৬,০০০ টাকা">
       <div class="specimen__paper">
-        <header class="specimen__head"><span>NO. 03</span><span>CATEGORY</span></header>
-        <div class="specimen__aa">E<em>a</em></div>
-        <p class="specimen__alphabet">TWS, neckbands &amp; small loud rooms.</p>
-        <footer class="specimen__footer"><span>IN STOCK</span><span class="specimen__price">৳500–6,000</span></footer>
+        <header class="specimen__head"><span>নং ০৩</span><span>ক্যাটাগরি</span></header>
+        <div class="specimen__aa">ই<em>য়</em></div>
+        <p class="specimen__alphabet">TWS, নেকব্যান্ড আর ছোটখাটো উচ্চস্বরের ঘর।</p>
+        <footer class="specimen__footer"><span>স্টকে আছে</span><span class="specimen__price">৳৫০০–৬,০০০</span></footer>
       </div>
     </article>
 
-    <article class="specimen" tabindex="0" aria-label="Power banks, in stock, 800 to 3500 taka">
+    <article class="specimen" tabindex="0" aria-label="পাওয়ার ব্যাংক, স্টকে, ৮০০ থেকে ৩,৫০০ টাকা">
       <div class="specimen__paper">
-        <header class="specimen__head"><span>NO. 04</span><span>CATEGORY</span></header>
-        <div class="specimen__aa">P<em>b</em></div>
-        <p class="specimen__alphabet">Ten to thirty thousand mAh of pocket insurance.</p>
-        <footer class="specimen__footer"><span>IN STOCK</span><span class="specimen__price">৳800–3,500</span></footer>
+        <header class="specimen__head"><span>নং ০৪</span><span>ক্যাটাগরি</span></header>
+        <div class="specimen__aa">পা<em>ও</em></div>
+        <p class="specimen__alphabet">দশ থেকে ত্রিশ হাজার mAh-র পকেট-বিমা।</p>
+        <footer class="specimen__footer"><span>স্টকে আছে</span><span class="specimen__price">৳৮০০–৩,৫০০</span></footer>
       </div>
     </article>
 
-    <article class="specimen" tabindex="0" aria-label="Screen guards, in stock, 100 to 600 taka">
+    <article class="specimen" tabindex="0" aria-label="স্ক্রিন গার্ড, স্টকে, ১০০ থেকে ৬০০ টাকা">
       <div class="specimen__paper">
-        <header class="specimen__head"><span>NO. 05</span><span>CATEGORY</span></header>
-        <div class="specimen__aa">S<em>g</em></div>
-        <p class="specimen__alphabet">Tempered, privacy, ceramic — fitted while you wait.</p>
-        <footer class="specimen__footer"><span>IN STOCK</span><span class="specimen__price">৳100–600</span></footer>
+        <header class="specimen__head"><span>নং ০৫</span><span>ক্যাটাগরি</span></header>
+        <div class="specimen__aa">স্ক্রি<em>ন</em></div>
+        <p class="specimen__alphabet">টেম্পার্ড, প্রাইভেসি, সিরামিক — অপেক্ষার মধ্যেই বসানো হয়।</p>
+        <footer class="specimen__footer"><span>স্টকে আছে</span><span class="specimen__price">৳১০০–৬০০</span></footer>
       </div>
     </article>
 
-    <article class="specimen" tabindex="0" aria-label="Smart watches, in stock, 1200 to 8000 taka">
+    <article class="specimen" tabindex="0" aria-label="স্মার্ট ঘড়ি, স্টকে, ১,২০০ থেকে ৮,০০০ টাকা">
       <div class="specimen__paper">
-        <header class="specimen__head"><span>NO. 06</span><span>CATEGORY</span></header>
-        <div class="specimen__aa">S<em>w</em></div>
-        <p class="specimen__alphabet">Straps, bands &amp; watches that count things.</p>
-        <footer class="specimen__footer"><span>IN STOCK</span><span class="specimen__price">৳1,200–8,000</span></footer>
+        <header class="specimen__head"><span>নং ০৬</span><span>ক্যাটাগরি</span></header>
+        <div class="specimen__aa">ঘ<em>ড়ি</em></div>
+        <p class="specimen__alphabet">স্ট্র্যাপ, ব্যান্ড আর সব হিসাব রাখা ঘড়ি।</p>
+        <footer class="specimen__footer"><span>স্টকে আছে</span><span class="specimen__price">৳১,২০০–৮,০০০</span></footer>
       </div>
     </article>
   </div>
@@ -2052,14 +2086,14 @@ body::after {
 <!-- ========== DIVIDER V ========== -->
 <div class="divider" role="presentation">
   <span class="divider__roman">V</span>
-  <span>— Palette —</span>
+  <span>— রংয়ের খাতা —</span>
 </div>
 
 <!-- ========== PALETTE — FILMSTRIP SCRUB ========== -->
 <section class="palette" id="palette">
   <div class="palette__head">
-    <h2 class="palette__title">The Palette, <em>printed</em>.</h2>
-    <p class="palette__count">FRAME <span id="frame-count">01 / 10</span><br><span class="palette__count-sub">SCROLL TO ADVANCE</span></p>
+    <h2 class="palette__title">রংয়ের খাতা, <em>ছাপা</em>।</h2>
+    <p class="palette__count">ফ্রেম <span id="frame-count">০১ / ১০</span><br><span class="palette__count-sub">স্ক্রল করলে এগোবে</span></p>
   </div>
 
   <div class="filmstrip" id="filmstrip">
@@ -2068,135 +2102,135 @@ body::after {
 
     <div class="filmframe" style="--swatch:#05140A">
       <div class="filmframe__swatch"></div>
-      <div class="filmframe__num">FRAME 01</div>
-      <div class="filmframe__name">Jungle Deep</div>
+      <div class="filmframe__num">ফ্রেম ০১</div>
+      <div class="filmframe__name">গভীর জঙ্গল</div>
       <div class="filmframe__hex">#05140A</div>
-      <div class="filmframe__pant"><span>SWATCH Nº 1</span><span>THE NIGHT GROUND</span></div>
+      <div class="filmframe__pant"><span>সোয়াচ নং ১</span><span>রাতের ভিত</span></div>
     </div>
     <div class="filmframe" style="--swatch:#0D2818">
       <div class="filmframe__swatch"></div>
-      <div class="filmframe__num">FRAME 02</div>
-      <div class="filmframe__name">Jungle Primary</div>
+      <div class="filmframe__num">ফ্রেম ০২</div>
+      <div class="filmframe__name">জঙ্গল-প্রাইমারি</div>
       <div class="filmframe__hex">#0D2818</div>
-      <div class="filmframe__pant"><span>SWATCH Nº 2</span><span>THE BASE COAT</span></div>
+      <div class="filmframe__pant"><span>সোয়াচ নং ২</span><span>প্রাথমিক কোট</span></div>
     </div>
     <div class="filmframe" style="--swatch:#1A4D2E">
       <div class="filmframe__swatch"></div>
-      <div class="filmframe__num">FRAME 03</div>
-      <div class="filmframe__name">Jungle Secondary</div>
+      <div class="filmframe__num">ফ্রেম ০৩</div>
+      <div class="filmframe__name">জঙ্গল-সেকেন্ডারি</div>
       <div class="filmframe__hex">#1A4D2E</div>
-      <div class="filmframe__pant"><span>SWATCH Nº 3</span><span>DEEP ACCENT</span></div>
+      <div class="filmframe__pant"><span>সোয়াচ নং ৩</span><span>গভীর জোর</span></div>
     </div>
     <div class="filmframe" style="--swatch:#8FBC8F">
       <div class="filmframe__swatch"></div>
-      <div class="filmframe__num">FRAME 04</div>
-      <div class="filmframe__name">Moss</div>
+      <div class="filmframe__num">ফ্রেম ০৪</div>
+      <div class="filmframe__name">শ্যাওলা</div>
       <div class="filmframe__hex">#8FBC8F</div>
-      <div class="filmframe__pant"><span>SWATCH Nº 4</span><span>THE SOFT VOICE</span></div>
+      <div class="filmframe__pant"><span>সোয়াচ নং ৪</span><span>মৃদু কণ্ঠ</span></div>
     </div>
     <div class="filmframe" style="--swatch:#B8860B">
       <div class="filmframe__swatch"></div>
-      <div class="filmframe__num">FRAME 05</div>
-      <div class="filmframe__name">Gold Dark</div>
+      <div class="filmframe__num">ফ্রেম ০৫</div>
+      <div class="filmframe__name">গাঢ় সোনা</div>
       <div class="filmframe__hex">#B8860B</div>
-      <div class="filmframe__pant"><span>SWATCH Nº 5</span><span>OLD MONEY EDGES</span></div>
+      <div class="filmframe__pant"><span>সোয়াচ নং ৫</span><span>পুরনো ধনের ধার</span></div>
     </div>
     <div class="filmframe" style="--swatch:#C9A227">
       <div class="filmframe__swatch"></div>
-      <div class="filmframe__num">FRAME 06</div>
-      <div class="filmframe__name">Gold</div>
+      <div class="filmframe__num">ফ্রেম ০৬</div>
+      <div class="filmframe__name">সোনালি</div>
       <div class="filmframe__hex">#C9A227</div>
-      <div class="filmframe__pant"><span>SWATCH Nº 6</span><span>THE ONLY INK</span></div>
+      <div class="filmframe__pant"><span>সোয়াচ নং ৬</span><span>একমাত্র কালি</span></div>
     </div>
     <div class="filmframe" style="--swatch:#D4AF37">
       <div class="filmframe__swatch"></div>
-      <div class="filmframe__num">FRAME 07</div>
-      <div class="filmframe__name">Gold Light</div>
+      <div class="filmframe__num">ফ্রেম ০৭</div>
+      <div class="filmframe__name">হালকা সোনা</div>
       <div class="filmframe__hex">#D4AF37</div>
-      <div class="filmframe__pant"><span>SWATCH Nº 7</span><span>EMPHASIS, ITALIC</span></div>
+      <div class="filmframe__pant"><span>সোয়াচ নং ৭</span><span>সোনালি জোর</span></div>
     </div>
     <div class="filmframe" style="--swatch:#F5F5DC">
       <div class="filmframe__swatch"></div>
-      <div class="filmframe__num">FRAME 08</div>
-      <div class="filmframe__name">Ivory</div>
+      <div class="filmframe__num">ফ্রেম ০৮</div>
+      <div class="filmframe__name">আইভরি</div>
       <div class="filmframe__hex">#F5F5DC</div>
-      <div class="filmframe__pant"><span>SWATCH Nº 8</span><span>BODY TYPE &amp; PAPER</span></div>
+      <div class="filmframe__pant"><span>সোয়াচ নং ৮</span><span>বডি-টাইপ ও কাগজ</span></div>
     </div>
     <div class="filmframe" style="--swatch:#8A3324">
       <div class="filmframe__swatch"></div>
-      <div class="filmframe__num">FRAME 09</div>
-      <div class="filmframe__name">Burnt Umber</div>
+      <div class="filmframe__num">ফ্রেম ০৯</div>
+      <div class="filmframe__name">পোড়া মাটি</div>
       <div class="filmframe__hex">#8A3324</div>
-      <div class="filmframe__pant"><span>SWATCH Nº 9</span><span>WARNINGS, HONEST</span></div>
+      <div class="filmframe__pant"><span>সোয়াচ নং ৯</span><span>সৎ সতর্কবার্তা</span></div>
     </div>
     <div class="filmframe" style="--swatch:#2F4F4F">
       <div class="filmframe__swatch"></div>
-      <div class="filmframe__num">FRAME 10</div>
-      <div class="filmframe__name">Slate</div>
+      <div class="filmframe__num">ফ্রেম ১০</div>
+      <div class="filmframe__name">ধূসর পাথর</div>
       <div class="filmframe__hex">#2F4F4F</div>
-      <div class="filmframe__pant"><span>SWATCH Nº 10</span><span>TECHNICAL CAPTIONS</span></div>
+      <div class="filmframe__pant"><span>সোয়াচ নং ১০</span><span>কারিগরি ক্যাপশন</span></div>
     </div>
   </div>
 
   <div class="palette__progress">
     <div class="palette__progress-bar" id="palette-bar"></div>
   </div>
-  <p class="palette__progress-label">PLATE V — TEN SWATCHES, ONE GOLD</p>
-  <p class="palette__progress-label palette__progress-label--right">VERTICAL SCROLL · HORIZONTAL STRIP</p>
+  <p class="palette__progress-label">প্লেট V — দশটা সোয়াচ, এক সোনা</p>
+  <p class="palette__progress-label palette__progress-label--right">উল্লম্ব স্ক্রল · অনুভূমিক ফিতা</p>
 </section>
 
 <!-- ========== DIVIDER VI ========== -->
 <div class="divider" role="presentation">
   <span class="divider__roman">VI</span>
-  <span>— Letters to the Editor —</span>
+  <span>— সম্পাদকের কাছে চিঠি —</span>
 </div>
 
 <!-- ========== TESTIMONIALS ========== -->
 <section class="letters" id="letters">
   <div class="section-head reveal" style="padding-top:1rem">
-    <div class="section-head__num">Correspondence</div>
-    <h2 class="section-head__title">Letters <em>to the Editor</em></h2>
-    <p class="section-head__sub">We asked three customers for the truth. They were kinder than we deserved.</p>
+    <div class="section-head__num">পত্রালাপ</div>
+    <h2 class="section-head__title">সম্পাদকের কাছে <em>চিঠি</em></h2>
+    <p class="section-head__sub">আমরা তিনজন ক্রেতাকে সত্যিটা বলতে বলেছিলাম। তাঁরা আমাদের প্রাপ্যের চেয়েও দয়ালু ছিলেন।</p>
   </div>
 
   <div class="letters__grid">
     <article class="letter reveal">
       <figure class="letter__img">
-        <img src="https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/e9cfaf591e95.jpg" alt="A technician fitting a display at the counter, microscope at her shoulder" width="480" height="360" loading="lazy">
+        <img src="https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/e9cfaf591e95.jpg" alt="কাউন্টারে ডিসপ্লে বসাচ্ছেন একজন টেকনিশিয়ান, কাঁধের পাশে মাইক্রোস্কোপ" width="480" height="360" loading="lazy">
       </figure>
       <div class="letter__meta">
-        <span>DEVICE — GALAXY S21 · GREEN LINE</span>
-        <span>03 · MMXXVI</span>
+        <span>ডিভাইস — গ্যালাক্সি S21 · গ্রিন লাইন</span>
+        <span>০৩ · MMXXVI</span>
       </div>
-      <h3 class="letter__title">"Gone in <em>two days.</em>"</h3>
-      <p class="letter__body">A green line appeared overnight, right after a Samsung update. Arpon checked the known-defect programme, confirmed my set qualified, and managed the replacement for a fraction of what I had been quoted elsewhere. No drama, no guessing games.</p>
-      <p class="letter__sig">— TANVIR A.</p>
+      <h3 class="letter__title">“দুই দিনেই <em>গায়েব।</em>”</h3>
+      <p class="letter__body">এক রাতেই গ্রিন লাইন — ঠিক স্যামসাং-এর একটা আপডেটের পরপরই। আরপন নোটো-ত্রুটি প্রোগ্রামটা মিলিয়ে দেখল, আমার সেট যোগ্য কি না নিশ্চিত করল, আর অন্য কোথাও যে দাম বলা হয়েছিল, তার ভগ্নাংশেই রিপ্লেসমেন্টটা এগিয়ে নিয়ে গেল। না কোনো নাটক, না কোনো আন্দাজ-পতাজ।</p>
+      <p class="letter__sig">— তানভীর এ.</p>
     </article>
 
     <article class="letter reveal reveal--delay-1">
       <figure class="letter__img">
-        <img src="https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/2fceb63b9ac5.jpg" alt="A logic board under the microscope, corrosion mapped after pond water" width="480" height="360" loading="lazy">
+        <img src="https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/2fceb63b9ac5.jpg" alt="মাইক্রোস্কোপের নিচে লজিক বোর্ড — পুকুরের পানির পর ক্ষয়ের মানচিত্র" width="480" height="360" loading="lazy">
       </figure>
       <div class="letter__meta">
-        <span>DEVICE — GALAXY A54 · WATER</span>
-        <span>06 · MMXXVI</span>
+        <span>ডিভাইস — গ্যালাক্সি A54 · পানি</span>
+        <span>০৬ · MMXXVI</span>
       </div>
-      <h3 class="letter__title">"A verdict, <em>not an invoice.</em>"</h3>
-      <p class="letter__body">Pond water. They opened it, washed the board, showed me the corrosion under the microscope, and saved it for half of what I had feared. I have never trusted a shop more.</p>
-      <p class="letter__sig">— NASRIN S.</p>
+      <h3 class="letter__title">“একটা রায়, <em>কোনো ইনভয়েস নয়।</em>”</h3>
+      <p class="letter__body">পুকুরের পানি। খুলল, বোর্ড ধুয়ে দিল, মাইক্রোস্কোপের নিচে ক্ষয়টা আমাকে দেখাল, আর আমার ভয়ের অর্ধেক খরচে বাঁচিয়ে ফেলল। এত ভরসা কোনো দোকানে আগে করিনি।</p>
+      <p class="letter__sig">— নাসরিন এস.</p>
     </article>
 
     <article class="letter reveal reveal--delay-2">
       <figure class="letter__img">
-        <img src="https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/93a8536b2995.jpg" alt="The bench at night — a board held under the microscope lamp" width="480" height="360" loading="lazy">
+        <img src="https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/93a8536b2995.jpg" alt="রাতের বেঞ্চ — মাইক্রোস্কোপ-ল্যাম্পের নিচে একটা বোর্ড" width="480" height="360" loading="lazy">
       </figure>
       <div class="letter__meta">
-        <span>DEVICE — REDMI NOTE · BOARD</span>
-        <span>09 · MMXXV</span>
+        <span>ডিভাইস — রেডমি নোট · বোর্ড</span>
+        <span>০৯ · MMXXV</span>
       </div>
-      <h3 class="letter__title">"Three shops said: <em>buy a new one.</em>"</h3>
-      <p class="letter__body">Dead, no display, one week of hope left. Arpon reballled the IC and it has worked for a year since. They treat boards like heirlooms and receipts like promises.</p>
-      <p class="letter__sig">— MAHMUD R.</p>
+      <h3 class="letter__title">“তিনটা দোকান বলল: <em>নতুন কিনুন।</em>”</h3>
+      <p class="letter__body">মৃত, ডিসপ্লে-হীন, হাতে এক সপ্তাহের আশা। আরপন IC-টা রিবল করল, আর সেই থেকে এক বছর নির্বিঘ্ন চলছে। বোর্ডগুলোকে তারা বংশপরিক্রমা-সম্পদের মতো দেখে, আর কাগজগুলোকে প্রতিশ্রুতির মতো।</p>
+      <p class="letter__sig">— মাহমুদ আর.</p>
     </article>
   </div>
 </section>
@@ -2204,7 +2238,7 @@ body::after {
 <!-- ========== DIVIDER VII ========== -->
 <div class="divider" role="presentation">
   <span class="divider__roman">VII</span>
-  <span>— Colophon —</span>
+  <span>— কলোফন —</span>
 </div>
 
 <!-- ========== CONTACT / COLOPHON ==========
@@ -2212,34 +2246,34 @@ body::after {
      BUSINESS object at the top of the <script> at the bottom
      of this file. Edit there once — every field updates. -->
 <footer class="contact" id="colophon">
-  <p class="contact__pre reveal">Correspondence, walk-ins &amp; emergencies welcome.</p>
-  <h2 class="contact__name reveal">Arpon <em>Telecom</em></h2>
+  <p class="contact__pre reveal">চিঠি, সরাসরি আগমন আর জরুরি অবস্থা — সবই স্বাগত।</p>
+  <h2 class="contact__name reveal">Arpon <em lang="en">Telecom</em></h2>
 
   <a class="contact__phone reveal" data-contact="phone" href="tel:+8801XXXXXXXXX">+880 1XXX-XXXXXX</a>
 
   <div class="contact__grid">
     <div class="contact__col reveal">
-      <span class="label">Visit</span>
-      <p class="value" data-contact="address">[Shop No. / Market Name], [Road &amp; Area], [City] — Bangladesh</p>
-      <p class="value value--hours" data-contact="hours">SAT – THU · 10:00 – 20:00<br>FRI · [EDIT FRIDAY HOURS]</p>
-      <p class="note">Cash, bKash &amp; Nagad accepted.</p>
+      <span class="label">ঠিকানা</span>
+      <p class="value" data-contact="address">[দোকান নং / মার্কেটের নাম], [রোড ও এলাকা], [শহর] — বাংলাদেশ</p>
+      <p class="value value--hours" data-contact="hours">শনি – বৃহঃ · ১০:০০ – ২০:০০<br>শুক্র · [শুক্রবারের সময় বসান]</p>
+      <p class="note">ক্যাশ, বিকাশ ও নগদ — সবই চলে।</p>
     </div>
     <div class="contact__col reveal reveal--delay-1">
-      <span class="label">Call / WhatsApp</span>
+      <span class="label">কল / হোয়াটসঅ্যাপ</span>
       <p class="value"><a data-contact="phone" href="tel:+8801XXXXXXXXX">+880 1XXX-XXXXXX</a></p>
-      <p class="value"><a data-contact="whatsapp" href="https://wa.me/8801XXXXXXXXX">Message us on WhatsApp</a></p>
-      <p class="note">Photos of the fault speed the verdict.</p>
+      <p class="value"><a data-contact="whatsapp" href="https://wa.me/8801XXXXXXXXX">হোয়াটসঅ্যাপে মেসেজ করুন</a></p>
+      <p class="note">সমস্যার ছবি পাঠালে রায় আরও দ্রুত আসে।</p>
     </div>
     <div class="contact__col reveal reveal--delay-2">
-      <span class="label">Follow</span>
+      <span class="label">ফলো করুন</span>
       <p class="value"><a data-contact="facebook" href="https://www.facebook.com/arpontelecom" target="_blank" rel="noopener">facebook.com/arpontelecom</a></p>
-      <p class="note">Where the bench posts its work.</p>
+      <p class="note">কর্মক্ষেত্র তার কাজ এখানেই ছাপে।</p>
     </div>
   </div>
 
   <div class="colophon">
-    <p>Set in <em>Cormorant Garamond</em>; labels in <em>Inter</em>; folios in <em>JetBrains Mono</em>. Composed on a jungle-green ground with a single gold ink and no gradients whatsoever. The photographs are of the trade at large; our own bench is being photographed for Volume II. Every phone mentioned in this volume was, at some point, in danger — and is fine now.</p>
-    <p class="colophon__sig">— END · MONOGRAPH I · ARPON TELECOM · MMXXVI —</p>
+    <p>সাজানো হয়েছে <em lang="en">Cormorant Garamond</em>-এ; লেবেল <em lang="en">Inter</em>-এ; পৃষ্ঠা-সংখ্যা <em lang="en">JetBrains Mono</em>-তে। জঙ্গল-সবুজ ভিতের ওপর একমাত্র সোনালি কালি — কোনো গ্রেডিয়েন্ট নেই, একেবারেই নেই। ছবিগুলো পেশার বহুল দেখা দৃশ্যের; আমাদের নিজের বেঞ্চের ছবি তোলা হচ্ছে দ্বিতীয় খণ্ডের জন্য। এই খণ্ডে উল্লিখিত প্রতিটা ফোন কখনো-না-কখনো বিপদে পড়েছিল — আর এখন ভালো আছে।</p>
+    <p class="colophon__sig">— সমাপ্ত · মনোগ্রাফ I · আরপন টেলিকম · MMXXVI —</p>
     <p class="colophon__bn">ভরসাই আমাদের পুঁজি।</p>
   </div>
 </footer>
@@ -2256,9 +2290,9 @@ body::after {
 const BUSINESS = {
   phone:    "+880 1XXX-XXXXXX",                              // shown as the big framed number & used for tel: links
   whatsapp: "8801XXXXXXXXX",                                 // digits only — used for the wa.me link
-  address:  "[Shop No. / Market Name], [Road & Area], [City] — Bangladesh",
-  hours:    "SAT – THU · 10:00 – 20:00\nFRI · [EDIT FRIDAY HOURS]",
-  sigline:  "[CITY] · BANGLADESH · MMXXVI",                  // signature line under the Preface
+  address:  "[দোকান নং / মার্কেটের নাম], [রোড ও এলাকা], [শহর] — বাংলাদেশ",
+  hours:    "শনি – বৃহঃ · ১০:০০ – ২০:০০\nশুক্র · [শুক্রবারের সময় বসান]",
+  sigline:  "[শহর] · বাংলাদেশ · MMXXVI",                    // signature line under the Preface
   facebook: "https://www.facebook.com/arpontelecom"
 };
 /* ═══════════════════════════ END OF EDITABLE BLOCK ═════════ */
@@ -2266,7 +2300,9 @@ const BUSINESS = {
 (function () {
   'use strict';
   var clamp = function (v, a, b) { return Math.max(a, Math.min(b, v)); };
-  var pad3 = function (n) { return String(n).padStart(3, '0'); };
+  var BN_D = '০১২৩৪৫৬৭৮৯';
+  var bnNum = function (s) { return String(s).replace(/[0-9]/g, function (d) { return BN_D[+d]; }); };
+  var pad3 = function (n) { return bnNum(String(n).padStart(3, '0')); };
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var coarse  = window.matchMedia('(pointer: coarse)').matches;
   var hasGSAP = typeof window.gsap !== 'undefined' && typeof window.ScrollTrigger !== 'undefined';
@@ -2414,7 +2450,7 @@ const BUSINESS = {
       strip.style.transform = 'translate3d(' + (-current * maxShift).toFixed(2) + 'px,0,0)';
       if (bar) bar.style.width = (current * 100).toFixed(2) + '%';
       var idx = clamp(Math.round(current * (frames.length - 1)) + 1, 1, frames.length);
-      if (frameCount) frameCount.textContent = String(idx).padStart(2, '0') + ' / ' + String(frames.length).padStart(2, '0');
+      if (frameCount) frameCount.textContent = bnNum(String(idx).padStart(2, '0')) + ' / ' + bnNum(String(frames.length).padStart(2, '0'));
       frames.forEach(function (f, i) { f.classList.toggle('is-active', i === idx - 1); });
     });
   } else if (palette) {
