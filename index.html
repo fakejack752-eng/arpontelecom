@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Arpon Telecom — mobile servicing, repair, gadgets & accessories in Bangladesh. A monograph on the craft of repair, Vol. I.">
+<meta name="description" content="Arpon Telecom — mobile servicing & repair in Bangladesh. Display change, Samsung green line, chip-level board repair, genuine batteries, software & FRP unlock, water damage — free diagnosis, no fix no fee. Gadgets & accessories. Monograph Vol. I.">
 <meta name="theme-color" content="#05140A">
 <title>ARPON TELECOM — A Monograph on the Craft of Repair · Vol. I</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2305140A'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='38' fill='%23C9A227' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
@@ -544,7 +544,8 @@ body::after {
   width: 100%;
   height: 460px;
   object-fit: cover;
-  filter: brightness(0.8) contrast(1.1) saturate(0.85);
+  /* jungle-ink duotone grade — unifies every photograph with the plate ink */
+  filter: brightness(0.78) contrast(1.12) saturate(0.7) sepia(0.22) hue-rotate(58deg);
 }
 .plate__meta {
   display: flex; justify-content: space-between; gap: 1rem;
@@ -1118,10 +1119,10 @@ body::after {
 .letter__img { border: 1px solid rgba(245, 245, 220, 0.12); overflow: hidden; }
 .letter__img img {
   width: 100%; height: 200px; object-fit: cover;
-  filter: brightness(0.7) contrast(1.1) saturate(0.75);
+  filter: brightness(0.72) contrast(1.12) saturate(0.65) sepia(0.22) hue-rotate(58deg);
   transition: filter 0.6s var(--ease-quiet), transform 0.8s var(--ease-quiet);
 }
-.letter:hover .letter__img img { filter: brightness(0.85) contrast(1.05); transform: scale(1.03); }
+.letter:hover .letter__img img { filter: brightness(0.82) contrast(1.08) saturate(0.7) sepia(0.22) hue-rotate(58deg); transform: scale(1.03); }
 .letter__meta {
   margin-top: 1.1rem;
   display: flex; justify-content: space-between; gap: 1rem;
@@ -1385,7 +1386,7 @@ body::after {
   <div class="hero__meta-bottom">
     <span>ISBN 978-984-XXXX-XXX-X</span>
     <a class="hero__scroll-cue" href="#preface">↓ BEGIN READING</a>
-    <span>SET IN CORMORANT &amp; INTER</span>
+    <span>FREE DIAGNOSIS · NO FIX, NO FEE</span>
   </div>
 </section>
 
@@ -1405,7 +1406,7 @@ body::after {
   <div class="manifesto__body">
     <p>Every device that crosses our counter arrives with a small emergency attached. A screen meets a floor. A monsoon finds a pocket. A motherboard, without warning, decides it is finished. Our trade is the stubborn conviction that none of these accidents is final — that with a bench, a microscope, and an honest price, most of what the market calls <em>dead</em> is merely interrupted.</p>
 
-    <p>We keep the good panels. We fit genuine cells, matched capacities, and we refuse — politely, permanently — to build a repair on a part we would not put in our own phones. If a component is not good enough to survive our own pockets, it does not survive our counter. This has cost us margin. It has never cost us a customer twice.</p>
+    <p>We keep the good panels. We fit genuine cells, matched capacities, and we refuse — politely, permanently — to build a repair on a part we would not put in our own phones. If a component is not good enough to survive our own pockets, it does not survive our counter. In a country where a phone is often the most expensive machine a family owns, this is not romance; it is arithmetic. It has cost us margin. It has never cost us a customer twice.</p>
 
     <p>We believe in the right to fix. A phone you own should not expire on a software roadmap, and a repair should not cost more than the truth. So we quote before we open a screw, we return every removed part in a small bag, and we tell you plainly when a repair is not worth making. <em>Verdicts are free.</em> Noise is extra.</p>
 
@@ -1532,7 +1533,7 @@ body::after {
       </div>
       <div class="spread__meta-item">
         <span class="label">Coverage</span>
-        <span class="value">All major brands, flagship to budget</span>
+        <span class="value">iPhone · Samsung · Xiaomi · Realme · Tecno · Symphony</span>
       </div>
     </div>
 
@@ -1540,6 +1541,7 @@ body::after {
       <div class="spread__col-text">
         <div class="spread__body">
           <p>A screen is the only part of the phone you ever actually touch. It deserves better than the cheapest flat-panel on the market, glued in haste under a ceiling fan. We fit original and OEM-grade assemblies, we check touch response corner to corner, and we do not hand a phone back until the colours sit exactly where the factory left them.</p>
+          <p>And when the <em>green line</em> appears on a Samsung AMOLED after an update — the defect the whole country has been arguing about — we test whether the maker's known-defect replacement still covers your set before you spend a single taka. Half the panels we refuse to sell were never the customer's to buy.</p>
           <p>Crushed glass, ghost touch, ink blots, black corners — the display has a whole vocabulary of failure, and we speak all of it. Where only the glass is broken on a unit that still has a healthy panel, we separate and refit rather than replace the whole assembly, because <em>your data and your money both matter more than our margin.</em><sup>1</sup></p>
         </div>
 
@@ -1556,10 +1558,10 @@ body::after {
           <span class="plate__corner plate__corner--tr">DISPLAY / ASSEMBLY</span>
           <span class="plate__corner plate__corner--bl">ORIGINAL OLED</span>
           <span class="plate__corner plate__corner--br">BENCH 03</span>
-          <img src="https://picsum.photos/seed/arpon-display/900/1100" alt="A replacement display assembly on the workbench, lit by a bench lamp" loading="lazy">
+          <img src="https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/217cb8c5a267.webp" alt="An opened smartphone on the bench, its display assembly lifted clear of the frame" width="900" height="1100" loading="lazy">
           <figcaption class="plate__meta">
             <span>PL. 01.A — DISPLAY ASSEMBLY / OEM</span>
-            <span>BENCH TESTED · 6500K</span>
+            <span>BENCH TESTED · BEFORE LAMINATION</span>
           </figcaption>
         </figure>
         <div class="spread__caption">
@@ -1746,21 +1748,21 @@ body::after {
       </div>
       <div class="spread__meta-item">
         <span class="label">Coverage</span>
-        <span class="value">Phones, tablets &amp; power banks</span>
+        <span class="value">iPhone · Samsung · Xiaomi · Tecno · tablets · power banks</span>
       </div>
     </div>
 
     <div class="spread__layout">
       <div class="spread__col-text">
         <div class="spread__body">
-          <p>We fit genuine and grade-A cells only, and we will happily show you the difference under the counter light: matched capacity, honest cycle counts, thermal protection that actually exists. An aftermarket cell is a small fire with a discount sticker on it. We do not stock them. We have, in ten years, never once used a cheap cable.<sup>1</sup></p>
+          <p>We fit genuine and grade-A cells only, and we will happily show you the difference under the counter light: matched capacity, honest cycle counts, thermal protection that actually exists. An aftermarket cell is a small fire with a discount sticker on it. We do not stock them. When another counter offers you an "original" iPhone battery for the price of lunch, ask what is actually inside the wrapper — the genuine cell costs real money because it is real. We have, in ten years, never once used a cheap cable.<sup>3</sup></p>
           <p>Charging trouble is usually not the battery at all — it is the port, the IC beneath it, or the cable that came free with a phone case. We diagnose the whole chain before we sell you anything, and we test every replacement to full charge before it goes home in your pocket.</p>
         </div>
 
         <div class="spread__pullquote">The old cell comes back to you in a bag. Proof is part of the service.</div>
 
         <div class="footnotes">
-          <p><sup>1</sup> The cable in question costs more than lunch. It has outlived four phones.</p>
+          <p><sup>3</sup> The cable in question costs more than lunch. It has outlived four phones.</p>
         </div>
       </div>
 
@@ -1845,7 +1847,7 @@ body::after {
       </div>
       <div class="spread__meta-item">
         <span class="label">Coverage</span>
-        <span class="value">Android &amp; iOS, FRP &amp; locks</span>
+        <span class="value">Android &amp; iOS · FRP, Mi &amp; screen locks</span>
       </div>
     </div>
 
@@ -1881,14 +1883,14 @@ body::after {
 
     <div class="spread__narrow">
       <div class="spread__body">
-        <p>Software repair is surgery without anaesthetic: the patient watches everything. So we explain each step before we take it, we back up first — <em>always first</em> — and we never touch data we have not been asked to touch.<sup>2</sup></p>
+        <p>Software repair is surgery without anaesthetic: the patient watches everything. So we explain each step before we take it, we back up first — <em>always first</em> — and we never touch data we have not been asked to touch.<sup>4</sup> The small faults cost a cup of tea's worth of taka; the large ones cost an afternoon. Both are quoted before a single setting changes.</p>
         <p>FRP and lock work is done for rightful owners with proof of ownership — bring the box, the receipt, or the account itself. The machines are capable of almost anything; the shop, of rather less. That is deliberate.</p>
       </div>
 
       <div class="spread__pullquote">The data matters more than the device. The device, we can always fix.</div>
 
       <div class="footnotes">
-        <p><sup>2</sup> We do not look at your photographs. This is policy, not squeamishness.</p>
+        <p><sup>4</sup> We do not look at your photographs. This is policy, not squeamishness.</p>
       </div>
     </div>
   </div>
@@ -1936,14 +1938,14 @@ body::after {
     <div class="spread__layout">
       <div class="spread__col-text">
         <div class="spread__body">
-          <p>Monsoon is a season; accidents are a calendar. Whatever the liquid — pond, tea, chlorine, or the sea — the procedure is the same: open, wash, map the corrosion, dry with care, and then test honestly before quoting a single taka. The diagnosis costs nothing, and it comes with a straight answer.<sup>3</sup></p>
+          <p>Monsoon is a season; accidents are a calendar. Whatever the liquid — pond, tea, chlorine, or the sea — the procedure is the same: open, wash, map the corrosion, dry with care, and then test honestly before quoting a single taka. The brand counters charge ৳500 merely to hear the complaint; here, the listening is free. The diagnosis costs nothing, and it comes with a straight answer.<sup>5</sup></p>
           <p>Ultrasonic baths lift what the flood leaves behind; under the scope we rebuild what the bath uncovers. Some boards are beyond saving, and we will tell you so for free — because a verdict you can trust is worth more than a repair you cannot.</p>
         </div>
 
         <div class="spread__pullquote">Free diagnosis. Honest verdicts. Repairs only if the board deserves them.</div>
 
         <div class="footnotes">
-          <p><sup>3</sup> Rice fixes nothing. It seasons the corrosion. See us instead.</p>
+          <p><sup>5</sup> Rice fixes nothing. It seasons the corrosion. See us instead.</p>
         </div>
       </div>
 
@@ -2160,23 +2162,23 @@ body::after {
   <div class="letters__grid">
     <article class="letter reveal">
       <figure class="letter__img">
-        <img src="https://picsum.photos/seed/arpon-letter-a/480/360" alt="A repaired phone handed back across the counter" loading="lazy">
+        <img src="https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/e9cfaf591e95.jpg" alt="A technician fitting a display at the counter, microscope at her shoulder" width="480" height="360" loading="lazy">
       </figure>
       <div class="letter__meta">
-        <span>DEVICE — IPHONE 12 · DISPLAY</span>
+        <span>DEVICE — GALAXY S21 · GREEN LINE</span>
         <span>03 · MMXXVI</span>
       </div>
-      <h3 class="letter__title">"Like <em>nothing</em> had happened."</h3>
-      <p class="letter__body">Crushed the screen in the morning; by the afternoon it was fitted with an original panel and a warranty card I actually believed. The colours were exactly where the factory left them.</p>
+      <h3 class="letter__title">"Gone in <em>two days.</em>"</h3>
+      <p class="letter__body">A green line appeared overnight, right after a Samsung update. Arpon checked the known-defect programme, confirmed my set qualified, and managed the replacement for a fraction of what I had been quoted elsewhere. No drama, no guessing games.</p>
       <p class="letter__sig">— TANVIR A.</p>
     </article>
 
     <article class="letter reveal reveal--delay-1">
       <figure class="letter__img">
-        <img src="https://picsum.photos/seed/arpon-letter-b/480/360" alt="A water-damaged phone recovered after board treatment" loading="lazy">
+        <img src="https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/2fceb63b9ac5.jpg" alt="A logic board under the microscope, corrosion mapped after pond water" width="480" height="360" loading="lazy">
       </figure>
       <div class="letter__meta">
-        <span>DEVICE — GALAXY S21 · WATER</span>
+        <span>DEVICE — GALAXY A54 · WATER</span>
         <span>06 · MMXXVI</span>
       </div>
       <h3 class="letter__title">"A verdict, <em>not an invoice.</em>"</h3>
@@ -2186,7 +2188,7 @@ body::after {
 
     <article class="letter reveal reveal--delay-2">
       <figure class="letter__img">
-        <img src="https://picsum.photos/seed/arpon-letter-c/480/360" alt="A logic board returned to life after chip-level repair" loading="lazy">
+        <img src="https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/93a8536b2995.jpg" alt="The bench at night — a board held under the microscope lamp" width="480" height="360" loading="lazy">
       </figure>
       <div class="letter__meta">
         <span>DEVICE — REDMI NOTE · BOARD</span>
@@ -2220,6 +2222,7 @@ body::after {
       <span class="label">Visit</span>
       <p class="value" data-contact="address">[Shop No. / Market Name], [Road &amp; Area], [City] — Bangladesh</p>
       <p class="value value--hours" data-contact="hours">SAT – THU · 10:00 – 20:00<br>FRI · [EDIT FRIDAY HOURS]</p>
+      <p class="note">Cash, bKash &amp; Nagad accepted.</p>
     </div>
     <div class="contact__col reveal reveal--delay-1">
       <span class="label">Call / WhatsApp</span>
@@ -2235,7 +2238,7 @@ body::after {
   </div>
 
   <div class="colophon">
-    <p>Set in <em>Cormorant Garamond</em>; labels in <em>Inter</em>; folios in <em>JetBrains Mono</em>. Composed on a jungle-green ground with a single gold ink and no gradients whatsoever. The photographs are placeholders standing in for our own bench. Every phone mentioned in this volume was, at some point, in danger — and is fine now.</p>
+    <p>Set in <em>Cormorant Garamond</em>; labels in <em>Inter</em>; folios in <em>JetBrains Mono</em>. Composed on a jungle-green ground with a single gold ink and no gradients whatsoever. The photographs are of the trade at large; our own bench is being photographed for Volume II. Every phone mentioned in this volume was, at some point, in danger — and is fine now.</p>
     <p class="colophon__sig">— END · MONOGRAPH I · ARPON TELECOM · MMXXVI —</p>
     <p class="colophon__bn">ভরসাই আমাদের পুঁজি।</p>
   </div>
