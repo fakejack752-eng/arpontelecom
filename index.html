@@ -7,6 +7,17 @@
 <meta name="theme-color" content="#05140A">
 <title>আরপন টেলিকম — মেরামতের কারুকলা বিষয়ক মনোগ্রাফ · প্রথম খণ্ড</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2305140A'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='38' fill='%23C9A227' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="canonical" href="https://fakejack752-eng.github.io/arpontelecom/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="bn_BD">
+<meta property="og:site_name" content="Arpon Telecom — আরপন টেলিকম">
+<meta property="og:title" content="আরপন টেলিকম — মেরামতের কারুকলা বিষয়ক মনোগ্রাফ · প্রথম খণ্ড">
+<meta property="og:description" content="বাংলাদেশে মোবাইল সার্ভিসিং ও মেরামত — ডিসপ্লে চেঞ্জ, গ্রিন লাইন, চিপ-লেভেল মাদারবোর্ড, জেনুইন ব্যাটারি, সফটওয়্যার ও FRP আনলক, পানি-ক্ষত। ফ্রি ডায়াগনোসিস, ঠিক না হলে ফি নেই।">
+<meta property="og:url" content="https://fakejack752-eng.github.io/arpontelecom/">
+<meta property="og:image" content="https://fakejack752-eng.github.io/arpontelecom/images/og-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Arpon Telecom — আরপন টেলিকম","description":"মোবাইল সার্ভিসিং ও মেরামত: ডিসপ্লে চেঞ্জ, চিপ-লেভেল মাদারবোর্ড রিপেয়ার, জেনুইন ব্যাটারি, সফটওয়্যার ও FRP আনলক, পানি-ক্ষত রিকভারি — ফ্রি ডায়াগনোসিস, ঠিক না হলে ফি নেই।","url":"https://fakejack752-eng.github.io/arpontelecom/","image":"https://fakejack752-eng.github.io/arpontelecom/images/og-cover.jpg","sameAs":["https://www.facebook.com/arpontelecom"],"priceRange":"৳৳","currenciesAccepted":"BDT","paymentAccepted":"Cash, bKash, Nagad","address":{"@type":"PostalAddress","addressCountry":"BD"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday","Monday","Tuesday","Wednesday","Thursday"],"opens":"10:00","closes":"20:00"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Arpon Telecom — আরপন টেলিকম","url":"https://fakejack752-eng.github.io/arpontelecom/","inLanguage":"bn","potentialAction":{"@type":"SearchAction","target":"https://fakejack752-eng.github.io/arpontelecom/search.html?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Hind+Siliguri:wght@400;500;600&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&family=Noto+Serif+Bengali:wght@400;500;600;700&display=swap">
@@ -30,6 +41,8 @@
   --serif: 'Cormorant Garamond', 'Noto Serif Bengali', 'Times New Roman', serif;
   --sans:  'Inter', 'Hind Siliguri', system-ui, sans-serif;
   --mono:  'JetBrains Mono', 'Hind Siliguri', 'Noto Serif Bengali', monospace;
+  --ui: 'Hind Siliguri', system-ui, sans-serif;
+  --bn: 'Noto Serif Bengali', serif;
   --ease-quiet:    cubic-bezier(.22, 1, .36, 1);
   --ease-precise:  cubic-bezier(.4, 0, .2, 1);
   --ease-emphasis: cubic-bezier(.16, 1, .3, 1);
@@ -1363,6 +1376,70 @@ body::after {
   .contact__phone { padding: 0.9rem 1.5rem; }
   .ticket { transform: rotate(0deg); }
 }
+
+/* ============================================================
+   SITE NAV — mega menu bar (shared with subpages)
+   ============================================================ */
+.sitenav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: transparent; border-bottom: 1px solid transparent; transition: background .45s var(--ease-quiet), border-color .45s var(--ease-quiet), -webkit-backdrop-filter .45s; }
+.sitenav.is-scrolled { background: rgba(5,20,10,.92); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border-bottom-color: rgba(201,162,39,.18); }
+.sitenav__bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0 2rem; height: 64px; max-width: 1400px; margin: 0 auto; }
+.sitenav__brand { display: flex; align-items: center; gap: .7rem; text-decoration: none; color: var(--ivory); flex-shrink: 0; }
+.sitenav__brand svg { width: 30px; height: 30px; }
+.sitenav__brand b { font-family: var(--sans); font-weight: 600; letter-spacing: .18em; font-size: 12.5px; }
+.sitenav__brand small { font-family: var(--bn); color: var(--gold); font-size: 11.5px; border-left: 1px solid rgba(201,162,39,.3); padding-left: .7rem; letter-spacing: .04em; }
+.sitenav__list { display: flex; align-items: center; gap: .15rem; list-style: none; }
+.sitenav__link { font-family: var(--ui); font-size: 14.5px; font-weight: 500; color: var(--ivory); opacity: .85; padding: .55rem .8rem; background: none; border: 0; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: .35rem; transition: color .3s, opacity .3s; letter-spacing: .01em; }
+.sitenav__link:hover { color: var(--gold-light); opacity: 1; }
+.sitenav__link .caret { width: 9px; height: 9px; border-right: 1.2px solid currentColor; border-bottom: 1.2px solid currentColor; transform: rotate(45deg) translateY(-2px); transition: transform .3s var(--ease-quiet); }
+.has-mega.is-open .sitenav__link .caret { transform: rotate(225deg) translateY(-1px); }
+.sitenav__item--active > .sitenav__link { color: var(--gold); opacity: 1; }
+.sitenav__folio { font-family: var(--mono); font-size: 10px; letter-spacing: .2em; color: var(--ivory); opacity: .5; margin-left: .6rem; white-space: nowrap; }
+.sitenav__folio .rh-mid { color: var(--gold); opacity: .9; }
+.has-mega { position: static; }
+.mega { position: absolute; top: 64px; left: 0; right: 0; background: rgba(6,24,14,.98); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(201,162,39,.3); opacity: 0; visibility: hidden; transform: translateY(-10px); transition: opacity .35s var(--ease-quiet), transform .35s var(--ease-quiet), visibility .35s; pointer-events: none; box-shadow: 0 40px 80px -30px rgba(0,0,0,.7); }
+.has-mega:hover .mega, .has-mega.is-open .mega, .has-mega:focus-within .mega { opacity: 1; visibility: visible; transform: none; pointer-events: auto; }
+.mega__inner { max-width: 1400px; margin: 0 auto; padding: 2.2rem 2rem 2.4rem; display: grid; grid-template-columns: 1fr 300px; gap: 2.5rem; }
+.mega__grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }
+.mega__card { border: 1px solid rgba(245,245,220,.1); padding: 1.15rem 1.2rem; text-decoration: none; color: var(--ivory); transition: border-color .3s, transform .3s var(--ease-quiet), background .3s; background: rgba(13,40,24,.35); display: flex; flex-direction: column; }
+.mega__card:hover { border-color: rgba(201,162,39,.55); transform: translateY(-3px); background: rgba(26,77,46,.25); }
+.mega__num { font-family: var(--mono); font-size: 10px; color: var(--gold); letter-spacing: .2em; }
+.mega__card strong { display: block; font-family: var(--bn); font-weight: 600; font-size: 1.04rem; margin: .4rem 0 .3rem; line-height: 1.45; }
+.mega__card p { font-family: var(--ui); font-size: 12.5px; opacity: .65; line-height: 1.7; flex: 1; }
+.mega__price { display: inline-block; margin-top: .6rem; font-family: var(--mono); font-size: 11px; color: var(--gold-light); letter-spacing: .08em; }
+.mega__aside { border-left: 1px solid rgba(201,162,39,.25); padding-left: 2rem; display: flex; flex-direction: column; gap: .55rem; }
+.mega__aside .eyebrow { margin-bottom: .3rem; }
+.mega__aside p { font-family: var(--ui); font-size: 13px; line-height: 1.75; color: rgba(245,245,220,.8); }
+.mega__aside a { color: var(--gold-light); text-decoration: none; font-family: var(--ui); font-weight: 600; font-size: 14px; border-bottom: 1px solid rgba(201,162,39,.4); align-self: flex-start; }
+.mega__aside a:hover { color: var(--ivory); }
+.mega__aside .mega__hours { font-family: var(--mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; opacity: .55; margin-top: auto; padding-top: .8rem; }
+.sitenav__burger { display: none; flex-direction: column; gap: 5px; background: none; border: 0; padding: .6rem; cursor: pointer; }
+.sitenav__burger span { width: 22px; height: 1.5px; background: var(--ivory); transition: transform .3s, opacity .3s; }
+.sitenav__burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.sitenav__burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.sitenav__burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+.drawer { position: fixed; top: 64px; left: 0; right: 0; bottom: 0; background: rgba(5,20,10,.98); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); transform: translateX(102%); transition: transform .45s var(--ease-quiet); overflow-y: auto; padding: 1.75rem 1.5rem 3rem; z-index: 999; }
+.drawer.is-open { transform: none; }
+.drawer a { display: block; font-family: var(--bn); font-size: 1.15rem; font-weight: 500; color: var(--ivory); text-decoration: none; padding: .85rem .25rem; border-bottom: 1px solid rgba(245,245,220,.1); }
+.drawer a:active { color: var(--gold); }
+.drawer details { border-bottom: 1px solid rgba(245,245,220,.1); }
+.drawer summary { cursor: pointer; list-style: none; padding: .85rem .25rem; font-family: var(--bn); font-size: 1.15rem; font-weight: 500; color: var(--gold); display: flex; justify-content: space-between; align-items: center; }
+.drawer summary::-webkit-details-marker { display: none; }
+.drawer summary::after { content: '+'; font-family: var(--mono); }
+.drawer details[open] summary::after { content: '–'; }
+.drawer details a { font-size: 1rem; padding: .6rem .25rem .6rem 1.1rem; border-bottom: 1px dashed rgba(245,245,220,.08); opacity: .85; }
+.drawer__meta { margin-top: 1.75rem; font-family: var(--mono); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; opacity: .5; line-height: 2; }
+@media (max-width: 950px) {
+  .sitenav__list, .sitenav__folio { display: none; }
+  .sitenav__burger { display: flex; }
+  .mega { display: none; }
+}
+@media (max-width: 700px) {
+  .sitenav__bar { padding: 0 1.1rem; }
+  .sitenav__brand small { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .drawer, .mega, .mega__card, .sitenav, .sitenav__link .caret { transition: none; }
+}
 </style>
 <noscript>
 <style>
@@ -1389,11 +1466,62 @@ body::after {
 <canvas class="cursor-canvas" id="cursor-canvas" aria-hidden="true"></canvas>
 <div class="page-frame" aria-hidden="true"></div>
 
-<header class="running-head">
-  <span class="rh-left">ARPON TELECOM</span>
-  <span class="rh-mid">মনোগ্রাফ · খণ্ড I</span>
-  <span class="rh-right">পৃ.&nbsp;<span id="page-num">০০১</span></span>
-</header>
+<nav class="sitenav" id="sitenav" aria-label="প্রধান মেনু">
+  <div class="sitenav__bar">
+    <a class="sitenav__brand" href="index.html" aria-label="আরপন টেলিকম — প্রচ্ছদ">
+      <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g stroke="#C9A227" stroke-width="2" fill="none"><path d="M 36.2 10.6 A 23.5 23.5 0 0 1 54.3 40.3"/><path d="M 50.3 47.2 A 23.5 23.5 0 0 1 13.7 47.2"/><path d="M 9.7 40.3 A 23.5 23.5 0 0 1 27.8 10.6"/></g><circle cx="32" cy="10" r="2.4" fill="#C9A227"/><path d="M 32 22 L 41.5 44 L 36.8 44 L 32 33 L 27.2 44 L 22.5 44 Z" fill="#C9A227"/></svg>
+      <b>ARPON TELECOM</b><small>আরপন টেলিকম</small>
+    </a>
+    <ul class="sitenav__list" role="list">
+      <li class="has-mega" id="mega-item">
+        <button class="sitenav__link" type="button" aria-expanded="false" aria-controls="mega-services">সেবাসমূহ <span class="caret" aria-hidden="true"></span></button>
+        <div class="mega" id="mega-services" role="region" aria-label="সেবাসমূহ">
+          <div class="mega__inner">
+            <div class="mega__grid">
+              <a class="mega__card" href="display-repair.html"><span class="mega__num">০১ · SERVICE</span><strong>ডিসপ্লে ও স্ক্রিন রিপেয়ার</strong><p>ভাঙা স্ক্রিন, টাচ সমস্যা, স্যামসাং গ্রিন লাইন — অরিজিনাল ও গ্রেড-A প্যানেল।</p><span class="mega__price">৳৮০০+</span></a>
+              <a class="mega__card" href="motherboard-repair.html"><span class="mega__num">০২ · SERVICE</span><strong>মাদারবোর্ড ও চিপ-লেভেল</strong><p>ডেড ফোন, শর্ট সার্কিট, নেটওয়ার্ক IC — মাইক্রোস্কোপে মাইক্রোসোল্ডারিং।</p><span class="mega__price">ডায়াগনোসিস ফ্রি</span></a>
+              <a class="mega__card" href="battery-repair.html"><span class="mega__num">০৩ · SERVICE</span><strong>ব্যাটারি ও পাওয়ার</strong><p>ব্যাকআপ কমে যাওয়া, গরম হয়ে যাওয়া, চার্জিং পোর্ট — জেনুইন সেল।</p><span class="mega__price">৳৫৫০+</span></a>
+              <a class="mega__card" href="software-unlock.html"><span class="mega__num">০৪ · SERVICE</span><strong>সফটওয়্যার ও আনলক</strong><p>ফ্ল্যাশিং, FRP/জিমেইল আনলক, প্যাটার্ন লক, হ্যাং — ডেটা নিরাপদ রেখে।</p><span class="mega__price">৳৩০০+</span></a>
+              <a class="mega__card" href="water-damage.html"><span class="mega__num">০৫ · SERVICE</span><strong>পানি-ক্ষত রিকভারি</strong><p>পানিতে পড়া ফোনের জরুরি ব্যবস্থা — আল্ট্রাসনিক ক্লিনিং ও বোর্ড ট্রিটমেন্ট।</p><span class="mega__price">৳৫০০+</span></a>
+            </div>
+            <div class="mega__aside">
+              <span class="eyebrow">ফ্রি ডায়াগনোসিস</span>
+              <p>প্রতিটি যন্ত্র খোলার আগে সমস্যা ধরা হয়, দাম বলে দেওয়া হয়। ঠিক করা না গেলে একটাকা ফিও নেই।</p>
+              <a href="services.html">সব সেবা একসঙ্গে দেখুন →</a>
+              <a data-contact="phone" href="tel:+8801XXXXXXXXX">+880 1XXX-XXXXXX</a>
+              <span class="mega__hours" data-contact="hours">শনি – বৃহঃ · ১০:০০ – ২০:০০</span>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="sitenav__item"><a class="sitenav__link" href="pricing.html">মূল্য তালিকা</a></li>
+      <li class="sitenav__item"><a class="sitenav__link" href="about.html">আমাদের সম্পর্কে</a></li>
+      <li class="sitenav__item"><a class="sitenav__link" href="faq.html">সাধারণ প্রশ্ন</a></li>
+      <li class="sitenav__item"><a class="sitenav__link" href="contact.html">যোগাযোগ</a></li>
+      <li class="sitenav__item"><a class="sitenav__link" href="search.html" aria-label="সাইটে অনুসন্ধান করুন"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg> অনুসন্ধান</a></li>
+    </ul>
+    <span class="sitenav__folio" aria-hidden="true"><span class="rh-mid">খণ্ড I</span> · পৃ.&nbsp;<span id="page-num">০০১</span></span>
+    <button class="sitenav__burger" id="burger" aria-expanded="false" aria-controls="drawer" aria-label="মেনু খুলুন বা বন্ধ করুন"><span></span><span></span><span></span></button>
+  </div>
+  <div class="drawer" id="drawer" aria-label="মোবাইল মেনু">
+    <details>
+      <summary>সেবাসমূহ</summary>
+      <a href="display-repair.html">০১ · ডিসপ্লে ও স্ক্রিন রিপেয়ার</a>
+      <a href="motherboard-repair.html">০২ · মাদারবোর্ড ও চিপ-লেভেল</a>
+      <a href="battery-repair.html">০৩ · ব্যাটারি ও পাওয়ার</a>
+      <a href="software-unlock.html">০৪ · সফটওয়্যার ও আনলক</a>
+      <a href="water-damage.html">০৫ · পানি-ক্ষত রিকভারি</a>
+      <a href="services.html">সব সেবা একসঙ্গে →</a>
+    </details>
+    <a href="pricing.html">মূল্য তালিকা</a>
+    <a href="about.html">আমাদের সম্পর্কে</a>
+    <a href="faq.html">সাধারণ প্রশ্ন</a>
+    <a href="contact.html">যোগাযোগ</a>
+    <a href="search.html">অনুসন্ধান</a>
+    <div class="drawer__meta" data-contact="address">[ঠিকানা]</div>
+    <div class="drawer__meta"><a data-contact="phone" href="tel:+8801XXXXXXXXX" style="border:0">+880 1XXX-XXXXXX</a></div>
+  </div>
+</nav>
 
 <!-- ========== HERO / FRONTISPIECE ========== -->
 <section class="hero" id="hero">
@@ -1592,7 +1720,7 @@ body::after {
           <span class="plate__corner plate__corner--tr">ডিসপ্লে / অ্যাসেম্বলি</span>
           <span class="plate__corner plate__corner--bl">অরিজিনাল OLED</span>
           <span class="plate__corner plate__corner--br">বেঞ্চ ০৩</span>
-          <img src="https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/217cb8c5a267.webp" alt="বেঞ্চে খোলা একটা স্মার্টফোন, ডিসপ্লে অ্যাসেম্বলি ফ্রেম থেকে সরানো অবস্থায়" width="900" height="1100" loading="lazy">
+          <img src="images/photo-display-bench.webp" alt="বেঞ্চে খোলা একটা স্মার্টফোন, ডিসপ্লে অ্যাসেম্বলি ফ্রেম থেকে সরানো অবস্থায়" width="900" height="1100" loading="lazy">
           <figcaption class="plate__meta">
             <span>PL. 01.A — ডিসপ্লে অ্যাসেম্বলি / OEM</span>
             <span>বেঞ্চ-টেস্টেড · ল্যামিনেশনের আগে</span>
@@ -2196,7 +2324,7 @@ body::after {
   <div class="letters__grid">
     <article class="letter reveal">
       <figure class="letter__img">
-        <img src="https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/e9cfaf591e95.jpg" alt="কাউন্টারে ডিসপ্লে বসাচ্ছেন একজন টেকনিশিয়ান, কাঁধের পাশে মাইক্রোস্কোপ" width="480" height="360" loading="lazy">
+        <img src="images/photo-technician-microscope.jpg" alt="কাউন্টারে ডিসপ্লে বসাচ্ছেন একজন টেকনিশিয়ান, কাঁধের পাশে মাইক্রোস্কোপ" width="480" height="360" loading="lazy">
       </figure>
       <div class="letter__meta">
         <span>ডিভাইস — গ্যালাক্সি S21 · গ্রিন লাইন</span>
@@ -2209,7 +2337,7 @@ body::after {
 
     <article class="letter reveal reveal--delay-1">
       <figure class="letter__img">
-        <img src="https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/2fceb63b9ac5.jpg" alt="মাইক্রোস্কোপের নিচে লজিক বোর্ড — পুকুরের পানির পর ক্ষয়ের মানচিত্র" width="480" height="360" loading="lazy">
+        <img src="images/photo-corrosion-board.jpg" alt="মাইক্রোস্কোপের নিচে লজিক বোর্ড — পুকুরের পানির পর ক্ষয়ের মানচিত্র" width="480" height="360" loading="lazy">
       </figure>
       <div class="letter__meta">
         <span>ডিভাইস — গ্যালাক্সি A54 · পানি</span>
@@ -2222,7 +2350,7 @@ body::after {
 
     <article class="letter reveal reveal--delay-2">
       <figure class="letter__img">
-        <img src="https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/93a8536b2995.jpg" alt="রাতের বেঞ্চ — মাইক্রোস্কোপ-ল্যাম্পের নিচে একটা বোর্ড" width="480" height="360" loading="lazy">
+        <img src="images/photo-night-bench.jpg" alt="রাতের বেঞ্চ — মাইক্রোস্কোপ-ল্যাম্পের নিচে একটা বোর্ড" width="480" height="360" loading="lazy">
       </figure>
       <div class="letter__meta">
         <span>ডিভাইস — রেডমি নোট · বোর্ড</span>
@@ -2276,6 +2404,20 @@ body::after {
     <p class="colophon__sig">— সমাপ্ত · মনোগ্রাফ I · আরপন টেলিকম · MMXXVI —</p>
     <p class="colophon__bn">ভরসাই আমাদের পুঁজি।</p>
   </div>
+
+  <nav class="colophon-sitemap" aria-label="সাইটের পাতাসমূহ" style="margin-top:2.5rem;padding-top:1.6rem;border-top:1px solid rgba(201,162,39,.25);display:flex;flex-wrap:wrap;gap:.55rem .9rem;justify-content:center">
+    <a href="services.html" style="color:var(--gold-light);text-decoration:none;font-family:var(--ui);font-size:.9rem">সেবাসমূহ</a><span style="opacity:.35">·</span>
+    <a href="display-repair.html" style="color:var(--gold-light);text-decoration:none;font-family:var(--ui);font-size:.9rem">ডিসপ্লে রিপেয়ার</a><span style="opacity:.35">·</span>
+    <a href="motherboard-repair.html" style="color:var(--gold-light);text-decoration:none;font-family:var(--ui);font-size:.9rem">মাদারবোর্ড</a><span style="opacity:.35">·</span>
+    <a href="battery-repair.html" style="color:var(--gold-light);text-decoration:none;font-family:var(--ui);font-size:.9rem">ব্যাটারি</a><span style="opacity:.35">·</span>
+    <a href="software-unlock.html" style="color:var(--gold-light);text-decoration:none;font-family:var(--ui);font-size:.9rem">সফটওয়্যার ও আনলক</a><span style="opacity:.35">·</span>
+    <a href="water-damage.html" style="color:var(--gold-light);text-decoration:none;font-family:var(--ui);font-size:.9rem">পানি-ক্ষত</a><span style="opacity:.35">·</span>
+    <a href="pricing.html" style="color:var(--gold-light);text-decoration:none;font-family:var(--ui);font-size:.9rem">মূল্য তালিকা</a><span style="opacity:.35">·</span>
+    <a href="about.html" style="color:var(--gold-light);text-decoration:none;font-family:var(--ui);font-size:.9rem">আমাদের সম্পর্কে</a><span style="opacity:.35">·</span>
+    <a href="faq.html" style="color:var(--gold-light);text-decoration:none;font-family:var(--ui);font-size:.9rem">সাধারণ প্রশ্ন</a><span style="opacity:.35">·</span>
+    <a href="contact.html" style="color:var(--gold-light);text-decoration:none;font-family:var(--ui);font-size:.9rem">যোগাযোগ</a><span style="opacity:.35">·</span>
+    <a href="search.html" style="color:var(--gold-light);text-decoration:none;font-family:var(--ui);font-size:.9rem">অনুসন্ধান</a>
+  </nav>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
@@ -2324,6 +2466,56 @@ const BUSINESS = {
       el.innerHTML = String(v).replace(/\n/g, '<br>');
     }
   });
+
+  /* ---- Site nav: burger drawer, mega toggle, scrolled state ---- */
+  var navEl = document.getElementById('sitenav');
+  if (navEl) {
+    var burger = document.getElementById('burger');
+    var drawer = document.getElementById('drawer');
+    if (burger && drawer) {
+      burger.addEventListener('click', function () {
+        var open = drawer.classList.toggle('is-open');
+        burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        document.body.style.overflow = open ? 'hidden' : '';
+      });
+      Array.prototype.forEach.call(drawer.querySelectorAll('a'), function (a) {
+        a.addEventListener('click', function () {
+          drawer.classList.remove('is-open');
+          burger.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        });
+      });
+    }
+    var megaItem = document.getElementById('mega-item');
+    if (megaItem) {
+      var megaTrigger = megaItem.querySelector('button');
+      megaTrigger.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var open = megaItem.classList.toggle('is-open');
+        megaTrigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      document.addEventListener('click', function (e) {
+        if (!megaItem.contains(e.target)) {
+          megaItem.classList.remove('is-open');
+          megaTrigger.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape') return;
+      if (drawer) { drawer.classList.remove('is-open'); if (burger) burger.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; }
+      if (megaItem) { megaItem.classList.remove('is-open'); megaTrigger.setAttribute('aria-expanded', 'false'); }
+    });
+    var navTick = false;
+    var navUpd = function () {
+      navTick = false;
+      navEl.classList.toggle('is-scrolled', window.scrollY > 24);
+    };
+    window.addEventListener('scroll', function () {
+      if (!navTick) { navTick = true; requestAnimationFrame(navUpd); }
+    }, { passive: true });
+    navUpd();
+  }
 
   /* ---- Lenis smooth scroll, wired to ScrollTrigger ---- */
   var lenis = null;

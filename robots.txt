@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fakejack752-eng.github.io/arpontelecom/sitemap.xml
