@@ -1,0 +1,2597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Arpon Telecom — mobile servicing, repair, gadgets & accessories in Bangladesh. A monograph on the craft of repair, Vol. I.">
+<meta name="theme-color" content="#05140A">
+<title>ARPON TELECOM — A Monograph on the Craft of Repair · Vol. I</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2305140A'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='38' fill='%23C9A227' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&family=Noto+Serif+Bengali:wght@400&display=swap">
+<style>
+/* ============================================================
+   ARPON TELECOM — A Monograph on the Craft of Repair, Vol. I
+   Dark-jungle ground · one gold ink · type-as-content
+   ============================================================ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --jungle-deep:     #05140A;
+  --jungle-primary:  #0D2818;
+  --jungle-mid:      #0a1f12;
+  --jungle-secondary:#1A4D2E;
+  --gold:            #C9A227;
+  --gold-light:      #D4AF37;
+  --gold-dark:       #B8860B;
+  --ivory:           #F5F5DC;
+  --moss:            #8FBC8F;
+  --serif: 'Cormorant Garamond', 'Times New Roman', 'Noto Serif Bengali', serif;
+  --sans:  'Inter', system-ui, sans-serif;
+  --mono:  'JetBrains Mono', 'Noto Serif Bengali', monospace;
+  --ease-quiet:    cubic-bezier(.22, 1, .36, 1);
+  --ease-precise:  cubic-bezier(.4, 0, .2, 1);
+  --ease-emphasis: cubic-bezier(.16, 1, .3, 1);
+}
+
+html { scroll-behavior: auto; }
+
+body {
+  background: var(--jungle-deep);
+  color: var(--ivory);
+  font-family: var(--sans);
+  font-weight: 300;
+  line-height: 1.6;
+  font-size: 16px;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection { background: var(--gold); color: var(--jungle-deep); }
+
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+a:focus-visible { outline: 1px solid var(--gold); outline-offset: 3px; }
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--jungle-deep); }
+::-webkit-scrollbar-thumb { background: var(--jungle-secondary); border: 2px solid var(--jungle-deep); }
+::-webkit-scrollbar-thumb:hover { background: var(--gold-dark); }
+
+/* Atmosphere — vignettes + scanline grain */
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background:
+    radial-gradient(ellipse at 12% 4%, rgba(26, 77, 46, 0.14), transparent 55%),
+    radial-gradient(ellipse at 88% 96%, rgba(201, 162, 39, 0.06), transparent 55%);
+  pointer-events: none; z-index: 1;
+}
+body::after {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(245, 245, 220, 0.012) 2px, rgba(245, 245, 220, 0.012) 3px);
+  pointer-events: none; z-index: 2;
+  mix-blend-mode: overlay;
+}
+
+/* Fixed hairline page frame, like a book plate */
+.page-frame {
+  position: fixed; inset: 12px;
+  border: 1px solid rgba(201, 162, 39, 0.14);
+  pointer-events: none; z-index: 90;
+}
+
+.cursor-canvas { position: fixed; inset: 0; pointer-events: none; z-index: 9999; }
+
+/* ---------- Utilities ---------- */
+.eyebrow {
+  font-family: var(--sans);
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--gold);
+  display: inline-block;
+}
+.bn { font-family: 'Noto Serif Bengali', serif; font-size: 0.95em; letter-spacing: 0.06em; }
+
+.rule-draw {
+  display: block;
+  width: 100%; height: 1px;
+  background: var(--gold);
+  opacity: 0.4;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 1.3s var(--ease-quiet);
+}
+.rule-draw.is-in { transform: scaleX(1); }
+
+/* ---------- Running head ---------- */
+.running-head {
+  position: fixed;
+  top: 1.4rem; left: 0; right: 0;
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: 0 2rem;
+  font-family: var(--mono);
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--ivory); opacity: 0.5;
+  z-index: 100;
+  pointer-events: none;
+}
+.running-head .rh-mid { color: var(--gold); opacity: 0.85; }
+.running-head .rh-right { color: var(--ivory); }
+
+/* ---------- Hero / Frontispiece ---------- */
+.hero {
+  min-height: 100vh;
+  display: flex; flex-direction: column;
+  justify-content: space-between;
+  padding: 5.5rem 2rem 2.5rem;
+  position: relative;
+  z-index: 3;
+}
+.hero__meta-top, .hero__meta-bottom {
+  display: flex; justify-content: space-between; align-items: baseline;
+  gap: 1rem; flex-wrap: wrap;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ivory); opacity: 0.55;
+}
+.hero__meta-top span:nth-child(2) { color: var(--gold); opacity: 0.9; }
+.hero__meta-bottom .hero__scroll-cue { color: var(--gold); opacity: 1; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; animation: nudge 2.4s var(--ease-quiet) infinite; }
+.hero__meta-bottom span:nth-child(3) { color: var(--moss); }
+
+@keyframes nudge {
+  0%, 100% { transform: translateY(0); opacity: 0.7; }
+  50%      { transform: translateY(4px); opacity: 1; }
+}
+
+.hero__title {
+  flex: 1;
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  padding: 3rem 0;
+  text-align: center;
+}
+.hero__name {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(4rem, 17vw, 15rem);
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+  color: var(--ivory);
+  display: flex; justify-content: center;
+  perspective: 800px;
+}
+.hero__name span { display: inline-block; opacity: 0; will-change: transform, opacity; }
+.hero__name--line2 {
+  color: var(--gold);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(2.4rem, 9.5vw, 8rem);
+  letter-spacing: -0.01em;
+  line-height: 1;
+  margin-top: 1.5rem;
+}
+.hero__byline {
+  display: flex; align-items: center; justify-content: center;
+  gap: 1.25rem;
+  margin-top: 2.75rem;
+  font-family: var(--sans);
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ivory); opacity: 0.8;
+  flex-wrap: wrap;
+}
+.hero__rule { display: inline-block; width: 3rem; height: 1px; background: var(--gold); }
+
+/* ---------- Section dividers (roman) ---------- */
+.divider {
+  display: flex; align-items: center; justify-content: center;
+  gap: 1.5rem;
+  padding: 5rem 2rem 3rem;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+  position: relative;
+  z-index: 3;
+}
+.divider::before, .divider::after {
+  content: '';
+  display: block;
+  width: 4rem; height: 1px;
+  background: var(--gold);
+  opacity: 0.4;
+  transform: scaleX(0);
+  transition: transform 1.3s var(--ease-quiet);
+}
+.divider::before { transform-origin: right center; }
+.divider::after  { transform-origin: left center; }
+.divider.is-in::before, .divider.is-in::after { transform: scaleX(1); }
+.divider__roman {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  color: var(--ivory);
+  letter-spacing: 0.15em;
+  padding: 0 0.5rem;
+}
+.divider > span:not(.divider__roman) {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.9s var(--ease-quiet) 0.2s, transform 0.9s var(--ease-quiet) 0.2s;
+}
+.divider.is-in > span:not(.divider__roman) { opacity: 1; transform: none; }
+
+/* ---------- Preface (manifesto) ---------- */
+.manifesto {
+  padding: 6rem 2rem 7rem;
+  max-width: 860px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+}
+.manifesto__header { text-align: center; margin-bottom: 4rem; }
+.manifesto__header .eyebrow { margin-bottom: 1.5rem; }
+.manifesto__title {
+  font-family: var(--serif);
+  font-size: clamp(2.4rem, 6vw, 4.4rem);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.05;
+  color: var(--ivory);
+}
+.manifesto__title em { color: var(--gold); font-style: normal; }
+
+.manifesto__body {
+  font-family: var(--serif);
+  font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+  line-height: 1.68;
+  color: var(--ivory);
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+.manifesto__body p { margin-bottom: 1.5rem; }
+.manifesto__body p:first-of-type::first-letter {
+  font-family: var(--serif);
+  font-size: 5.4em;
+  line-height: 0.82;
+  float: left;
+  padding: 0.05em 0.12em 0 0;
+  color: var(--gold);
+  font-weight: 700;
+}
+.manifesto__body em { color: var(--gold-light); font-style: italic; }
+.manifesto__body sup { color: var(--gold); font-family: var(--mono); font-size: 0.55em; }
+
+.manifesto__sig {
+  margin-top: 4rem;
+  text-align: right;
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--gold);
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+.manifesto__sig::before {
+  content: '';
+  display: inline-block;
+  width: 3rem; height: 1px;
+  background: var(--gold);
+  vertical-align: middle;
+  margin-right: 1rem;
+  opacity: 0.5;
+}
+.manifesto__sig-meta {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-style: normal;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ivory);
+  opacity: 0.6;
+}
+
+/* ---------- Index / Contents ---------- */
+.index {
+  padding: 5rem 2rem 8rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+}
+.index__header { text-align: center; margin-bottom: 4rem; }
+.index__title {
+  font-family: var(--serif);
+  font-size: clamp(3rem, 7vw, 5rem);
+  font-weight: 400;
+  line-height: 1;
+  margin-top: 1rem;
+  color: var(--ivory);
+  font-style: italic;
+}
+.index__list { list-style: none; border-top: 1px solid rgba(245, 245, 220, 0.18); }
+.index__entry {
+  display: grid;
+  grid-template-columns: 90px 1fr 250px 90px;
+  align-items: baseline;
+  padding: 1.7rem 0.5rem;
+  border-bottom: 1px solid rgba(245, 245, 220, 0.18);
+  text-decoration: none;
+  transition: padding 0.5s var(--ease-quiet), background 0.5s var(--ease-quiet);
+  cursor: pointer;
+}
+.index__entry:hover {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+  background: linear-gradient(90deg, transparent, rgba(201, 162, 39, 0.07), transparent);
+}
+.index__entry:hover .index__name,
+.index__entry:hover .index__num,
+.index__entry:hover .index__page { color: var(--gold); text-shadow: 0 0 22px rgba(201, 162, 39, 0.4); }
+.index__num { font-family: var(--mono); font-size: 13px; color: var(--gold); transition: color 0.4s var(--ease-quiet); }
+.index__name {
+  font-family: var(--serif);
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 400;
+  color: var(--ivory);
+  transition: color 0.4s var(--ease-quiet), text-shadow 0.4s var(--ease-quiet);
+}
+.index__cat {
+  font-family: var(--sans);
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--ivory); opacity: 0.5;
+}
+.index__page {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--ivory); opacity: 0.55;
+  text-align: right;
+  transition: color 0.4s var(--ease-quiet);
+}
+/* ---------- Chapter spreads (two-page spreads) ---------- */
+.spread {
+  min-height: 100vh;
+  padding: 4.5rem 2rem 7rem;
+  position: relative;
+  z-index: 3;
+  opacity: 0;
+  transform: translateX(80px);
+  transition: opacity 1.25s var(--ease-quiet), transform 1.25s var(--ease-quiet);
+  will-change: transform, opacity;
+}
+.spread.is-in { opacity: 1; transform: translateX(0); }
+.spread.is-past { opacity: 0.45; transform: translateX(-60px); }
+
+.spread__inner { max-width: 1400px; margin: 0 auto; }
+
+.spread__head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  gap: 1rem;
+  padding-bottom: 1.4rem;
+  border-bottom: 1px solid rgba(245, 245, 220, 0.15);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ivory); opacity: 0.55;
+  margin-bottom: 3rem;
+}
+.spread__head span:nth-child(2) { color: var(--gold); opacity: 0.9; }
+
+.spread__chapter-wrap {
+  display: flex; align-items: flex-end; gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+.spread__chapter {
+  font-family: var(--serif);
+  font-size: clamp(7rem, 17vw, 14rem);
+  font-weight: 400;
+  line-height: 0.82;
+  color: var(--gold);
+  letter-spacing: -0.04em;
+}
+.spread__chapter-label {
+  font-family: var(--sans);
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--ivory);
+  opacity: 0.8;
+  padding-bottom: 1.2rem;
+  border-left: 1px solid var(--gold);
+  padding-left: 1rem;
+}
+.spread__chapter-label small {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  opacity: 0.6;
+  margin-top: 0.4rem;
+  color: var(--moss);
+}
+
+.spread__title {
+  font-family: var(--serif);
+  font-size: clamp(2.2rem, 5.5vw, 4.2rem);
+  font-weight: 400;
+  line-height: 1.04;
+  color: var(--ivory);
+  margin-bottom: 1.25rem;
+  max-width: 1000px;
+  letter-spacing: -0.015em;
+}
+.spread__sub {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.1rem, 1.7vw, 1.45rem);
+  color: var(--gold);
+  margin-bottom: 3rem;
+  max-width: 780px;
+  line-height: 1.45;
+}
+
+.spread__meta {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-bottom: 4rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(245, 245, 220, 0.15);
+  border-bottom: 1px solid rgba(245, 245, 220, 0.15);
+}
+.spread__meta-item .label {
+  display: block;
+  font-family: var(--sans);
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--ivory); opacity: 0.5;
+  margin-bottom: 0.5rem;
+}
+.spread__meta-item .value { font-family: var(--serif); font-size: 1.15rem; color: var(--ivory); }
+
+.spread__body {
+  font-family: var(--serif);
+  font-size: clamp(1.05rem, 1.3vw, 1.25rem);
+  line-height: 1.7;
+  color: var(--ivory);
+  max-width: 680px;
+  margin-bottom: 2.5rem;
+}
+.spread__body p { margin-bottom: 1.25rem; text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.spread__body p:first-of-type::first-letter {
+  font-family: var(--serif);
+  font-size: 5em;
+  line-height: 0.82;
+  float: left;
+  padding: 0.05em 0.12em 0 0;
+  color: var(--gold);
+  font-weight: 700;
+}
+.spread__body em { color: var(--gold-light); font-style: italic; }
+.spread__body sup { color: var(--gold); font-family: var(--mono); font-size: 0.55em; }
+
+.spread__pullquote {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.45rem, 2.6vw, 2.15rem);
+  line-height: 1.28;
+  color: var(--gold);
+  margin: 2.75rem 0;
+  padding-left: 2rem;
+  border-left: 1px solid var(--gold);
+  max-width: 720px;
+}
+.spread__pullquote::before { content: '\201C'; }
+.spread__pullquote::after  { content: '\201D'; }
+
+.spread__caption {
+  font-family: var(--sans);
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--ivory); opacity: 0.55;
+  margin-top: 0.85rem;
+  display: flex; justify-content: space-between; gap: 1rem;
+}
+
+/* Footnotes — margin notes at chapter ends */
+.footnotes {
+  margin-top: 2.25rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid rgba(201, 162, 39, 0.3);
+  max-width: 680px;
+}
+.footnotes p {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: var(--moss);
+  margin-bottom: 0.35rem;
+}
+.footnotes sup { font-family: var(--mono); font-style: normal; color: var(--gold); font-size: 0.62rem; margin-right: 0.15rem; }
+
+/* ---------- Chapter layouts ---------- */
+.spread--plate .spread__layout,
+.spread--board .spread__layout,
+.spread--power .spread__layout,
+.spread--water .spread__layout {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+.spread--water .spread__layout { grid-template-columns: 1.15fr 0.85fr; align-items: center; }
+
+/* Framed plate (photograph + corner meta) */
+.plate {
+  border: 1px solid rgba(201, 162, 39, 0.22);
+  background: var(--jungle-mid);
+  padding: 2.25rem 2.25rem 1.5rem;
+  position: relative;
+}
+.plate img {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  filter: brightness(0.8) contrast(1.1) saturate(0.85);
+}
+.plate__meta {
+  display: flex; justify-content: space-between; gap: 1rem;
+  padding-top: 1rem;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ivory); opacity: 0.65;
+}
+.plate__corner {
+  position: absolute;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: var(--gold); opacity: 0.65;
+  background: var(--jungle-mid);
+  padding: 0 0.4rem;
+  z-index: 2;
+}
+.plate__corner--tl { top: 0.85rem; left: 1rem; }
+.plate__corner--tr { top: 0.85rem; right: 1rem; }
+.plate__corner--bl { bottom: 0.6rem; left: 1rem; }
+.plate__corner--br { bottom: 0.6rem; right: 1rem; }
+
+/* Logo construction panel (Chapter 02) */
+.logo-display {
+  border: 1px solid rgba(201, 162, 39, 0.2);
+  background: var(--jungle-mid);
+  padding: 3.25rem 2rem 2rem;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  position: relative;
+}
+.logo-display__svg { width: 100%; max-width: 340px; height: auto; }
+.logo-paths path,
+.logo-paths line,
+.logo-paths polygon,
+.logo-paths circle {
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  transition: stroke-dashoffset 2.2s var(--ease-emphasis) 0.2s;
+}
+.spread.is-in .logo-paths path,
+.spread.is-in .logo-paths line,
+.spread.is-in .logo-paths polygon,
+.spread.is-in .logo-paths circle { stroke-dashoffset: 0; }
+.logo-dots .dot { opacity: 0; transition: opacity 0.9s var(--ease-quiet) 1.7s; }
+.spread.is-in .logo-dots .dot { opacity: 1; }
+
+.logo-grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(201, 162, 39, 0.2);
+  width: 100%;
+}
+.logo-grid__item {
+  aspect-ratio: 1;
+  border: 1px solid rgba(245, 245, 220, 0.1);
+  display: flex; align-items: center; justify-content: center;
+  padding: 0.6rem;
+}
+.logo-grid__item svg { width: 100%; height: 100%; }
+
+/* Bench spec sheet (Chapter 02) */
+.bench-spec {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem 2.5rem;
+  margin-top: 4rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(201, 162, 39, 0.25);
+}
+.bench-spec .bench-spec__eyebrow {
+  grid-column: 1 / -1;
+  font-family: var(--sans);
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+.bench-spec__item .label {
+  display: block;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--gold-dark);
+  opacity: 0.9;
+  margin-bottom: 0.4rem;
+}
+.bench-spec__item .value { font-family: var(--serif); font-size: 1.1rem; color: var(--ivory); }
+
+/* Ledger — genuine vs aftermarket (Chapter 03) */
+.ledger {
+  border: 1px solid rgba(201, 162, 39, 0.25);
+  background: var(--jungle-mid);
+  padding: 2rem 1.75rem 1.5rem;
+}
+.ledger__head {
+  display: flex; justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--gold);
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(201, 162, 39, 0.3);
+}
+.ledger__row {
+  display: grid;
+  grid-template-columns: 0.8fr 1.1fr 1fr;
+  gap: 1rem;
+  padding: 0.95rem 0;
+  border-bottom: 1px solid rgba(245, 245, 220, 0.08);
+  align-items: baseline;
+}
+.ledger__row:last-child { border-bottom: none; }
+.ledger__row.head {
+  font-family: var(--sans);
+  font-size: 9px; font-weight: 500;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  padding-bottom: 0.6rem;
+}
+.ledger__row.head span:nth-child(2) { color: var(--gold); }
+.ledger__row.head span:nth-child(3) { color: var(--ivory); opacity: 0.45; }
+.ledger__k {
+  font-family: var(--sans);
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--ivory); opacity: 0.55;
+}
+.ledger__yes { font-family: var(--serif); font-size: 1.05rem; color: var(--gold-light); }
+.ledger__no  { font-family: var(--serif); font-style: italic; font-size: 1rem; color: var(--ivory); opacity: 0.5; }
+
+/* Intake ticket (Chapter 05) */
+.ticket {
+  width: min(360px, 100%);
+  margin: 0 auto;
+  background: var(--ivory);
+  color: var(--jungle-deep);
+  padding: 1.6rem 1.5rem 1.3rem;
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.6), 0 8px 20px -8px rgba(0, 0, 0, 0.4);
+  transform: rotate(1.4deg);
+  font-family: var(--mono);
+}
+.ticket__head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
+  border-bottom: 1px solid rgba(5, 20, 10, 0.4);
+  padding-bottom: 0.6rem;
+  margin-bottom: 1.1rem;
+}
+.ticket__head span:last-child { color: var(--gold-dark); }
+.ticket__brand {
+  font-family: var(--serif);
+  font-size: 1.7rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  margin-bottom: 0.2rem;
+}
+.ticket__no {
+  font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase;
+  opacity: 0.6;
+  margin-bottom: 1.1rem;
+}
+.ticket__row {
+  display: flex; justify-content: space-between; gap: 1rem;
+  font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed rgba(5, 20, 10, 0.28);
+}
+.ticket__row .k { opacity: 0.55; }
+.ticket__row .v { font-weight: 500; text-align: right; }
+.ticket__stamp {
+  margin-top: 1.3rem;
+  border: 2px solid var(--gold-dark);
+  color: var(--gold-dark);
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.15rem;
+  letter-spacing: 0.1em;
+  text-align: center;
+  padding: 0.5rem;
+  transform: rotate(-2deg);
+}
+.ticket__foot {
+  margin-top: 1.1rem;
+  display: flex; justify-content: space-between;
+  font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase;
+  opacity: 0.55;
+}
+
+/* Specimen stage (Chapter 04) */
+.specimen-stage {
+  background: var(--jungle-mid);
+  border: 1px solid rgba(201, 162, 39, 0.2);
+  padding: 4rem 3rem 3rem;
+  margin: 1rem 0 3.5rem;
+  text-align: center;
+  position: relative;
+}
+.specimen-stage__corner {
+  position: absolute;
+  font-family: var(--mono);
+  font-size: 9px; letter-spacing: 0.2em;
+  color: var(--gold); opacity: 0.65;
+}
+.specimen-stage__corner--tl { top: 1rem; left: 1rem; }
+.specimen-stage__corner--br { bottom: 1rem; right: 1rem; }
+.specimen-stage__glyph {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(9rem, 26vw, 24rem);
+  line-height: 0.85;
+  color: var(--ivory);
+  letter-spacing: -0.06em;
+}
+.specimen-stage__glyph em { color: var(--gold); font-style: italic; font-weight: 500; }
+.specimen-stage__caption {
+  margin-top: 4.5rem;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--gold);
+  position: relative;
+  z-index: 1;
+}
+
+.type-features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+  padding-top: 3rem;
+  border-top: 1px solid rgba(245, 245, 220, 0.15);
+}
+.type-features__item .num {
+  font-family: var(--serif);
+  font-size: 3.4rem;
+  font-weight: 400;
+  color: var(--gold);
+  line-height: 1;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+.type-features__item .label {
+  font-family: var(--sans);
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--ivory); opacity: 0.75;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.type-features__item .desc {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.98rem;
+  color: var(--ivory); opacity: 0.6;
+}
+.spread__narrow { max-width: 760px; margin: 0 auto; }
+/* ---------- Section head (shop / palette / letters) ---------- */
+.section-head {
+  padding: 6rem 2rem 3.5rem;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.section-head__num {
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-style: italic;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+.section-head__title {
+  font-family: var(--serif);
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  font-weight: 400;
+  line-height: 1;
+  color: var(--ivory);
+  letter-spacing: -0.02em;
+}
+.section-head__title em { color: var(--gold); font-style: italic; }
+.section-head__sub {
+  margin-top: 1.5rem;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--ivory); opacity: 0.7;
+  max-width: 560px;
+  margin-left: auto; margin-right: auto;
+}
+
+/* ---------- Specimen desk (accessories) ---------- */
+.specimens { position: relative; z-index: 3; padding: 0 2rem 7rem; }
+.specimens__desk {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 720px;
+  background:
+    radial-gradient(ellipse at center, rgba(13, 40, 24, 0.6), transparent 70%),
+    var(--jungle-deep);
+  border: 1px solid rgba(201, 162, 39, 0.15);
+  overflow: hidden;
+}
+.specimens__desk::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(201, 162, 39, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201, 162, 39, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+.specimens__hint {
+  position: absolute;
+  bottom: 1.4rem; left: 1.5rem;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ivory); opacity: 0.5;
+  pointer-events: none;
+  z-index: 1;
+}
+.specimens__hint .bn { color: var(--moss); }
+
+.specimen {
+  position: absolute;
+  width: 280px;
+  background: var(--ivory);
+  color: var(--jungle-deep);
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+  box-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.3),
+    0 30px 60px -20px rgba(0, 0, 0, 0.6),
+    0 12px 24px -8px rgba(0, 0, 0, 0.4);
+  transition: box-shadow 0.4s var(--ease-quiet);
+  transform-origin: center center;
+  will-change: transform;
+}
+.specimen:nth-of-type(1) { left: 3%;  top: 5%; }
+.specimen:nth-of-type(2) { left: 32%; top: 3%; }
+.specimen:nth-of-type(3) { left: 61%; top: 10%; }
+.specimen:nth-of-type(4) { left: 10%; top: 52%; }
+.specimen:nth-of-type(5) { left: 42%; top: 48%; }
+.specimen:nth-of-type(6) { left: 68%; top: 54%; }
+.specimen.is-dragging {
+  cursor: grabbing;
+  box-shadow: 0 40px 80px -10px rgba(0, 0, 0, 0.7), 0 16px 32px -4px rgba(0, 0, 0, 0.5);
+}
+.specimen__paper {
+  padding: 1.4rem 1.5rem 1.2rem;
+  position: relative;
+}
+.specimen__paper::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(5, 20, 10, 0.02) 3px, rgba(5, 20, 10, 0.02) 4px);
+  pointer-events: none;
+}
+.specimen__head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--jungle-deep); opacity: 0.65;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid rgba(5, 20, 10, 0.25);
+  margin-bottom: 0.5rem;
+}
+.specimen__head span:last-child { color: var(--gold-dark); opacity: 1; }
+.specimen__aa {
+  font-family: var(--serif);
+  font-size: 7.5rem;
+  font-weight: 700;
+  line-height: 0.9;
+  color: var(--jungle-deep);
+  letter-spacing: -0.05em;
+  text-align: center;
+  padding: 0.75rem 0;
+}
+.specimen__aa em { color: var(--gold-dark); font-style: italic; font-weight: 500; }
+.specimen__alphabet {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--jungle-deep);
+  text-align: center;
+  letter-spacing: 0.03em;
+  padding: 0.7rem 0;
+  border-top: 1px solid rgba(5, 20, 10, 0.18);
+  border-bottom: 1px solid rgba(5, 20, 10, 0.18);
+  margin-bottom: 0.7rem;
+}
+.specimen__footer {
+  display: flex; justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--jungle-deep); opacity: 0.75;
+}
+.specimen__footer .specimen__price { color: var(--gold-dark); font-weight: 500; }
+
+/* ---------- Palette film strip ---------- */
+.palette {
+  position: relative;
+  z-index: 3;
+  min-height: 100vh;
+  display: flex; align-items: center;
+  overflow: hidden;
+  padding: 6rem 0;
+}
+.palette__head {
+  position: absolute;
+  top: 4rem; left: 2rem; right: 2rem;
+  display: flex; justify-content: space-between; align-items: flex-end;
+  z-index: 4;
+}
+.palette__title {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--ivory);
+  line-height: 1;
+}
+.palette__title em { color: var(--gold); font-style: normal; }
+.palette__count {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-align: right;
+  line-height: 1.8;
+}
+.palette__count-sub { color: var(--ivory); opacity: 0.45; font-size: 9px; }
+.palette__progress {
+  position: absolute;
+  bottom: 3rem; left: 2rem; right: 2rem;
+  height: 1px;
+  background: rgba(245, 245, 220, 0.15);
+  z-index: 4;
+}
+.palette__progress-bar {
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  background: var(--gold);
+  width: 0%;
+}
+.palette__progress-label {
+  position: absolute;
+  bottom: 1.6rem; left: 2rem;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--ivory); opacity: 0.45;
+}
+.palette__progress-label--right { left: auto; right: 2rem; }
+
+.filmstrip {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 4.5rem 0;
+  will-change: transform;
+}
+.filmstrip__sprockets {
+  position: absolute;
+  left: 0; right: 0;
+  height: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  pointer-events: none;
+  z-index: 2;
+}
+.filmstrip__sprockets--top { top: 1.3rem; }
+.filmstrip__sprockets--bottom { bottom: 1.3rem; }
+.sprocket {
+  width: 13px; height: 13px;
+  background: var(--jungle-deep);
+  border: 1px solid rgba(201, 162, 39, 0.3);
+  margin: 0 0.6rem;
+  flex-shrink: 0;
+}
+.filmframe {
+  flex-shrink: 0;
+  width: 320px;
+  height: 440px;
+  margin: 0 0.6rem;
+  background: var(--jungle-primary);
+  border: 1px solid rgba(201, 162, 39, 0.2);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem 1.5rem;
+  transition: border-color 0.5s var(--ease-quiet), box-shadow 0.5s var(--ease-quiet);
+}
+.filmframe.is-active {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 1px rgba(201, 162, 39, 0.35), 0 22px 50px -20px rgba(0, 0, 0, 0.65);
+}
+.filmframe__swatch {
+  width: 100%;
+  height: 190px;
+  background: var(--swatch);
+  margin-bottom: 1.4rem;
+  border: 1px solid rgba(245, 245, 220, 0.12);
+}
+.filmframe__num {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.25em;
+  color: var(--gold);
+  margin-bottom: 0.7rem;
+}
+.filmframe__name {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--ivory);
+  line-height: 1.1;
+  margin-bottom: 0.4rem;
+}
+.filmframe__hex {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--ivory); opacity: 0.7;
+  margin-bottom: 0.8rem;
+}
+.filmframe__pant {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-family: var(--sans);
+  font-size: 9px; font-weight: 500;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--ivory); opacity: 0.5;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(245, 245, 220, 0.1);
+}
+.palette--static { min-height: auto; overflow-x: auto; padding: 4rem 0 6rem; }
+.palette--static .palette__head { position: static; padding: 0 2rem 2.5rem; }
+.palette--static .palette__progress, .palette--static .palette__progress-label { display: none; }
+.palette--static .filmstrip { transform: none !important; }
+
+/* ---------- Letters to the Editor ---------- */
+.letters { padding: 4rem 2rem 8rem; max-width: 1400px; margin: 0 auto; position: relative; z-index: 3; }
+.letters__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.letter {
+  border: 1px solid rgba(201, 162, 39, 0.18);
+  background: var(--jungle-primary);
+  padding: 1.25rem 1.25rem 1.75rem;
+  display: flex; flex-direction: column;
+}
+.letter__img { border: 1px solid rgba(245, 245, 220, 0.12); overflow: hidden; }
+.letter__img img {
+  width: 100%; height: 200px; object-fit: cover;
+  filter: brightness(0.7) contrast(1.1) saturate(0.75);
+  transition: filter 0.6s var(--ease-quiet), transform 0.8s var(--ease-quiet);
+}
+.letter:hover .letter__img img { filter: brightness(0.85) contrast(1.05); transform: scale(1.03); }
+.letter__meta {
+  margin-top: 1.1rem;
+  display: flex; justify-content: space-between; gap: 1rem;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--gold); opacity: 0.85;
+}
+.letter__meta span:last-child { color: var(--ivory); opacity: 0.5; }
+.letter__title {
+  font-family: var(--serif);
+  font-size: 1.75rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.15;
+  color: var(--ivory);
+  margin-top: 0.8rem;
+}
+.letter__title em { color: var(--gold); font-style: normal; }
+.letter__body {
+  font-family: var(--serif);
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: var(--ivory); opacity: 0.75;
+  margin-top: 0.7rem;
+}
+.letter__sig {
+  margin-top: auto;
+  padding-top: 1.2rem;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--moss);
+}
+
+/* ---------- Contact / Colophon ---------- */
+.contact { padding: 8rem 2rem 5rem; position: relative; z-index: 3; text-align: center; }
+.contact__pre {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+.contact__name {
+  font-family: var(--serif);
+  font-size: clamp(3rem, 9vw, 8rem);
+  font-weight: 700;
+  line-height: 0.9;
+  color: var(--ivory);
+  letter-spacing: -0.03em;
+  margin-bottom: 2.25rem;
+}
+.contact__name em { color: var(--gold); font-style: italic; font-weight: 500; }
+.contact__phone {
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-style: italic;
+  color: var(--gold);
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border-top: 1px solid var(--gold);
+  border-bottom: 1px solid var(--gold);
+  margin-bottom: 3.5rem;
+  text-decoration: none;
+  transition: opacity 0.3s var(--ease-quiet), letter-spacing 0.5s var(--ease-quiet);
+}
+.contact__phone:hover { opacity: 0.75; letter-spacing: 0.02em; }
+.contact__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto 5rem;
+  text-align: left;
+}
+.contact__col { border-top: 1px solid rgba(201, 162, 39, 0.25); padding-top: 1.2rem; }
+.contact__col .label {
+  display: block;
+  font-family: var(--sans);
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.8rem;
+}
+.contact__col .value {
+  font-family: var(--serif);
+  font-size: 1.12rem;
+  line-height: 1.55;
+  color: var(--ivory);
+  margin-bottom: 0.75rem;
+}
+.contact__col .value--hours { opacity: 0.65; font-size: 1rem; }
+.contact__col a { text-decoration: none; border-bottom: 1px solid rgba(201, 162, 39, 0.4); transition: color 0.3s var(--ease-quiet); }
+.contact__col a:hover { color: var(--gold-light); }
+.contact__col .note {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--ivory); opacity: 0.5;
+}
+.colophon {
+  max-width: 720px;
+  margin: 3rem auto 0;
+  padding: 3rem 2rem 0;
+  border-top: 1px solid rgba(245, 245, 220, 0.15);
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: var(--ivory); opacity: 0.65;
+  text-align: center;
+}
+.colophon em { color: var(--gold); font-style: normal; }
+.colophon__sig {
+  margin-top: 2rem;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-style: normal;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.85;
+}
+.colophon__bn {
+  font-family: 'Noto Serif Bengali', serif;
+  font-style: normal;
+  font-size: 0.9rem;
+  color: var(--moss);
+  margin-top: 1.2rem;
+  opacity: 0.8;
+}
+
+/* ---------- Reveal ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 1.1s var(--ease-quiet), transform 1.1s var(--ease-quiet);
+}
+.reveal.is-in { opacity: 1; transform: translateY(0); }
+.reveal--delay-1 { transition-delay: 0.15s; }
+.reveal--delay-2 { transition-delay: 0.3s; }
+.reveal--delay-3 { transition-delay: 0.45s; }
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .spread, .reveal, .divider > span:not(.divider__roman) { opacity: 1 !important; transform: none !important; }
+  .hero__name span { opacity: 1 !important; }
+  .rule-draw, .divider::before, .divider::after { transform: scaleX(1) !important; }
+  .logo-paths path, .logo-paths line, .logo-paths polygon, .logo-paths circle { stroke-dashoffset: 0 !important; }
+  .logo-dots .dot { opacity: 1 !important; }
+  .cursor-canvas { display: none; }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 950px) {
+  .spread--plate .spread__layout, .spread--board .spread__layout,
+  .spread--power .spread__layout, .spread--water .spread__layout { grid-template-columns: 1fr; gap: 3rem; }
+  .plate img { height: 380px; }
+  .letters__grid { grid-template-columns: 1fr; max-width: 620px; margin: 0 auto; }
+  .bench-spec { grid-template-columns: repeat(2, 1fr); }
+  .specimens__desk { height: 860px; }
+  .type-features { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 700px) {
+  .hero { padding: 4.5rem 1.25rem 2rem; }
+  .hero__name--line2 { margin-top: 0.75rem; }
+  .hero__meta-top, .hero__meta-bottom { font-size: 9px; }
+  .hero__meta-top span:nth-child(2), .hero__meta-bottom span:nth-child(3) { display: none; }
+  .running-head { padding: 0 1rem; font-size: 9px; }
+  .manifesto, .index { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .index__entry { grid-template-columns: 54px 1fr 62px; padding: 1.3rem 0.25rem; }
+  .index__cat { display: none; }
+  .spread { padding: 3rem 1.1rem 5rem; }
+  .spread__head { font-size: 9px; flex-wrap: wrap; }
+  .spread__head span:nth-child(2) { display: none; }
+  .spread__meta { grid-template-columns: repeat(2, 1fr); gap: 1.4rem; }
+  .plate { padding: 1.75rem 1.25rem 1.1rem; }
+  .plate img { height: 300px; }
+  .plate__corner--tr, .plate__corner--br { display: none; }
+  .bench-spec { grid-template-columns: repeat(2, 1fr); gap: 1.2rem 1.5rem; }
+  .ledger__row { grid-template-columns: 1fr; gap: 0.2rem; padding: 0.8rem 0; }
+  .ledger__row.head span:nth-child(3) { display: none; }
+  .specimen-stage { padding: 3rem 1.25rem 2.25rem; }
+  .specimens { padding: 0 1rem 4.5rem; }
+  .specimens__desk { height: 1000px; }
+  .specimen { width: 236px; }
+  .specimen__aa { font-size: 6rem; }
+  .section-head { padding: 4.5rem 1.25rem 2.5rem; }
+  .palette__head { left: 1.1rem; right: 1.1rem; }
+  .palette__progress { left: 1.1rem; right: 1.1rem; }
+  .palette__progress-label { left: 1.1rem; }
+  .palette__progress-label--right { right: 1.1rem; }
+  .filmframe { width: 260px; height: 380px; padding: 1.5rem 1.1rem 1.1rem; }
+  .filmframe__swatch { height: 150px; }
+  .letters { padding: 3rem 1.25rem 6rem; }
+  .contact { padding: 6rem 1.25rem 4rem; }
+  .contact__grid { grid-template-columns: 1fr; gap: 2rem; }
+  .contact__phone { padding: 0.9rem 1.5rem; }
+  .ticket { transform: rotate(0deg); }
+}
+</style>
+<noscript>
+<style>
+  .reveal, .divider > span:not(.divider__roman), .spread { opacity: 1 !important; transform: none !important; }
+  .hero__name span { opacity: 1 !important; }
+  .rule-draw, .divider::before, .divider::after { transform: scaleX(1) !important; }
+  .logo-paths * { stroke-dashoffset: 0 !important; }
+  .logo-dots .dot { opacity: 1 !important; }
+</style>
+</noscript>
+</head>
+<body>
+<!--
+  ════════════════════════════════════════════════════════════════
+  ARPON TELECOM — MONOGRAPH I
+  HOW TO EDIT: all business details (phone, WhatsApp, address,
+  hours, city, Facebook) live in ONE place — the BUSINESS object
+  at the top of the <script> tag at the bottom of this file.
+  Search for  "BUSINESS"  and edit there. Nothing else to touch.
+  ════════════════════════════════════════════════════════════════
+-->
+
+<canvas class="cursor-canvas" id="cursor-canvas" aria-hidden="true"></canvas>
+<div class="page-frame" aria-hidden="true"></div>
+
+<header class="running-head">
+  <span class="rh-left">ARPON TELECOM</span>
+  <span class="rh-mid">MONOGRAPH · VOL. I</span>
+  <span class="rh-right">P.&nbsp;<span id="page-num">001</span></span>
+</header>
+
+<!-- ========== HERO / FRONTISPIECE ========== -->
+<section class="hero" id="hero">
+  <div class="hero__meta-top">
+    <span>VOL. I / MONOGRAPH</span>
+    <span>MOBILE SERVICING · REPAIR · GADGETS</span>
+    <span>FIRST EDITION · MMXXVI</span>
+  </div>
+
+  <div class="hero__title">
+    <h1 class="hero__name hero__name--line1" aria-label="Arpon">
+      <span>A</span><span>R</span><span>P</span><span>O</span><span>N</span>
+    </h1>
+    <div class="hero__name hero__name--line2" aria-hidden="true">
+      <span>T</span><span>e</span><span>l</span><span>e</span><span>c</span><span>o</span><span>m</span>
+    </div>
+    <div class="hero__byline">
+      <span class="hero__rule"></span>
+      <span>Mobile Servicing · Repair · Gadgets &amp; Accessories</span>
+      <span class="hero__rule"></span>
+    </div>
+  </div>
+
+  <div class="hero__meta-bottom">
+    <span>ISBN 978-984-XXXX-XXX-X</span>
+    <a class="hero__scroll-cue" href="#preface">↓ BEGIN READING</a>
+    <span>SET IN CORMORANT &amp; INTER</span>
+  </div>
+</section>
+
+<!-- ========== DIVIDER I ========== -->
+<div class="divider" role="presentation">
+  <span class="divider__roman">I</span>
+  <span>— Preface —</span>
+</div>
+
+<!-- ========== PREFACE (ABOUT) ========== -->
+<section class="manifesto reveal" id="preface">
+  <div class="manifesto__header">
+    <span class="eyebrow">A NOTE FROM THE COUNTER</span>
+    <h2 class="manifesto__title">A shop that refuses to let a <em>good phone</em> die.</h2>
+  </div>
+
+  <div class="manifesto__body">
+    <p>Every device that crosses our counter arrives with a small emergency attached. A screen meets a floor. A monsoon finds a pocket. A motherboard, without warning, decides it is finished. Our trade is the stubborn conviction that none of these accidents is final — that with a bench, a microscope, and an honest price, most of what the market calls <em>dead</em> is merely interrupted.</p>
+
+    <p>We keep the good panels. We fit genuine cells, matched capacities, and we refuse — politely, permanently — to build a repair on a part we would not put in our own phones. If a component is not good enough to survive our own pockets, it does not survive our counter. This has cost us margin. It has never cost us a customer twice.</p>
+
+    <p>We believe in the right to fix. A phone you own should not expire on a software roadmap, and a repair should not cost more than the truth. So we quote before we open a screw, we return every removed part in a small bag, and we tell you plainly when a repair is not worth making. <em>Verdicts are free.</em> Noise is extra.</p>
+
+    <p>What follows is not a brochure. It is a record of the work, set the way the trade deserves — slowly, and in gold.</p>
+  </div>
+
+  <div class="manifesto__sig">
+    Arpon Telecom<br>
+    <span class="manifesto__sig-meta" data-contact="sigline">[CITY] · BANGLADESH · MMXXVI</span>
+  </div>
+</section>
+
+<!-- ========== DIVIDER II ========== -->
+<div class="divider" role="presentation">
+  <span class="divider__roman">II</span>
+  <span>— Contents —</span>
+</div>
+
+<!-- ========== INDEX / TABLE OF CONTENTS ========== -->
+<section class="index reveal" id="contents">
+  <div class="index__header">
+    <span class="eyebrow">FIVE CHAPTERS &amp; A SHOP</span>
+    <h2 class="index__title">Contents</h2>
+  </div>
+
+  <ul class="index__list">
+    <li>
+      <a class="index__entry" href="#ch-01">
+        <span class="index__num">01 ——</span>
+        <span class="index__name">Screen &amp; Display</span>
+        <span class="index__cat">Hardware · Glass &amp; OLED</span>
+        <span class="index__page">P. 042</span>
+      </a>
+    </li>
+    <li>
+      <a class="index__entry" href="#ch-02">
+        <span class="index__num">02 ——</span>
+        <span class="index__name">Motherboard &amp; Chip-Level</span>
+        <span class="index__cat">The Heirloom Chapter</span>
+        <span class="index__page">P. 068</span>
+      </a>
+    </li>
+    <li>
+      <a class="index__entry" href="#ch-03">
+        <span class="index__num">03 ——</span>
+        <span class="index__name">Battery &amp; Power</span>
+        <span class="index__cat">Power &amp; Safety</span>
+        <span class="index__page">P. 094</span>
+      </a>
+    </li>
+    <li>
+      <a class="index__entry" href="#ch-04">
+        <span class="index__num">04 ——</span>
+        <span class="index__name">Software &amp; Unlocking</span>
+        <span class="index__cat">Firmware &amp; Data</span>
+        <span class="index__page">P. 118</span>
+      </a>
+    </li>
+    <li>
+      <a class="index__entry" href="#ch-05">
+        <span class="index__num">05 ——</span>
+        <span class="index__name">Water Damage &amp; Diagnostics</span>
+        <span class="index__cat">Free Diagnosis</span>
+        <span class="index__page">P. 142</span>
+      </a>
+    </li>
+    <li>
+      <a class="index__entry" href="#shop">
+        <span class="index__num">06 ——</span>
+        <span class="index__name">The Shop</span>
+        <span class="index__cat">Gadgets &amp; Accessories</span>
+        <span class="index__page">P. 166</span>
+      </a>
+    </li>
+    <li>
+      <a class="index__entry" href="#letters">
+        <span class="index__num">07 ——</span>
+        <span class="index__name">Letters to the Editor</span>
+        <span class="index__cat">Testimonials</span>
+        <span class="index__page">P. 204</span>
+      </a>
+    </li>
+  </ul>
+</section>
+
+<!-- ========== DIVIDER III ========== -->
+<div class="divider" role="presentation">
+  <span class="divider__roman">III</span>
+  <span>— Selected Work —</span>
+</div>
+
+<!-- ========== CHAPTER 01 — SCREEN & DISPLAY ========== -->
+<section class="spread spread--plate" id="ch-01" data-spread="01">
+  <div class="spread__inner">
+    <header class="spread__head">
+      <span>ARPON TELECOM / MONOGRAPH I</span>
+      <span>CHAPTER 01 — SCREEN &amp; DISPLAY</span>
+      <span>P. 042—067</span>
+    </header>
+
+    <div class="spread__chapter-wrap">
+      <div class="spread__chapter">01</div>
+      <div class="spread__chapter-label">
+        Screen &amp; Display
+        <small>Glass · OLED · Assemblies · Walk-in</small>
+      </div>
+    </div>
+
+    <h3 class="spread__title">The glass breaks. The day doesn't have to.</h3>
+    <p class="spread__sub">Displays replaced while you take tea — glass, OLED and full assemblies, fitted, laminated and pressure-tested before they leave the bench.</p>
+
+    <div class="spread__meta">
+      <div class="spread__meta-item">
+        <span class="label">Service</span>
+        <span class="value">Screens, glass &amp; display assemblies</span>
+      </div>
+      <div class="spread__meta-item">
+        <span class="label">Turnaround</span>
+        <span class="value">45–90 minutes, walk-in</span>
+      </div>
+      <div class="spread__meta-item">
+        <span class="label">Warranty</span>
+        <span class="value">6 months, parts &amp; fitting</span>
+      </div>
+      <div class="spread__meta-item">
+        <span class="label">Coverage</span>
+        <span class="value">All major brands, flagship to budget</span>
+      </div>
+    </div>
+
+    <div class="spread__layout">
+      <div class="spread__col-text">
+        <div class="spread__body">
+          <p>A screen is the only part of the phone you ever actually touch. It deserves better than the cheapest flat-panel on the market, glued in haste under a ceiling fan. We fit original and OEM-grade assemblies, we check touch response corner to corner, and we do not hand a phone back until the colours sit exactly where the factory left them.</p>
+          <p>Crushed glass, ghost touch, ink blots, black corners — the display has a whole vocabulary of failure, and we speak all of it. Where only the glass is broken on a unit that still has a healthy panel, we separate and refit rather than replace the whole assembly, because <em>your data and your money both matter more than our margin.</em><sup>1</sup></p>
+        </div>
+
+        <div class="spread__pullquote">A repair is a promise the shop keeps finishing.</div>
+
+        <div class="footnotes">
+          <p><sup>1</sup> "Original" does not mean expensive. It means fitted once.</p>
+        </div>
+      </div>
+
+      <div class="spread__col-visual">
+        <figure class="plate">
+          <span class="plate__corner plate__corner--tl">PL. 01.A</span>
+          <span class="plate__corner plate__corner--tr">DISPLAY / ASSEMBLY</span>
+          <span class="plate__corner plate__corner--bl">ORIGINAL OLED</span>
+          <span class="plate__corner plate__corner--br">BENCH 03</span>
+          <img src="https://picsum.photos/seed/arpon-display/900/1100" alt="A replacement display assembly on the workbench, lit by a bench lamp" loading="lazy">
+          <figcaption class="plate__meta">
+            <span>PL. 01.A — DISPLAY ASSEMBLY / OEM</span>
+            <span>BENCH TESTED · 6500K</span>
+          </figcaption>
+        </figure>
+        <div class="spread__caption">
+          <span>Pl. 01.A — Display assembly, original panel, prior to lamination</span>
+          <span>Bench lamp, natural shade</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CHAPTER 02 — MOTHERBOARD & CHIP-LEVEL ========== -->
+<section class="spread spread--board" id="ch-02" data-spread="02">
+  <div class="spread__inner">
+    <header class="spread__head">
+      <span>ARPON TELECOM / MONOGRAPH I</span>
+      <span>CHAPTER 02 — MOTHERBOARD &amp; CHIP-LEVEL</span>
+      <span>P. 068—093</span>
+    </header>
+
+    <div class="spread__chapter-wrap">
+      <div class="spread__chapter">02</div>
+      <div class="spread__chapter-label">
+        Motherboard &amp; Chip-Level
+        <small>The Heirloom Chapter · Micro-Soldering</small>
+      </div>
+    </div>
+
+    <h3 class="spread__title">Where other shops see a dead board, we see unasked questions.</h3>
+    <p class="spread__sub">Microscope work, reballing, trace repair — the slow, patient discipline of bringing logic boards back from verdicts handed down too quickly.</p>
+
+    <div class="spread__meta">
+      <div class="spread__meta-item">
+        <span class="label">Service</span>
+        <span class="value">Motherboard &amp; chip-level repair</span>
+      </div>
+      <div class="spread__meta-item">
+        <span class="label">Turnaround</span>
+        <span class="value">2–5 days, case by case</span>
+      </div>
+      <div class="spread__meta-item">
+        <span class="label">Warranty</span>
+        <span class="value">3 months on the repaired fault</span>
+      </div>
+      <div class="spread__meta-item">
+        <span class="label">Coverage</span>
+        <span class="value">Dead sets, no display, no charge, water boards</span>
+      </div>
+    </div>
+
+    <div class="spread__layout">
+      <div class="spread__col-text">
+        <div class="spread__body">
+          <p>This is the heirloom chapter. Most phones are not dead — they are one component away from living, and the component costs less than lunch. The difference between a verdict and a repair is a microscope, a steady hand, and the willingness to test rather than guess. We work at 10–45× magnification with hot air and micro-irons, reballing ICs, rebuilding pads, and running jumper wires thinner than an argument.<sup>2</sup></p>
+          <p>Boards are washed, corrosion is mapped, and every repair is photographed under the scope before and after, so you can see precisely what was wrong and what we did about it. No shortcuts, no "board-level problem, buy a new one" — unless the board truly says so.</p>
+        </div>
+
+        <div class="spread__pullquote">Dead is a rumour. We interrogate the witnesses.</div>
+
+        <div class="footnotes">
+          <p><sup>2</sup> Our scope has seen more drama than most television.</p>
+        </div>
+      </div>
+
+      <div class="spread__col-visual">
+        <div class="logo-display">
+          <span class="plate__corner plate__corner--tl">PL. 02.A</span>
+          <span class="plate__corner plate__corner--tr">ARPON / TELECOM</span>
+          <span class="plate__corner plate__corner--bl">THE MARK, CONSTRUCTED</span>
+          <span class="plate__corner plate__corner--br">MMXXVI</span>
+
+          <!-- The Arpon mark, redrawn as a gold hairline construction:
+               three arcs, three nodes, one honest A. -->
+          <svg class="logo-display__svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The Arpon Telecom mark constructed in gold hairlines">
+            <g class="logo-paths" stroke="#C9A227" stroke-width="1.2" fill="none" stroke-linecap="square">
+              <g opacity="0.35">
+                <circle cx="100" cy="100" r="85"/>
+                <line x1="100" y1="8" x2="100" y2="192"/>
+                <line x1="8" y1="100" x2="192" y2="100"/>
+                <polygon points="100,15 173.6,57.5 173.6,142.5 100,185 26.4,142.5 26.4,57.5"/>
+              </g>
+              <path d="M 112.2 31.1 A 70 70 0 0 1 165.8 123.9"/>
+              <path d="M 153.6 145 A 70 70 0 0 1 46.4 145"/>
+              <path d="M 34.2 123.9 A 70 70 0 0 1 87.8 31.1"/>
+              <line x1="100" y1="58" x2="70" y2="142"/>
+              <line x1="100" y1="58" x2="130" y2="142"/>
+              <line x1="82" y1="114" x2="118" y2="114"/>
+              <circle cx="100" cy="96" r="5.5"/>
+              <path d="M 88 126 A 12 12 0 0 1 112 126"/>
+              <line x1="100" y1="58" x2="100" y2="30" opacity="0.6"/>
+            </g>
+            <g class="logo-dots" fill="#C9A227" stroke="none">
+              <circle class="dot" cx="100" cy="30" r="3"/>
+              <circle class="dot" cx="160.6" cy="135" r="3"/>
+              <circle class="dot" cx="39.4" cy="135" r="3"/>
+              <circle class="dot" cx="100" cy="100" r="1.6"/>
+            </g>
+          </svg>
+
+          <div class="logo-grid">
+            <div class="logo-grid__item">
+              <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g class="logo-paths" stroke="#C9A227" stroke-width="1" fill="none"><polygon points="30,6 51,18 51,42 30,54 9,42 9,18"/><line x1="30" y1="6" x2="30" y2="54"/></g></svg>
+            </div>
+            <div class="logo-grid__item">
+              <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g class="logo-paths" stroke="#C9A227" stroke-width="1" fill="none"><path d="M 33.8 8.3 A 22 22 0 0 1 50.7 37.5"/><path d="M 46.9 44.1 A 22 22 0 0 1 13.1 44.1"/><path d="M 9.3 37.5 A 22 22 0 0 1 26.2 8.3"/></g><circle class="dot" cx="30" cy="8" r="2" fill="#C9A227"/></svg>
+            </div>
+            <div class="logo-grid__item">
+              <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g class="logo-paths" stroke="#C9A227" stroke-width="1" fill="none"><line x1="30" y1="17" x2="15" y2="43"/><line x1="30" y1="17" x2="45" y2="43"/><line x1="22" y1="34" x2="38" y2="34"/><circle cx="30" cy="28" r="3"/></g></svg>
+            </div>
+            <div class="logo-grid__item">
+              <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g class="logo-paths" stroke="#C9A227" stroke-width="1" fill="none"><polygon points="30,6 51,18 51,42 30,54 9,42 9,18"/><circle cx="30" cy="30" r="10"/><line x1="20" y1="30" x2="40" y2="30"/></g><circle class="dot" cx="30" cy="30" r="1.6" fill="#C9A227"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="spread__caption">
+          <span>Pl. 02.A — Three arcs, three nodes, one honest A</span>
+          <span>Gold ink, hairline 1.2</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bench-spec">
+      <span class="bench-spec__eyebrow">THE BENCH, SPECIFIED</span>
+      <div class="bench-spec__item">
+        <span class="label">Magnification</span>
+        <span class="value">10× – 45×, stereo scope</span>
+      </div>
+      <div class="bench-spec__item">
+        <span class="label">Irons</span>
+        <span class="value">Hot-air rework, 0.2&nbsp;mm tips</span>
+      </div>
+      <div class="bench-spec__item">
+        <span class="label">Reballing</span>
+        <span class="value">BGA stencils, both alloys</span>
+      </div>
+      <div class="bench-spec__item">
+        <span class="label">Bench PSU</span>
+        <span class="value">0–30 V, current watched</span>
+      </div>
+      <div class="bench-spec__item">
+        <span class="label">Donor Boards</span>
+        <span class="value">300+ units on the shelf</span>
+      </div>
+      <div class="bench-spec__item">
+        <span class="label">Photography</span>
+        <span class="value">Every repair, before &amp; after</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CHAPTER 03 — BATTERY & POWER ========== -->
+<section class="spread spread--power" id="ch-03" data-spread="03">
+  <div class="spread__inner">
+    <header class="spread__head">
+      <span>ARPON TELECOM / MONOGRAPH I</span>
+      <span>CHAPTER 03 — BATTERY &amp; POWER</span>
+      <span>P. 094—117</span>
+    </header>
+
+    <div class="spread__chapter-wrap">
+      <div class="spread__chapter">03</div>
+      <div class="spread__chapter-label">
+        Battery &amp; Power
+        <small>Genuine Cells · Safety First</small>
+      </div>
+    </div>
+
+    <h3 class="spread__title">A swollen battery is not a feature. It is a warning.</h3>
+    <p class="spread__sub">Genuine cells fitted in thirty minutes — with the old cell returned to you in a bag, because proof is part of the service.</p>
+
+    <div class="spread__meta">
+      <div class="spread__meta-item">
+        <span class="label">Service</span>
+        <span class="value">Batteries, charging ports &amp; power</span>
+      </div>
+      <div class="spread__meta-item">
+        <span class="label">Turnaround</span>
+        <span class="value">30 minutes, most models</span>
+      </div>
+      <div class="spread__meta-item">
+        <span class="label">Warranty</span>
+        <span class="value">12 months on genuine cells</span>
+      </div>
+      <div class="spread__meta-item">
+        <span class="label">Coverage</span>
+        <span class="value">Phones, tablets &amp; power banks</span>
+      </div>
+    </div>
+
+    <div class="spread__layout">
+      <div class="spread__col-text">
+        <div class="spread__body">
+          <p>We fit genuine and grade-A cells only, and we will happily show you the difference under the counter light: matched capacity, honest cycle counts, thermal protection that actually exists. An aftermarket cell is a small fire with a discount sticker on it. We do not stock them. We have, in ten years, never once used a cheap cable.<sup>1</sup></p>
+          <p>Charging trouble is usually not the battery at all — it is the port, the IC beneath it, or the cable that came free with a phone case. We diagnose the whole chain before we sell you anything, and we test every replacement to full charge before it goes home in your pocket.</p>
+        </div>
+
+        <div class="spread__pullquote">The old cell comes back to you in a bag. Proof is part of the service.</div>
+
+        <div class="footnotes">
+          <p><sup>1</sup> The cable in question costs more than lunch. It has outlived four phones.</p>
+        </div>
+      </div>
+
+      <div class="spread__col-visual">
+        <div class="ledger">
+          <div class="ledger__head">
+            <span>LEDGER — PL. 03.A</span>
+            <span>GENUINE vs AFTERMARKET</span>
+          </div>
+          <div class="ledger__row head">
+            <span></span>
+            <span>Genuine (ours)</span>
+            <span>Aftermarket</span>
+          </div>
+          <div class="ledger__row">
+            <span class="ledger__k">Capacity</span>
+            <span class="ledger__yes">As rated, matched</span>
+            <span class="ledger__no">60–80% of the printing</span>
+          </div>
+          <div class="ledger__row">
+            <span class="ledger__k">Thermals</span>
+            <span class="ledger__yes">Fused &amp; protected</span>
+            <span class="ledger__no">Hopeful</span>
+          </div>
+          <div class="ledger__row">
+            <span class="ledger__k">Cycle Life</span>
+            <span class="ledger__yes">An honest count</span>
+            <span class="ledger__no">A rumour</span>
+          </div>
+          <div class="ledger__row">
+            <span class="ledger__k">Warranty</span>
+            <span class="ledger__yes">12 months, written</span>
+            <span class="ledger__no">A handshake, maybe</span>
+          </div>
+          <div class="ledger__row">
+            <span class="ledger__k">Old Cell</span>
+            <span class="ledger__yes">Returned in a bag</span>
+            <span class="ledger__no">Vanishes</span>
+          </div>
+        </div>
+        <div class="spread__caption">
+          <span>Pl. 03.A — The ledger we keep against the market</span>
+          <span>Audited seasonally</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CHAPTER 04 — SOFTWARE & UNLOCKING ========== -->
+<section class="spread spread--soft" id="ch-04" data-spread="04">
+  <div class="spread__inner">
+    <header class="spread__head">
+      <span>ARPON TELECOM / MONOGRAPH I</span>
+      <span>CHAPTER 04 — SOFTWARE &amp; UNLOCKING</span>
+      <span>P. 118—141</span>
+    </header>
+
+    <div class="spread__chapter-wrap">
+      <div class="spread__chapter">04</div>
+      <div class="spread__chapter-label">
+        Software &amp; Unlocking
+        <small>Flashing · FRP · Data Recovery</small>
+      </div>
+    </div>
+
+    <h3 class="spread__title">The quiet half of the craft.</h3>
+    <p class="spread__sub">Flashing, FRP, unlocking and data recovery — performed with consent, patience, and a backup taken before anything else moves.</p>
+
+    <div class="spread__meta">
+      <div class="spread__meta-item">
+        <span class="label">Service</span>
+        <span class="value">Software, flashing &amp; unlocking</span>
+      </div>
+      <div class="spread__meta-item">
+        <span class="label">Turnaround</span>
+        <span class="value">Same day, most cases</span>
+      </div>
+      <div class="spread__meta-item">
+        <span class="label">Warranty</span>
+        <span class="value">Firmware guaranteed stable</span>
+      </div>
+      <div class="spread__meta-item">
+        <span class="label">Coverage</span>
+        <span class="value">Android &amp; iOS, FRP &amp; locks</span>
+      </div>
+    </div>
+
+    <div class="specimen-stage">
+      <span class="specimen-stage__corner specimen-stage__corner--tl">PL. 04.A — TYPE SPECIMEN</span>
+      <span class="specimen-stage__corner specimen-stage__corner--br">THE QUIET HALF</span>
+      <div class="specimen-stage__glyph">S<em>f</em></div>
+      <p class="specimen-stage__caption">Sf, for software — the half of repair that has no screws.</p>
+    </div>
+
+    <div class="type-features">
+      <div class="type-features__item">
+        <span class="num">01</span>
+        <span class="label">Flashing</span>
+        <span class="desc">Stock firmware &amp; brick rescue</span>
+      </div>
+      <div class="type-features__item">
+        <span class="num">02</span>
+        <span class="label">FRP</span>
+        <span class="desc">Verification for rightful owners</span>
+      </div>
+      <div class="type-features__item">
+        <span class="num">03</span>
+        <span class="label">Recovery</span>
+        <span class="desc">Photos off dying storage</span>
+      </div>
+      <div class="type-features__item">
+        <span class="num">04</span>
+        <span class="label">Unlocking</span>
+        <span class="desc">With proof, with paperwork</span>
+      </div>
+    </div>
+
+    <div class="spread__narrow">
+      <div class="spread__body">
+        <p>Software repair is surgery without anaesthetic: the patient watches everything. So we explain each step before we take it, we back up first — <em>always first</em> — and we never touch data we have not been asked to touch.<sup>2</sup></p>
+        <p>FRP and lock work is done for rightful owners with proof of ownership — bring the box, the receipt, or the account itself. The machines are capable of almost anything; the shop, of rather less. That is deliberate.</p>
+      </div>
+
+      <div class="spread__pullquote">The data matters more than the device. The device, we can always fix.</div>
+
+      <div class="footnotes">
+        <p><sup>2</sup> We do not look at your photographs. This is policy, not squeamishness.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CHAPTER 05 — WATER DAMAGE & DIAGNOSTICS ========== -->
+<section class="spread spread--water" id="ch-05" data-spread="05">
+  <div class="spread__inner">
+    <header class="spread__head">
+      <span>ARPON TELECOM / MONOGRAPH I</span>
+      <span>CHAPTER 05 — WATER DAMAGE &amp; DIAGNOSTICS</span>
+      <span>P. 142—165</span>
+    </header>
+
+    <div class="spread__chapter-wrap">
+      <div class="spread__chapter">05</div>
+      <div class="spread__chapter-label">
+        Water Damage &amp; Diagnostics
+        <small>Free Diagnosis · Ultrasonic Treatment</small>
+      </div>
+    </div>
+
+    <h3 class="spread__title">Bring it in wet. Leave with a verdict, not an invoice.</h3>
+    <p class="spread__sub">Free, honest diagnosis — every device, every condition — followed by ultrasonic board treatment if the verdict says the fight is worth having.</p>
+
+    <div class="spread__meta">
+      <div class="spread__meta-item">
+        <span class="label">Service</span>
+        <span class="value">Water damage &amp; full diagnostics</span>
+      </div>
+      <div class="spread__meta-item">
+        <span class="label">Turnaround</span>
+        <span class="value">Diagnosis free, same day</span>
+      </div>
+      <div class="spread__meta-item">
+        <span class="label">Warranty</span>
+        <span class="value">90 days on board treatment</span>
+      </div>
+      <div class="spread__meta-item">
+        <span class="label">Coverage</span>
+        <span class="value">Any condition, any brand, any state</span>
+      </div>
+    </div>
+
+    <div class="spread__layout">
+      <div class="spread__col-text">
+        <div class="spread__body">
+          <p>Monsoon is a season; accidents are a calendar. Whatever the liquid — pond, tea, chlorine, or the sea — the procedure is the same: open, wash, map the corrosion, dry with care, and then test honestly before quoting a single taka. The diagnosis costs nothing, and it comes with a straight answer.<sup>3</sup></p>
+          <p>Ultrasonic baths lift what the flood leaves behind; under the scope we rebuild what the bath uncovers. Some boards are beyond saving, and we will tell you so for free — because a verdict you can trust is worth more than a repair you cannot.</p>
+        </div>
+
+        <div class="spread__pullquote">Free diagnosis. Honest verdicts. Repairs only if the board deserves them.</div>
+
+        <div class="footnotes">
+          <p><sup>3</sup> Rice fixes nothing. It seasons the corrosion. See us instead.</p>
+        </div>
+      </div>
+
+      <div class="spread__col-visual">
+        <div class="ticket" role="img" aria-label="An intake ticket: diagnosis free, no fix no fee">
+          <div class="ticket__head">
+            <span>ARPON TELECOM</span>
+            <span>INTAKE</span>
+          </div>
+          <div class="ticket__brand">Intake Ticket</div>
+          <div class="ticket__no">Nº 0547 — DESK COPY</div>
+          <div class="ticket__row"><span class="k">Device</span><span class="v">[Your phone here]</span></div>
+          <div class="ticket__row"><span class="k">Condition</span><span class="v">"Brief swim"</span></div>
+          <div class="ticket__row"><span class="k">Diagnosis</span><span class="v">Free · Same day</span></div>
+          <div class="ticket__row"><span class="k">Quote</span><span class="v">Before work, always</span></div>
+          <div class="ticket__row"><span class="k">Fix or not</span><span class="v">You decide</span></div>
+          <div class="ticket__stamp">NO FIX · NO FEE</div>
+          <div class="ticket__foot">
+            <span>KEEP THIS HALF</span>
+            <span>VALID ALL MONSOON</span>
+          </div>
+        </div>
+        <div class="spread__caption">
+          <span>Pl. 05.A — The intake ticket, as issued</span>
+          <span>Desk copy, carbon none</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ========== DIVIDER IV ========== -->
+<div class="divider" role="presentation">
+  <span class="divider__roman">IV</span>
+  <span>— Gadgets &amp; Accessories —</span>
+</div>
+
+<!-- ========== THE SHOP — DRAGGABLE SPECIMEN DESK ========== -->
+<div class="section-head reveal" id="shop">
+  <div class="section-head__num">Plate Series</div>
+  <h2 class="section-head__title">Gadgets &amp; <em>Accessories</em></h2>
+  <p class="section-head__sub">Six categories on one desk. Drag the papers; wheel or pinch to magnify. Everything shown here is on the shelf today.</p>
+</div>
+
+<div class="specimens">
+  <div class="specimens__desk" id="desk">
+    <p class="specimens__hint">DRAG THE PAPERS · WHEEL / PINCH TO MAGNIFY · <span class="bn">টেনে সাজান</span></p>
+
+    <article class="specimen" tabindex="0" aria-label="Cases and covers, in stock, 150 to 1500 taka">
+      <div class="specimen__paper">
+        <header class="specimen__head"><span>NO. 01</span><span>CATEGORY</span></header>
+        <div class="specimen__aa">C<em>c</em></div>
+        <p class="specimen__alphabet">Armor, leather, silicone, clear — a wardrobe for every pocket.</p>
+        <footer class="specimen__footer"><span>IN STOCK</span><span class="specimen__price">৳150–1,500</span></footer>
+      </div>
+    </article>
+
+    <article class="specimen" tabindex="0" aria-label="Chargers and cables, in stock, 250 to 2500 taka">
+      <div class="specimen__paper">
+        <header class="specimen__head"><span>NO. 02</span><span>CATEGORY</span></header>
+        <div class="specimen__aa">C<em>h</em></div>
+        <p class="specimen__alphabet">Braided, fast, honest wattage — cables that outlive phones.</p>
+        <footer class="specimen__footer"><span>IN STOCK</span><span class="specimen__price">৳250–2,500</span></footer>
+      </div>
+    </article>
+
+    <article class="specimen" tabindex="0" aria-label="Earbuds and audio, in stock, 500 to 6000 taka">
+      <div class="specimen__paper">
+        <header class="specimen__head"><span>NO. 03</span><span>CATEGORY</span></header>
+        <div class="specimen__aa">E<em>a</em></div>
+        <p class="specimen__alphabet">TWS, neckbands &amp; small loud rooms.</p>
+        <footer class="specimen__footer"><span>IN STOCK</span><span class="specimen__price">৳500–6,000</span></footer>
+      </div>
+    </article>
+
+    <article class="specimen" tabindex="0" aria-label="Power banks, in stock, 800 to 3500 taka">
+      <div class="specimen__paper">
+        <header class="specimen__head"><span>NO. 04</span><span>CATEGORY</span></header>
+        <div class="specimen__aa">P<em>b</em></div>
+        <p class="specimen__alphabet">Ten to thirty thousand mAh of pocket insurance.</p>
+        <footer class="specimen__footer"><span>IN STOCK</span><span class="specimen__price">৳800–3,500</span></footer>
+      </div>
+    </article>
+
+    <article class="specimen" tabindex="0" aria-label="Screen guards, in stock, 100 to 600 taka">
+      <div class="specimen__paper">
+        <header class="specimen__head"><span>NO. 05</span><span>CATEGORY</span></header>
+        <div class="specimen__aa">S<em>g</em></div>
+        <p class="specimen__alphabet">Tempered, privacy, ceramic — fitted while you wait.</p>
+        <footer class="specimen__footer"><span>IN STOCK</span><span class="specimen__price">৳100–600</span></footer>
+      </div>
+    </article>
+
+    <article class="specimen" tabindex="0" aria-label="Smart watches, in stock, 1200 to 8000 taka">
+      <div class="specimen__paper">
+        <header class="specimen__head"><span>NO. 06</span><span>CATEGORY</span></header>
+        <div class="specimen__aa">S<em>w</em></div>
+        <p class="specimen__alphabet">Straps, bands &amp; watches that count things.</p>
+        <footer class="specimen__footer"><span>IN STOCK</span><span class="specimen__price">৳1,200–8,000</span></footer>
+      </div>
+    </article>
+  </div>
+</div>
+
+<!-- ========== DIVIDER V ========== -->
+<div class="divider" role="presentation">
+  <span class="divider__roman">V</span>
+  <span>— Palette —</span>
+</div>
+
+<!-- ========== PALETTE — FILMSTRIP SCRUB ========== -->
+<section class="palette" id="palette">
+  <div class="palette__head">
+    <h2 class="palette__title">The Palette, <em>printed</em>.</h2>
+    <p class="palette__count">FRAME <span id="frame-count">01 / 10</span><br><span class="palette__count-sub">SCROLL TO ADVANCE</span></p>
+  </div>
+
+  <div class="filmstrip" id="filmstrip">
+    <div class="filmstrip__sprockets filmstrip__sprockets--top"></div>
+    <div class="filmstrip__sprockets filmstrip__sprockets--bottom"></div>
+
+    <div class="filmframe" style="--swatch:#05140A">
+      <div class="filmframe__swatch"></div>
+      <div class="filmframe__num">FRAME 01</div>
+      <div class="filmframe__name">Jungle Deep</div>
+      <div class="filmframe__hex">#05140A</div>
+      <div class="filmframe__pant"><span>SWATCH Nº 1</span><span>THE NIGHT GROUND</span></div>
+    </div>
+    <div class="filmframe" style="--swatch:#0D2818">
+      <div class="filmframe__swatch"></div>
+      <div class="filmframe__num">FRAME 02</div>
+      <div class="filmframe__name">Jungle Primary</div>
+      <div class="filmframe__hex">#0D2818</div>
+      <div class="filmframe__pant"><span>SWATCH Nº 2</span><span>THE BASE COAT</span></div>
+    </div>
+    <div class="filmframe" style="--swatch:#1A4D2E">
+      <div class="filmframe__swatch"></div>
+      <div class="filmframe__num">FRAME 03</div>
+      <div class="filmframe__name">Jungle Secondary</div>
+      <div class="filmframe__hex">#1A4D2E</div>
+      <div class="filmframe__pant"><span>SWATCH Nº 3</span><span>DEEP ACCENT</span></div>
+    </div>
+    <div class="filmframe" style="--swatch:#8FBC8F">
+      <div class="filmframe__swatch"></div>
+      <div class="filmframe__num">FRAME 04</div>
+      <div class="filmframe__name">Moss</div>
+      <div class="filmframe__hex">#8FBC8F</div>
+      <div class="filmframe__pant"><span>SWATCH Nº 4</span><span>THE SOFT VOICE</span></div>
+    </div>
+    <div class="filmframe" style="--swatch:#B8860B">
+      <div class="filmframe__swatch"></div>
+      <div class="filmframe__num">FRAME 05</div>
+      <div class="filmframe__name">Gold Dark</div>
+      <div class="filmframe__hex">#B8860B</div>
+      <div class="filmframe__pant"><span>SWATCH Nº 5</span><span>OLD MONEY EDGES</span></div>
+    </div>
+    <div class="filmframe" style="--swatch:#C9A227">
+      <div class="filmframe__swatch"></div>
+      <div class="filmframe__num">FRAME 06</div>
+      <div class="filmframe__name">Gold</div>
+      <div class="filmframe__hex">#C9A227</div>
+      <div class="filmframe__pant"><span>SWATCH Nº 6</span><span>THE ONLY INK</span></div>
+    </div>
+    <div class="filmframe" style="--swatch:#D4AF37">
+      <div class="filmframe__swatch"></div>
+      <div class="filmframe__num">FRAME 07</div>
+      <div class="filmframe__name">Gold Light</div>
+      <div class="filmframe__hex">#D4AF37</div>
+      <div class="filmframe__pant"><span>SWATCH Nº 7</span><span>EMPHASIS, ITALIC</span></div>
+    </div>
+    <div class="filmframe" style="--swatch:#F5F5DC">
+      <div class="filmframe__swatch"></div>
+      <div class="filmframe__num">FRAME 08</div>
+      <div class="filmframe__name">Ivory</div>
+      <div class="filmframe__hex">#F5F5DC</div>
+      <div class="filmframe__pant"><span>SWATCH Nº 8</span><span>BODY TYPE &amp; PAPER</span></div>
+    </div>
+    <div class="filmframe" style="--swatch:#8A3324">
+      <div class="filmframe__swatch"></div>
+      <div class="filmframe__num">FRAME 09</div>
+      <div class="filmframe__name">Burnt Umber</div>
+      <div class="filmframe__hex">#8A3324</div>
+      <div class="filmframe__pant"><span>SWATCH Nº 9</span><span>WARNINGS, HONEST</span></div>
+    </div>
+    <div class="filmframe" style="--swatch:#2F4F4F">
+      <div class="filmframe__swatch"></div>
+      <div class="filmframe__num">FRAME 10</div>
+      <div class="filmframe__name">Slate</div>
+      <div class="filmframe__hex">#2F4F4F</div>
+      <div class="filmframe__pant"><span>SWATCH Nº 10</span><span>TECHNICAL CAPTIONS</span></div>
+    </div>
+  </div>
+
+  <div class="palette__progress">
+    <div class="palette__progress-bar" id="palette-bar"></div>
+  </div>
+  <p class="palette__progress-label">PLATE V — TEN SWATCHES, ONE GOLD</p>
+  <p class="palette__progress-label palette__progress-label--right">VERTICAL SCROLL · HORIZONTAL STRIP</p>
+</section>
+
+<!-- ========== DIVIDER VI ========== -->
+<div class="divider" role="presentation">
+  <span class="divider__roman">VI</span>
+  <span>— Letters to the Editor —</span>
+</div>
+
+<!-- ========== TESTIMONIALS ========== -->
+<section class="letters" id="letters">
+  <div class="section-head reveal" style="padding-top:1rem">
+    <div class="section-head__num">Correspondence</div>
+    <h2 class="section-head__title">Letters <em>to the Editor</em></h2>
+    <p class="section-head__sub">We asked three customers for the truth. They were kinder than we deserved.</p>
+  </div>
+
+  <div class="letters__grid">
+    <article class="letter reveal">
+      <figure class="letter__img">
+        <img src="https://picsum.photos/seed/arpon-letter-a/480/360" alt="A repaired phone handed back across the counter" loading="lazy">
+      </figure>
+      <div class="letter__meta">
+        <span>DEVICE — IPHONE 12 · DISPLAY</span>
+        <span>03 · MMXXVI</span>
+      </div>
+      <h3 class="letter__title">"Like <em>nothing</em> had happened."</h3>
+      <p class="letter__body">Crushed the screen in the morning; by the afternoon it was fitted with an original panel and a warranty card I actually believed. The colours were exactly where the factory left them.</p>
+      <p class="letter__sig">— TANVIR A.</p>
+    </article>
+
+    <article class="letter reveal reveal--delay-1">
+      <figure class="letter__img">
+        <img src="https://picsum.photos/seed/arpon-letter-b/480/360" alt="A water-damaged phone recovered after board treatment" loading="lazy">
+      </figure>
+      <div class="letter__meta">
+        <span>DEVICE — GALAXY S21 · WATER</span>
+        <span>06 · MMXXVI</span>
+      </div>
+      <h3 class="letter__title">"A verdict, <em>not an invoice.</em>"</h3>
+      <p class="letter__body">Pond water. They opened it, washed the board, showed me the corrosion under the microscope, and saved it for half of what I had feared. I have never trusted a shop more.</p>
+      <p class="letter__sig">— NASRIN S.</p>
+    </article>
+
+    <article class="letter reveal reveal--delay-2">
+      <figure class="letter__img">
+        <img src="https://picsum.photos/seed/arpon-letter-c/480/360" alt="A logic board returned to life after chip-level repair" loading="lazy">
+      </figure>
+      <div class="letter__meta">
+        <span>DEVICE — REDMI NOTE · BOARD</span>
+        <span>09 · MMXXV</span>
+      </div>
+      <h3 class="letter__title">"Three shops said: <em>buy a new one.</em>"</h3>
+      <p class="letter__body">Dead, no display, one week of hope left. Arpon reballled the IC and it has worked for a year since. They treat boards like heirlooms and receipts like promises.</p>
+      <p class="letter__sig">— MAHMUD R.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ========== DIVIDER VII ========== -->
+<div class="divider" role="presentation">
+  <span class="divider__roman">VII</span>
+  <span>— Colophon —</span>
+</div>
+
+<!-- ========== CONTACT / COLOPHON ==========
+     ⚠ EDIT ME: all contact details below are filled from the
+     BUSINESS object at the top of the <script> at the bottom
+     of this file. Edit there once — every field updates. -->
+<footer class="contact" id="colophon">
+  <p class="contact__pre reveal">Correspondence, walk-ins &amp; emergencies welcome.</p>
+  <h2 class="contact__name reveal">Arpon <em>Telecom</em></h2>
+
+  <a class="contact__phone reveal" data-contact="phone" href="tel:+8801XXXXXXXXX">+880 1XXX-XXXXXX</a>
+
+  <div class="contact__grid">
+    <div class="contact__col reveal">
+      <span class="label">Visit</span>
+      <p class="value" data-contact="address">[Shop No. / Market Name], [Road &amp; Area], [City] — Bangladesh</p>
+      <p class="value value--hours" data-contact="hours">SAT – THU · 10:00 – 20:00<br>FRI · [EDIT FRIDAY HOURS]</p>
+    </div>
+    <div class="contact__col reveal reveal--delay-1">
+      <span class="label">Call / WhatsApp</span>
+      <p class="value"><a data-contact="phone" href="tel:+8801XXXXXXXXX">+880 1XXX-XXXXXX</a></p>
+      <p class="value"><a data-contact="whatsapp" href="https://wa.me/8801XXXXXXXXX">Message us on WhatsApp</a></p>
+      <p class="note">Photos of the fault speed the verdict.</p>
+    </div>
+    <div class="contact__col reveal reveal--delay-2">
+      <span class="label">Follow</span>
+      <p class="value"><a data-contact="facebook" href="https://www.facebook.com/arpontelecom" target="_blank" rel="noopener">facebook.com/arpontelecom</a></p>
+      <p class="note">Where the bench posts its work.</p>
+    </div>
+  </div>
+
+  <div class="colophon">
+    <p>Set in <em>Cormorant Garamond</em>; labels in <em>Inter</em>; folios in <em>JetBrains Mono</em>. Composed on a jungle-green ground with a single gold ink and no gradients whatsoever. The photographs are placeholders standing in for our own bench. Every phone mentioned in this volume was, at some point, in danger — and is fine now.</p>
+    <p class="colophon__sig">— END · MONOGRAPH I · ARPON TELECOM · MMXXVI —</p>
+    <p class="colophon__bn">ভরসাই আমাদের পুঁজি।</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.13/dist/lenis.min.js"></script>
+<script>
+/* ════════════════════════════════════════════════════════════
+   ⚠ EDIT YOUR BUSINESS DETAILS HERE — the only place to edit ⚠
+   These values fill every contact field on the page
+   (elements marked with data-contact="key").
+   ════════════════════════════════════════════════════════════ */
+const BUSINESS = {
+  phone:    "+880 1XXX-XXXXXX",                              // shown as the big framed number & used for tel: links
+  whatsapp: "8801XXXXXXXXX",                                 // digits only — used for the wa.me link
+  address:  "[Shop No. / Market Name], [Road & Area], [City] — Bangladesh",
+  hours:    "SAT – THU · 10:00 – 20:00\nFRI · [EDIT FRIDAY HOURS]",
+  sigline:  "[CITY] · BANGLADESH · MMXXVI",                  // signature line under the Preface
+  facebook: "https://www.facebook.com/arpontelecom"
+};
+/* ═══════════════════════════ END OF EDITABLE BLOCK ═════════ */
+
+(function () {
+  'use strict';
+  var clamp = function (v, a, b) { return Math.max(a, Math.min(b, v)); };
+  var pad3 = function (n) { return String(n).padStart(3, '0'); };
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var coarse  = window.matchMedia('(pointer: coarse)').matches;
+  var hasGSAP = typeof window.gsap !== 'undefined' && typeof window.ScrollTrigger !== 'undefined';
+  if (hasGSAP) gsap.registerPlugin(ScrollTrigger);
+
+  /* ---- Fill every [data-contact] field from the BUSINESS object ---- */
+  Array.prototype.forEach.call(document.querySelectorAll('[data-contact]'), function (el) {
+    var k = el.getAttribute('data-contact');
+    var v = BUSINESS[k];
+    if (!v) return;
+    if (k === 'phone') {
+      el.textContent = v;
+      el.setAttribute('href', 'tel:' + String(v).replace(/[^\d+]/g, ''));
+    } else if (k === 'whatsapp') {
+      el.setAttribute('href', 'https://wa.me/' + BUSINESS.whatsapp);
+    } else if (k === 'facebook') {
+      el.setAttribute('href', v);
+    } else {
+      el.innerHTML = String(v).replace(/\n/g, '<br>');
+    }
+  });
+
+  /* ---- Lenis smooth scroll, wired to ScrollTrigger ---- */
+  var lenis = null;
+  if (!reduced && typeof window.Lenis !== 'undefined' && hasGSAP) {
+    lenis = new Lenis({
+      duration: 1.15,
+      easing: function (t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); }
+    });
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add(function (t) { lenis.raf(t * 1000); });
+    gsap.ticker.lagSmoothing(0);
+  }
+
+  /* ---- Anchor scrolling (Contents, scroll cue) ---- */
+  Array.prototype.forEach.call(document.querySelectorAll('a[href^="#"]'), function (a) {
+    a.addEventListener('click', function (e) {
+      var el = document.querySelector(a.getAttribute('href'));
+      if (!el) return;
+      e.preventDefault();
+      if (lenis) lenis.scrollTo(el, { duration: 1.4 });
+      else el.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth' });
+    });
+  });
+
+  /* ---- Generic reveals + divider hairline draws ---- */
+  var revealables = document.querySelectorAll('.reveal, .divider');
+  if (reduced || !('IntersectionObserver' in window)) {
+    Array.prototype.forEach.call(revealables, function (el) { el.classList.add('is-in'); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    Array.prototype.forEach.call(revealables, function (el) { io.observe(el); });
+  }
+
+  /* ---- Kinetic hero name: six entrances, 70ms stagger ---- */
+  var glyphs = document.querySelectorAll('.hero__name span');
+  if (!reduced && hasGSAP) {
+    var pool = [
+      { y: -160, x: 0,   scale: 1,   rotation: 0  },  /* slide down   */
+      { y: 160,  x: 0,   scale: 1,   rotation: 0  },  /* slide up     */
+      { y: 0,    x: -120, scale: 1,  rotation: 0  },  /* slide right  */
+      { y: 0,    x: 120,  scale: 1,  rotation: 0  },  /* slide left   */
+      { y: 0,    x: 0,   scale: 0,   rotation: 0  },  /* scale from 0 */
+      { y: 70,   x: 0,   scale: 0.5, rotation: 80 }   /* rotate in    */
+    ];
+    Array.prototype.forEach.call(glyphs, function (el, i) {
+      var v = pool[i % pool.length];
+      gsap.fromTo(el,
+        { y: v.y, x: v.x, scale: v.scale, rotation: v.rotation, opacity: 0, transformOrigin: '50% 50%' },
+        { y: 0, x: 0, scale: 1, rotation: 0, opacity: 1, duration: 1.05, ease: 'expo.out', delay: i * 0.07 }
+      );
+    });
+  } else {
+    Array.prototype.forEach.call(glyphs, function (el) { el.style.opacity = 1; });
+  }
+
+  /* ---- Spread handover (fade from right in, dim left out) + live folio ---- */
+  var spreads = Array.prototype.slice.call(document.querySelectorAll('.spread'));
+  var pageNumEl = document.getElementById('page-num');
+  var ticking = false;
+  function onScrollFrame() {
+    ticking = false;
+    var vh = window.innerHeight;
+    if (!reduced) {
+      for (var i = 0; i < spreads.length; i++) {
+        var r = spreads[i].getBoundingClientRect();
+        if (r.top < vh * 0.88 && r.bottom > vh * 0.1) spreads[i].classList.add('is-in');
+        if (r.bottom < vh * 0.42 && r.top < 0) spreads[i].classList.add('is-past');
+        else spreads[i].classList.remove('is-past');
+      }
+    }
+    if (pageNumEl) {
+      var p = Math.max(1, Math.round(window.scrollY / (vh * 0.85)) + 1);
+      pageNumEl.textContent = pad3(p);
+    }
+  }
+  window.addEventListener('scroll', function () {
+    if (!ticking) { ticking = true; requestAnimationFrame(onScrollFrame); }
+  }, { passive: true });
+  onScrollFrame();
+
+  /* ---- Filmstrip sprockets (built to strip width) ---- */
+  var strip = document.getElementById('filmstrip');
+  var sprocketRows = strip ? Array.prototype.slice.call(strip.querySelectorAll('.filmstrip__sprockets')) : [];
+  function buildSprockets() {
+    if (!strip) return;
+    var n = Math.ceil(strip.scrollWidth / 34) + 6;
+    sprocketRows.forEach(function (row) {
+      row.innerHTML = '';
+      for (var i = 0; i < n; i++) {
+        var s = document.createElement('span');
+        s.className = 'sprocket';
+        row.appendChild(s);
+      }
+    });
+  }
+  buildSprockets();
+
+  /* ---- Filmstrip palette scrub (pinned, 0.09 lerp) ---- */
+  var palette = document.getElementById('palette');
+  var bar = document.getElementById('palette-bar');
+  var frameCount = document.getElementById('frame-count');
+  var frames = strip ? Array.prototype.slice.call(strip.querySelectorAll('.filmframe')) : [];
+  var target = 0, current = 0, maxShift = 0;
+  function measure() {
+    if (strip && palette) maxShift = Math.max(0, strip.scrollWidth - palette.clientWidth + 32);
+  }
+  measure();
+  if (hasGSAP && !reduced && palette && strip) {
+    ScrollTrigger.create({
+      trigger: palette,
+      start: 'top top',
+      end: '+=230%',
+      pin: true,
+      scrub: false,
+      onUpdate: function (self) { target = self.progress; }
+    });
+    gsap.ticker.add(function () {
+      current += (target - current) * 0.09;
+      if (Math.abs(target - current) < 0.0004) current = target;
+      strip.style.transform = 'translate3d(' + (-current * maxShift).toFixed(2) + 'px,0,0)';
+      if (bar) bar.style.width = (current * 100).toFixed(2) + '%';
+      var idx = clamp(Math.round(current * (frames.length - 1)) + 1, 1, frames.length);
+      if (frameCount) frameCount.textContent = String(idx).padStart(2, '0') + ' / ' + String(frames.length).padStart(2, '0');
+      frames.forEach(function (f, i) { f.classList.toggle('is-active', i === idx - 1); });
+    });
+  } else if (palette) {
+    palette.classList.add('palette--static');
+  }
+
+  /* ---- Risograph cursor trail (desktop, motion-safe only) ---- */
+  if (!reduced && !coarse) {
+    var cv = document.getElementById('cursor-canvas');
+    if (cv && cv.getContext) {
+      var ctx = cv.getContext('2d');
+      var DPR = Math.min(window.devicePixelRatio || 1, 2);
+      var W = 0, H = 0;
+      function size() {
+        W = cv.width = innerWidth * DPR;
+        H = cv.height = innerHeight * DPR;
+        cv.style.width = innerWidth + 'px';
+        cv.style.height = innerHeight + 'px';
+      }
+      size();
+      window.addEventListener('resize', size);
+      var dots = [], MAXD = 600, mx = -100, my = -100, lastSpawn = 0;
+      window.addEventListener('pointermove', function (e) {
+        mx = e.clientX * DPR; my = e.clientY * DPR;
+        var now = performance.now();
+        if (now - lastSpawn > 18 && dots.length < MAXD) {
+          lastSpawn = now;
+          for (var k = 0; k < 2; k++) {
+            dots.push({
+              x: mx + (Math.random() * 10 - 5) * DPR,
+              y: my + (Math.random() * 10 - 5) * DPR,
+              r: (0.6 + Math.random() * 2.2) * DPR,
+              a: 1,
+              d: 0.012 + Math.random() * 0.03,
+              vx: (Math.random() - 0.5) * 0.6 * DPR,
+              vy: (Math.random() - 0.5) * 0.6 * DPR
+            });
+          }
+        }
+      }, { passive: true });
+      (function tick() {
+        ctx.clearRect(0, 0, W, H);
+        ctx.fillStyle = '#C9A227';
+        for (var i = dots.length - 1; i >= 0; i--) {
+          var p = dots[i];
+          p.a -= p.d; p.x += p.vx; p.y += p.vy;
+          if (p.a <= 0) { dots.splice(i, 1); continue; }
+          ctx.globalAlpha = p.a * 0.5;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r * (0.4 + p.a * 0.6), 0, 6.2832);
+          ctx.fill();
+        }
+        if (mx > 0) {
+          ctx.globalAlpha = 0.95;
+          ctx.beginPath();
+          ctx.arc(mx, my, 1.7 * DPR, 0, 6.2832);
+          ctx.fill();
+        }
+        ctx.globalAlpha = 1;
+        requestAnimationFrame(tick);
+      })();
+    }
+  }
+
+  /* ---- Specimen desk: drag / pinch / wheel-scale, paper z-stacking ---- */
+  var desk = document.getElementById('desk');
+  if (desk) {
+    var cards = Array.prototype.slice.call(desk.querySelectorAll('.specimen'));
+    var layout = [
+      { x: 0.03, y: 0.05, r: -2.4 },
+      { x: 0.30, y: 0.02, r: 1.8 },
+      { x: 0.57, y: 0.09, r: -1.2 },
+      { x: 0.09, y: 0.50, r: 2.2 },
+      { x: 0.40, y: 0.46, r: -2.8 },
+      { x: 0.68, y: 0.52, r: 1.5 }
+    ];
+    var topZ = 20;
+    function applyCard(c) {
+      var st = c._st;
+      c.style.transform = 'translate3d(' + st.x + 'px,' + st.y + 'px,0) rotate(' + st.r + 'deg) scale(' + st.s + ')';
+    }
+    function layoutCards(force) {
+      var dw = desk.clientWidth, dh = desk.clientHeight;
+      var maxH = 0;
+      cards.forEach(function (c) { maxH = Math.max(maxH, c.offsetHeight); });
+      var slack = Math.max(0, dh - maxH * 2 - 28);
+      cards.forEach(function (c, i) {
+        if (!c._st) c._st = { x: 0, y: 0, s: 1, r: layout[i].r, dragged: false };
+        var st = c._st;
+        if (force || !st.dragged) {
+          var w = c.offsetWidth, h = c.offsetHeight;
+          var bw = Math.max(0, dw - w - 28);
+          var rowTop = (i < 3) ? 14 + slack * 0.08 : 14 + maxH + slack * 0.60;
+          var jitter = (layout[i].y - 0.5) * slack * 0.3;
+          var x = 12 + layout[i].x * bw;
+          var y = Math.min(rowTop + jitter, Math.max(12, dh - h - 12));
+          c.style.left = x + 'px';
+          c.style.top = y + 'px';
+        }
+        applyCard(c);
+      });
+    }
+    layoutCards(true);
+
+    cards.forEach(function (c) {
+      var st = c._st;
+      var pts = new Map();
+      var startPos = null, start = null, startDist = 0, startS = 1;
+
+      c.addEventListener('pointerdown', function (e) {
+        e.preventDefault();
+        try { c.setPointerCapture(e.pointerId); } catch (err) {}
+        pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
+        c.classList.add('is-dragging');
+        c.style.zIndex = ++topZ;
+        if (pts.size === 1) {
+          startPos = { x: e.clientX, y: e.clientY };
+          start = { x: st.x, y: st.y };
+        } else if (pts.size === 2) {
+          var v = Array.from(pts.values());
+          startDist = Math.hypot(v[0].x - v[1].x, v[0].y - v[1].y);
+          startS = st.s;
+        }
+      });
+
+      c.addEventListener('pointermove', function (e) {
+        if (!pts.has(e.pointerId)) return;
+        pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
+        if (pts.size >= 2 && startDist > 0) {
+          var v = Array.from(pts.values());
+          var d = Math.hypot(v[0].x - v[1].x, v[0].y - v[1].y);
+          st.s = clamp(startS * d / startDist, 0.7, 1.45);
+        } else if (pts.size === 1 && startPos) {
+          st.x = start.x + (e.clientX - startPos.x);
+          st.y = start.y + (e.clientY - startPos.y);
+          st.dragged = true;
+        }
+        applyCard(c);
+      });
+
+      var release = function (e) {
+        pts.delete(e.pointerId);
+        if (pts.size === 0) c.classList.remove('is-dragging');
+        if (pts.size === 1) {
+          var v = Array.from(pts.values())[0];
+          startPos = { x: v.x, y: v.y };
+          start = { x: st.x, y: st.y };
+          startDist = 0;
+        }
+      };
+      c.addEventListener('pointerup', release);
+      c.addEventListener('pointercancel', release);
+
+      /* Wheel over a card scales the paper instead of scrolling the page */
+      c.addEventListener('wheel', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        st.s = clamp(st.s - e.deltaY * 0.0012, 0.7, 1.45);
+        applyCard(c);
+      }, { passive: false });
+    });
+
+    window.addEventListener('resize', function () { layoutCards(false); });
+  }
+
+  /* ---- Keep measurements honest across resizes ---- */
+  if (hasGSAP && !reduced) {
+    window.addEventListener('resize', function () {
+      measure();
+      buildSprockets();
+      ScrollTrigger.refresh();
+    });
+  } else {
+    window.addEventListener('resize', function () {
+      measure();
+      buildSprockets();
+    });
+  }
+
+})();
+</script>
+</body>
+</html>
